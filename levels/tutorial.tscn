@@ -1,11 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj3bc4ejjg88h"]
+[gd_scene load_steps=7 format=3 uid="uid://bj3bc4ejjg88h"]
 
-[ext_resource type="Script" path="res://scripts/turotial.gd" id="1_dwngr"]
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_cm87e"]
 [ext_resource type="AudioStream" uid="uid://lvrevyr13n8o" path="res://audio/temp/sfx_ui_enter.wav" id="2_5h34v"]
 [ext_resource type="AudioStream" uid="uid://bx7k310yhyrbg" path="res://audio/temp/sfx_ui_start.wav" id="3_o8cmq"]
+[ext_resource type="Texture2D" uid="uid://dhx5xcxg3hgxl" path="res://icon.svg" id="4_7eqhp"]
+[ext_resource type="Script" path="res://scripts/right_patch_follow.gd" id="4_tyoug"]
+
+[sub_resource type="Curve2D" id="Curve2D_xum2d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 602, 374, 0, 0, 0, 0, 433, 227, 0, 0, 0, 0, 603, 80, 0, 0, 0, 0, 765, 220, 0, 0, 0, 0, 602, 373)
+}
+point_count = 5
 
 [node name="tutorial" type="Node2D"]
-script = ExtResource("1_dwngr")
+position = Vector2(1, 1)
+script = ExtResource("1_cm87e")
 
 [node name="button1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_5h34v")
@@ -14,3 +23,17 @@ volume_db = -3.0
 [node name="button2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_o8cmq")
 volume_db = -3.0
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(22, 74)
+curve = SubResource("Curve2D_xum2d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(602, 374)
+rotation = -2.4257
+script = ExtResource("4_tyoug")
+
+[node name="Icon" type="Sprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(0.162231, 7.86758)
+scale = Vector2(0.429688, 0.445313)
+texture = ExtResource("4_7eqhp")

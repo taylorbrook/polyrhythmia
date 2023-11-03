@@ -1,11 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://clwuud8tkwo1y"]
+[gd_scene load_steps=7 format=3 uid="uid://clwuud8tkwo1y"]
 
 [ext_resource type="Script" path="res://scripts/Rhythm.gd" id="1_egyi7"]
 [ext_resource type="AudioStream" uid="uid://bfidgyt6htg7r" path="res://audio/temp/polyrhythm_game_note1.wav" id="2_mral2"]
-[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="3_gvs4b"]
-[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="4_m1g7s"]
-[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="5_ixwdh"]
-[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/a2_mp.wav" id="6_1x76e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpejc"]
 border_width_left = 5
@@ -204,19 +200,5 @@ offset_bottom = -205.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qf124")
-
-[node name="samples" type="Node" parent="."]
-
-[node name="g0" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("3_gvs4b")
-
-[node name="g1" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("4_m1g7s")
-
-[node name="d2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("5_ixwdh")
-
-[node name="a2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("6_1x76e")
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

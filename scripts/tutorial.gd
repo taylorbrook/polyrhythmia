@@ -28,15 +28,5 @@ func _process(_delta: float) -> void:
 	var measuresignal: float = (mstime / 1000) / (bpm / 60) / 4
 	var measurecount = int(measuresignal)
 
-	# right trigger subdivisions
-	if(beatsignal_r >= 1 and beat1trigger_r == false):
-		beat1trigger_r = true
-	if(beatsignal_r >= 2 and beat1trigger_r == false):
-		beat2trigger_r = true
-	if(beatsignal_r >= 3 and beat1trigger_r == false):
-		beat3trigger_r = true
-	if(beatsignal_r >= 4 and beat1trigger_r == false):
-		beat4trigger_r = true
-			
 	#debug
-	#print(beatsignal_r)
+	print(beat3trigger_r)

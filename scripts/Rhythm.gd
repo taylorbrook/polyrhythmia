@@ -9,7 +9,7 @@ extends Control
 
 var last_played_degrees = 0  # variable to keep track of the last played beat
 
-var audio_streams = [
+@onready var audio_streams = [
 	$samples/g0,
 	$samples/g1,
 	$samples/d2,
@@ -43,7 +43,8 @@ func check_beat():
 		last_played_degrees = current_degrees
 		for i in range(0, 4):  # Checking for each 90-degree interval
 			if current_degrees % 360 == (i * 90):
-				print(audio_streams[i])
+				#print(audio_streams[i])
+				audio_streams[i].play()
 
 func _on_h_slider_value_changed(value):
 	$HSlider/Label.text=str(value)+" BPM"

@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://qlgihv5fcdp1"]
+
+[ext_resource type="ArrayMesh" uid="uid://cjg30qei3lmr" path="res://mesh/4beats.tres" id="1_i0rof"]
+[ext_resource type="Shader" path="res://mesh/outline.gdshader" id="2_lcnhp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fm3mn"]
+render_priority = 0
+shader = ExtResource("2_lcnhp")
+shader_parameter/outline_color = Color(0.733333, 0, 0, 1)
+shader_parameter/outline_width = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jq1v6"]
+next_pass = SubResource("ShaderMaterial_fm3mn")
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.42
+
+[sub_resource type="Curve3D" id="Curve3D_v3e74"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.00161, 1.00634, 0, 0, 0, 0, 0, 0, 0, 0.982715, 1.00634, 0, 0, 0, 0, 0, 0, 0, 0.982715, -0.996889, 0, 0, 0, 0, 0, 0, 0, -1.00161, -0.97799, 0, 0, 0, 0, 0, 0, 0, -1.00161, 1.00634, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0qtsp"]
+render_priority = 0
+shader = ExtResource("2_lcnhp")
+shader_parameter/outline_color = Color(0, 0.827451, 0, 1)
+shader_parameter/outline_width = 3.235
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvmpl"]
+next_pass = SubResource("ShaderMaterial_0qtsp")
+albedo_color = Color(0.470588, 0.596078, 0.270588, 1)
+
+[sub_resource type="Animation" id="Animation_2lu2o"]
+resource_name = "idle_loop"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.392699, 0), Vector3(-0.270526, 0.392699, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x34h4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bolaa"]
+_data = {
+"RESET": SubResource("Animation_x34h4"),
+"idle_loop": SubResource("Animation_2lu2o")
+}
+
+[node name="MainShape" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00451, 0)
+mesh = ExtResource("1_i0rof")
+surface_material_override/0 = SubResource("StandardMaterial3D_jq1v6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212314, 0.0726824, 0.736658)
+light_color = Color(0.631373, 1, 1, 1)
+light_specular = 0.085
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_v3e74")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-4.37114e-08, 0.999999, 4.37113e-08, 0, -4.37113e-08, 0.999999, 1, 4.37113e-08, 1.91068e-15, 0.982715, -0.472119, 0)
+progress = 3.46099
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
+transform = Transform3D(-1.26763e-08, 0, 0.29, 0, 0.29, 0, -0.29, 0, -1.26763e-08, 0.380708, -0.00633764, -0.00161314)
+mesh = ExtResource("1_i0rof")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_kvmpl")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.345)
+fov = 65.7947
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pivot/Camera3D"]
+libraries = {
+"": SubResource("AnimationLibrary_bolaa")
+}

@@ -9,12 +9,7 @@ extends MeshInstance3D
 
 var last_played_degrees = 0  # variable to keep track of the last played beat
 
-@onready var audio_streams = [
-	$samples/g0,
-	$samples/g1,
-	$samples/d2,
-	$samples/a2
-	]  # Array containing all AudioStreamPlayer nodes
+@onready var audio_streams = $samples.get_children()  # Array containing all AudioStreamPlayer nodes
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,13 +17,16 @@ func _ready():
 	pass # Replace with function body.
 
 var last_beat=-1
-func _process(delta):
+@onready var tlabel = find_child("Label3D")
+func _physics_process(delta):
 	time+=delta
 	$Path3D/PathFollow3D.progress_ratio+=beat_steps * delta
 	var beat = int(time*bps) % beats
 	if last_beat!=beat:
 		last_beat=beat
-		audio_streams[beat].play()
+		if is_instance_valid(tlabel):
+			tlabel.text=str(beat+1)
+		#audio_streams[beat].play()
 #	circle.rotation_degrees+=beat_steps * delta
 #	for c in circle.get_children():
 #		c.rotation_degrees=-circle.rotation_degrees

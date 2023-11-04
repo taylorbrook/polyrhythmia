@@ -1,16 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://qlgihv5fcdp1"]
+[gd_scene load_steps=16 format=3 uid="uid://8iupmbagx7ce"]
 
-[ext_resource type="ArrayMesh" uid="uid://cjg30qei3lmr" path="res://mesh/4beats.tres" id="1_i0rof"]
-[ext_resource type="Shader" path="res://mesh/outline.gdshader" id="2_lcnhp"]
-[ext_resource type="Script" path="res://scripts/Rhythm3d.gd" id="3_3xrhu"]
-[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="4_2t52l"]
-[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="5_bn4cm"]
-[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="6_jj4vu"]
-[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/a2_mp.wav" id="7_p8bof"]
+[ext_resource type="ArrayMesh" uid="uid://b0esl445wk3h" path="res://mesh/3beats.tres" id="1_g3743"]
+[ext_resource type="Shader" path="res://mesh/outline.gdshader" id="2_hr10d"]
+[ext_resource type="Script" path="res://scripts/Rhythm3d.gd" id="3_6suqd"]
+[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="4_doq3s"]
+[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="5_fqlcm"]
+[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="6_ds62t"]
+[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/a2_mp.wav" id="7_075dt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fm3mn"]
 render_priority = 0
-shader = ExtResource("2_lcnhp")
+shader = ExtResource("2_hr10d")
 shader_parameter/outline_color = Color(0.733333, 0, 0, 1)
 shader_parameter/outline_width = 2.4
 
@@ -19,16 +19,16 @@ next_pass = SubResource("ShaderMaterial_fm3mn")
 albedo_color = Color(0, 0, 0, 1)
 roughness = 0.42
 
-[sub_resource type="Curve3D" id="Curve3D_1wlip"]
+[sub_resource type="Curve3D" id="Curve3D_v3e74"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.00595, 1.00132, -1.54972e-05, 0, 0, 0, 0, 0, 0, 0.994682, 1.00132, -1.54972e-05, 0, 0, 0, 0, 0, 0, 0.989513, -0.983809, -1.54972e-05, 0, 0, 0, 0, 0, 0, -1.00078, -0.978639, -1.54972e-05, 0, 0, 0, 0, 0, 0, -1.00595, 1.00132, -1.54972e-05),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.982666, -0.977667, 0.232094, 0, 0, 0, 0, 0, 0, -1.00159, -0.977667, 0.232094, 0, 0, 0, 0, 0, 0, -0.0131564, 0.988349, 0.232053, 0, 0, 0, 0, 0, 0, 0.982666, -0.977667, 0.232094),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
 }
-point_count = 5
+point_count = 4
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0qtsp"]
 render_priority = 0
-shader = ExtResource("2_lcnhp")
+shader = ExtResource("2_hr10d")
 shader_parameter/outline_color = Color(0, 0.827451, 0, 1)
 shader_parameter/outline_width = 1.2
 
@@ -74,11 +74,12 @@ _data = {
 "idle_loop": SubResource("Animation_2lu2o")
 }
 
-[node name="4-beats" type="MeshInstance3D"]
+[node name="3-beats" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00451, 0)
-mesh = ExtResource("1_i0rof")
+mesh = ExtResource("1_g3743")
 surface_material_override/0 = SubResource("StandardMaterial3D_jq1v6")
-script = ExtResource("3_3xrhu")
+script = ExtResource("3_6suqd")
+beats = 3
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212314, 0.0726824, 0.736658)
@@ -86,17 +87,17 @@ light_color = Color(0.631373, 1, 1, 1)
 light_specular = 0.085
 
 [node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.23378)
-curve = SubResource("Curve3D_1wlip")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0376003)
+curve = SubResource("Curve3D_v3e74")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.999997, 0, 0, 0, 0.999997, 0, 0, 0, 0.999998, -1.29095, 1.00132, -1.54972e-05)
+transform = Transform3D(0.999997, 0, 0, 0, 0.999997, 0, 0, 0, 0.999998, 0.697666, -0.977667, 0.232094)
 h_offset = -0.285
 rotation_mode = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
 transform = Transform3D(0.29, 0, 0, 0, 0.29, 0, 0, 0, 0.29, 0.284736, -0.00633764, -0.00161314)
-mesh = ExtResource("1_i0rof")
+mesh = ExtResource("1_g3743")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_kvmpl")
 
@@ -114,18 +115,18 @@ libraries = {
 [node name="samples" type="Node" parent="."]
 
 [node name="g0" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("4_2t52l")
+stream = ExtResource("4_doq3s")
 
 [node name="g1" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("5_bn4cm")
+stream = ExtResource("5_fqlcm")
 
 [node name="d2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("6_jj4vu")
+stream = ExtResource("6_ds62t")
 
 [node name="a2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("7_p8bof")
+stream = ExtResource("7_075dt")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0401225, 0.260098)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0323761, -0.255701, 0.260098)
 text = "1"
 font_size = 247

@@ -6,6 +6,7 @@ extends MeshInstance3D
 @onready var bps = bpm/60.0
 @onready var beat_steps = (1.0/beats * bps)
 @onready var circle = null
+@export var playing = false
 
 var last_played_degrees = 0  # variable to keep track of the last played beat
 
@@ -26,7 +27,8 @@ func _physics_process(delta):
 		last_beat=beat
 		if is_instance_valid(tlabel):
 			tlabel.text=str(beat+1)
-		#audio_streams[beat].play()
+		if playing:
+			audio_streams[beat].play()
 #	circle.rotation_degrees+=beat_steps * delta
 #	for c in circle.get_children():
 #		c.rotation_degrees=-circle.rotation_degrees

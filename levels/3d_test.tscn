@@ -27,6 +27,7 @@ subdivide_depth = 50
 [node name="3dTest" type="Node3D"]
 
 [node name="MainShape" parent="." instance=ExtResource("1_x713b")]
+bpm = 120
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")
@@ -39,6 +40,3 @@ mesh = SubResource("PlaneMesh_c12ko")
 
 [node name="MainCam" type="Node3D" parent="."]
 transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 0, 0)
-
-[node name="Camera3D" type="Camera3D" parent="MainCam"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65399, 3.92816)

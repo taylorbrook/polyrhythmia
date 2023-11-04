@@ -1,12 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://8iupmbagx7ce"]
+[gd_scene load_steps=15 format=3 uid="uid://8iupmbagx7ce"]
 
 [ext_resource type="ArrayMesh" uid="uid://b0esl445wk3h" path="res://mesh/3beats.tres" id="1_g3743"]
 [ext_resource type="Shader" path="res://mesh/outline.gdshader" id="2_hr10d"]
 [ext_resource type="Script" path="res://scripts/Rhythm3d.gd" id="3_6suqd"]
-[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="4_doq3s"]
-[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="5_fqlcm"]
-[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="6_ds62t"]
-[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/a2_mp.wav" id="7_075dt"]
+[ext_resource type="AudioStream" uid="uid://n4v8arjed8a" path="res://audio/harp_sampler/player_mono/a3_mf_1.wav" id="4_5cyq6"]
+[ext_resource type="AudioStream" uid="uid://u8dxrdnl6fc7" path="res://audio/harp_sampler/player_mono/a3_mf_2.wav" id="5_fmb81"]
+[ext_resource type="AudioStream" uid="uid://ct06jghm52ebe" path="res://audio/harp_sampler/player_mono/g3_mf_1.wav" id="6_pt8qh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fm3mn"]
 render_priority = 0
@@ -80,6 +79,7 @@ mesh = ExtResource("1_g3743")
 surface_material_override/0 = SubResource("StandardMaterial3D_jq1v6")
 script = ExtResource("3_6suqd")
 beats = 3
+playing = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212314, 0.0726824, 0.736658)
@@ -114,17 +114,14 @@ libraries = {
 
 [node name="samples" type="Node" parent="."]
 
-[node name="g0" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("4_doq3s")
-
-[node name="g1" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("5_fqlcm")
-
-[node name="d2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("6_ds62t")
+[node name="a" type="AudioStreamPlayer" parent="samples"]
+stream = ExtResource("4_5cyq6")
 
 [node name="a2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("7_075dt")
+stream = ExtResource("5_fmb81")
+
+[node name="g" type="AudioStreamPlayer" parent="samples"]
+stream = ExtResource("6_pt8qh")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0323761, -0.255701, 0.260098)

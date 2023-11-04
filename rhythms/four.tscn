@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://clwuud8tkwo1y"]
+[gd_scene load_steps=30 format=3 uid="uid://clwuud8tkwo1y"]
 
 [ext_resource type="Script" path="res://scripts/Rhythm.gd" id="1_egyi7"]
-[ext_resource type="AudioStream" uid="uid://bfidgyt6htg7r" path="res://audio/temp/polyrhythm_game_note1.wav" id="2_mral2"]
+[ext_resource type="AudioStream" uid="uid://ct06jghm52ebe" path="res://audio/harp_sampler/player_mono/g3_mf_1.wav" id="2_y7ruj"]
 [ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="3_gvs4b"]
 [ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="4_m1g7s"]
 [ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="5_ixwdh"]
@@ -13,7 +13,16 @@
 [ext_resource type="AudioStream" uid="uid://bc5g8sw0isa85" path="res://audio/harp_sampler/accompaniment_stereo/d3_mp.wav" id="11_pndg7"]
 [ext_resource type="AudioStream" uid="uid://6s42mh0q4p8m" path="res://audio/harp_sampler/accompaniment_stereo/f#3_mp.wav" id="12_4vy3b"]
 [ext_resource type="AudioStream" uid="uid://cbh2bvh2n0hl" path="res://audio/harp_sampler/accompaniment_stereo/f3_mp.wav" id="13_iqw8w"]
+[ext_resource type="AudioStream" uid="uid://n4v8arjed8a" path="res://audio/harp_sampler/player_mono/a3_mf_1.wav" id="14_bjbvv"]
 [ext_resource type="AudioStream" uid="uid://bdw08icnk8268" path="res://audio/harp_sampler/accompaniment_stereo/g3_mp.wav" id="14_uwtqi"]
+[ext_resource type="AudioStream" uid="uid://u8dxrdnl6fc7" path="res://audio/harp_sampler/player_mono/a3_mf_2.wav" id="15_o0wud"]
+[ext_resource type="AudioStream" uid="uid://c8jflbf8k8xvo" path="res://audio/harp_sampler/player_mono/a3_mf_3.wav" id="16_va2pm"]
+[ext_resource type="AudioStream" uid="uid://ctd411fmjbyv0" path="res://audio/harp_sampler/player_mono/a3_mf_4.wav" id="17_p288i"]
+[ext_resource type="AudioStream" uid="uid://clmdc5e3aqdxq" path="res://audio/harp_sampler/player_mono/a3_mf_5.wav" id="18_n3w7c"]
+[ext_resource type="AudioStream" uid="uid://xu5ne4s11p3y" path="res://audio/harp_sampler/player_mono/g3_mf_2.wav" id="20_xygqm"]
+[ext_resource type="AudioStream" uid="uid://c1kbogkyejyqi" path="res://audio/harp_sampler/player_mono/g3_mf_3.wav" id="21_8mk0m"]
+[ext_resource type="AudioStream" uid="uid://citdyi610am33" path="res://audio/harp_sampler/player_mono/g3_mf_4.wav" id="22_gqfu4"]
+[ext_resource type="AudioStream" uid="uid://b2ex7txg1odti" path="res://audio/harp_sampler/player_mono/g3_mf_5.wav" id="23_28m1q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpejc"]
 border_width_left = 5
@@ -46,6 +55,36 @@ border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dpkyh"]
+streams_count = 5
+random_pitch = 1.0
+random_volume_offset_db = 3.0
+stream_0/stream = ExtResource("14_bjbvv")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("15_o0wud")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("16_va2pm")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("17_p288i")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("18_n3w7c")
+stream_4/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_morge"]
+streams_count = 5
+random_pitch = 1.0
+random_volume_offset_db = 3.0
+stream_0/stream = ExtResource("2_y7ruj")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("20_xygqm")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("21_8mk0m")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("22_gqfu4")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("23_28m1q")
+stream_4/weight = 1.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -180,9 +219,6 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "60 BPM"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_mral2")
-
 [node name="TimeNote" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -250,5 +286,13 @@ stream = ExtResource("13_iqw8w")
 
 [node name="g3" type="AudioStreamPlayer" parent="samples"]
 stream = ExtResource("14_uwtqi")
+
+[node name="playersamples" type="Node" parent="."]
+
+[node name="player_a3" type="AudioStreamPlayer" parent="playersamples"]
+stream = SubResource("AudioStreamRandomizer_dpkyh")
+
+[node name="player_g3" type="AudioStreamPlayer" parent="playersamples"]
+stream = SubResource("AudioStreamRandomizer_morge")
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

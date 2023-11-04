@@ -41,7 +41,7 @@ func _process(delta):
 			note = "Perfect!"
 		elif timing < 17:
 			note = "Good!"
-		$AudioStreamPlayer.play()
+		$playersamples/player_g3.play()
 		$TimeNote.text=note
 	check_beat()
 	

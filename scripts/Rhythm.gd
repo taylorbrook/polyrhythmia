@@ -9,20 +9,7 @@ extends Control
 
 var last_played_degrees = 0  # variable to keep track of the last played beat
 
-@onready var audio_streams = [
-	$samples/g0,
-	$samples/g1,
-	$samples/a1,
-	$samples/d2,
-	$samples/g2,
-	$samples/a2,
-	$samples/b2,
-	$samples/c3,
-	$samples/d3,
-	$samples/f3,
-	$samples/fs3,
-	$samples/g3,
-	]  # Array containing all AudioStreamPlayer nodes
+@onready var audio_streams = $samples.get_children()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,7 +38,6 @@ func check_beat():
 		last_played_degrees = current_degrees
 		for i in range(0, 12):  # Checking for each 90-degree interval
 			if current_degrees % 360 == (i * 30):
-				#print(audio_streams[i])
 				audio_streams[i].play()
 
 func _on_h_slider_value_changed(value):

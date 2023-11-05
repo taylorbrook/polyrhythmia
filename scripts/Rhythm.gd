@@ -38,7 +38,8 @@ func check_beat():
 		last_played_degrees = current_degrees
 		for i in range(0, 12):  # Checking for each 90-degree interval
 			if current_degrees % 360 == (i * 30):
-				audio_streams[i].play()
+				if i < audio_streams.size():
+					audio_streams[i].play()
 
 func _on_h_slider_value_changed(value):
 	$HSlider/Label.text=str(value)+" BPM"

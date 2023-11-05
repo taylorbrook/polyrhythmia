@@ -4,7 +4,7 @@
 
 [sub_resource type="AudioEffectDelay" id="AudioEffectDelay_jx3m1"]
 resource_name = "Delay"
-tap1_delay_ms = 205.0
+tap1_delay_ms = 510.0
 tap1_pan = -1.0
 tap2_pan = -1.0
 script = SubResource("GDScript_texjl")

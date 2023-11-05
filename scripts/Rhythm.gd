@@ -13,7 +13,7 @@ var last_played_degrees = 0  # variable to keep track of the last played beat
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$AnimationPlayer.play("test_animation_taylor")
 
 func _process(delta):
 	circle.rotation_degrees+=beat_steps * delta

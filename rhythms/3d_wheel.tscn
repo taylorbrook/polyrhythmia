@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://c50ac4wvpw0bg"]
+
+[ext_resource type="ArrayMesh" uid="uid://cjg30qei3lmr" path="res://mesh/4beats.tres" id="1_axvxf"]
+[ext_resource type="Script" path="res://scripts/3d_wheel.gd" id="1_p5eqy"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nvqjv"]
+height = 0.105
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xr822"]
+resource_local_to_scene = true
+albedo_color = Color(0.458824, 0.576471, 0.431373, 1)
+metallic = 0.66
+metallic_specular = 0.0
+roughness = 0.06
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srsk6"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(0.168627, 0.388235, 0.313726, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_k3aeg"]
+size = Vector2(0.965, 0.29)
+
+[sub_resource type="Gradient" id="Gradient_oqhc8"]
+offsets = PackedFloat32Array(0.448819, 0.716535)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xh11v"]
+gradient = SubResource("Gradient_oqhc8")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2p7i"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("GradientTexture2D_xh11v")
+emission_enabled = true
+emission = Color(0.176471, 0.917647, 0, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="Animation" id="Animation_oh42v"]
+resource_name = "flash_trigger"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriggerArea:surface_material_override/0:emission_energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w8spu"]
+_data = {
+"flash_trigger": SubResource("Animation_oh42v")
+}
+
+[node name="3d_wheel" type="Node3D"]
+script = ExtResource("1_p5eqy")
+
+[node name="Wheel" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 4.37114e-08, 4.37114e-08, 1.91069e-15, 1, -8.74228e-08, 1, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("CylinderMesh_nvqjv")
+surface_material_override/0 = SubResource("StandardMaterial3D_xr822")
+
+[node name="Polymark" type="Node3D" parent="Wheel"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wheel/Polymark"]
+transform = Transform3D(-3.69738e-09, -0.0845863, 0, -3.69738e-09, 1.61618e-16, 0.0845863, -0.0845863, 3.69738e-09, -3.69738e-09, -0.476, 0.0532149, -2.3261e-09)
+mesh = ExtResource("1_axvxf")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_srsk6")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03271)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+editor_only = true
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0624498)
+pixel_size = 0.0024
+double_sided = false
+texture_filter = 0
+text = "1"
+font_size = 297
+outline_size = 32
+
+[node name="TriggerArea" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.5, 0, 0)
+mesh = SubResource("PlaneMesh_k3aeg")
+surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w8spu")
+}

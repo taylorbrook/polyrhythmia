@@ -348,6 +348,6 @@ libraries = {
 
 [node name="delayproperties" type="Node" parent="."]
 script = ExtResource("23_sotti")
-delaytap1 = 510.0
+delaytap1 = 205.0
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

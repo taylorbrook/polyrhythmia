@@ -3,7 +3,6 @@
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_bj3sl"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_ljrwg"]
-constant = 0.5
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_6hd7o"]
 constant = Color(0.150487, 0.310982, 0.247753, 1)
@@ -138,7 +137,7 @@ void fragment() {
 
 
 // FloatConstant:11
-	float n_out11p0 = 0.500000;
+	float n_out11p0 = 0.000000;
 
 
 // Input:7
@@ -181,6 +180,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-52.8182, -17.0909)
 nodes/vertex/0/position = Vector2(640, 100)
 nodes/vertex/2/node = SubResource("VisualShaderNodeInput_tx81d")
 nodes/vertex/2/position = Vector2(-1300, 480)

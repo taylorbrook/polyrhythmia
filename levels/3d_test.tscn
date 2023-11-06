@@ -1,13 +1,23 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=21 format=3 uid="uid://bwrbp5hm8j3ht"]
 
-[ext_resource type="PackedScene" uid="uid://8iupmbagx7ce" path="res://rhythms/three.tscn" id="1_ofsli"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
-[ext_resource type="PackedScene" uid="uid://dqwybnk0ykud0" path="res://rhythms/five.tscn" id="3_to37w"]
+[ext_resource type="PackedScene" uid="uid://c50ac4wvpw0bg" path="res://rhythms/3d_wheel.tscn" id="3_2bv1u"]
+[ext_resource type="AudioStream" uid="uid://d1tkiieg02b4b" path="res://audio/harp_sampler/accompaniment_stereo/a1_mp.wav" id="4_80b6h"]
+[ext_resource type="AudioStream" uid="uid://txy7qmi78fm7" path="res://audio/harp_sampler/accompaniment_stereo/d0_mf_1.wav" id="5_bryth"]
+[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="6_ms3k6"]
+[ext_resource type="AudioStream" uid="uid://u8dxrdnl6fc7" path="res://audio/harp_sampler/player_mono/a3_mf_2.wav" id="7_tcnid"]
+[ext_resource type="AudioStream" uid="uid://ct06jghm52ebe" path="res://audio/harp_sampler/player_mono/g3_mf_1.wav" id="8_wv1ap"]
+[ext_resource type="Shader" path="res://mesh/clouds.res" id="10_e6p8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kadxq"]
-sky_top_color = Color(0.176471, 0.121569, 0.211765, 1)
-sky_horizon_color = Color(0.819608, 0.596078, 0.513726, 1)
+sky_top_color = Color(0.152941, 0.101961, 0.184314, 1)
+sky_horizon_color = Color(0.47451, 0.341176, 0.156863, 1)
+sky_curve = 0.0416089
+ground_bottom_color = Color(0.372549, 0.360784, 0.380392, 1)
+ground_horizon_color = Color(0.360784, 0.470588, 0.396078, 1)
+sun_angle_max = 51.95
+sun_curve = 0.126135
 
 [sub_resource type="Sky" id="Sky_arhvc"]
 sky_material = SubResource("ProceduralSkyMaterial_kadxq")
@@ -43,21 +53,95 @@ _data = {
 "running": SubResource("Animation_fsypk")
 }
 
+[sub_resource type="Animation" id="Animation_246lq"]
+resource_name = "Song1"
+length = 4.0
+loop_mode = 1
+step = 0.125
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("4_subdivisions/NotePlayer4")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_80b6h")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_bryth")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_ms3k6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_bryth")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_80b6h")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_bryth")
+}],
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 3)
+}
+tracks/0/use_blend = true
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2_subdivisions/NotePlayer2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_tcnid")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.01,
+"stream": ExtResource("8_wv1ap")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_wv1ap")
+}],
+"times": PackedFloat32Array(0, 1, 3)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
+_data = {
+"Song1": SubResource("Animation_246lq")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m8iya"]
+render_priority = 0
+shader = ExtResource("10_e6p8a")
+
+[sub_resource type="SphereMesh" id="SphereMesh_hljms"]
+material = SubResource("ShaderMaterial_m8iya")
+flip_faces = true
+radius = 12.51
+height = 5.49
+is_hemisphere = true
+
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
-
-[node name="3-beats" parent="." instance=ExtResource("1_ofsli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.00451, 0)
-
-[node name="5-beats" parent="." instance=ExtResource("3_to37w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.00451, 0)
-playing = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.830479, 0.55705, 0, -0.55705, -0.830479, 0, 8.36086, -11.1119)
+transform = Transform3D(1, 0, 0, 0, -0.861974, 0.506952, 0, -0.506952, -0.861974, 0, 8.36086, -21.1571)
+light_color = Color(1, 1, 0.886275, 1)
 
 [node name="Water" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_c12ko")
@@ -66,10 +150,63 @@ mesh = SubResource("PlaneMesh_c12ko")
 transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="MainCam"]
-transform = Transform3D(0.999657, 0, 0.0261769, 0, 1, 0, -0.0261769, 0, 0.999657, 1.477, 2.197, 5.193)
+transform = Transform3D(0.999657, 0, 0.0261769, 0, 1, 0, -0.0261769, 0, 0.999657, 0.885, 1.147, 1.408)
 current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainCam/Camera3D"]
+speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_c2brf")
 }
+
+[node name="4_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.289, 0)
+spinning = true
+
+[node name="NotePlayer4" type="AudioStreamPlayer" parent="4_subdivisions"]
+
+[node name="2_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62686, 1.289, 0)
+beats = 2
+spinning = true
+direction = 1
+
+[node name="NotePlayer2" type="AudioStreamPlayer" parent="2_subdivisions"]
+
+[node name="SongPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mug7h")
+}
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+update_mode = 1
+intensity = 0.33
+max_distance = 20.9
+size = Vector3(8.39568, 20, 7.98332)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_hljms")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VSlider" type="VSlider" parent="UI"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 248.0
+min_value = 30.0
+max_value = 120.0
+step = 10.0
+value = 30.0
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 89.0
+offset_bottom = 26.0
+text = "30 BPM"
+
+[connection signal="value_changed" from="UI/VSlider" to="." method="_on_v_slider_value_changed"]

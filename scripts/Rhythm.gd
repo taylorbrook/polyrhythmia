@@ -2,8 +2,8 @@ extends Control
 
 @export var beats = 4
 @onready var time = 0.0
-@export var bpm = 60
-@onready var bps = bpm/60.0
+@export var bpm = 30
+@onready var bps = (bpm/60.0)*beats
 @onready var beat_steps = (360.0/beats * bps)
 @onready var circle = $RhythmCircle
 

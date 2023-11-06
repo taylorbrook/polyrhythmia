@@ -110,7 +110,7 @@ tracks/0/keys = {
 "start_offset": 0.0,
 "stream": ExtResource("6_hyt87")
 }],
-"times": PackedFloat32Array(0, 3, 6)
+"times": PackedFloat32Array(0, 3, 5.9)
 }
 tracks/0/use_blend = true
 tracks/1/type = "value"
@@ -120,22 +120,10 @@ tracks/1/path = NodePath("delayproperties:delaytap1")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3, 6),
-"transitions": PackedFloat32Array(372.31, 36.5136, 32.0001),
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [500.0, 250.0, 100.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("delayproperties:delaytap2")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(64, 29.857),
-"update": 0,
-"values": [500.0, 1000.0]
+"values": [205.0, 510.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sk1rf"]
@@ -309,7 +297,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qf124")
 [node name="samples" type="Node" parent="."]
 
 [node name="g0" type="AudioStreamPlayer" parent="samples"]
-bus = &"delay effect r"
 
 [node name="g1" type="AudioStreamPlayer" parent="samples"]
 stream = ExtResource("2_esryw")
@@ -348,11 +335,9 @@ stream = ExtResource("12_sfj56")
 
 [node name="player_a3" type="AudioStreamPlayer" parent="playersamples"]
 stream = SubResource("AudioStreamRandomizer_dpkyh")
-bus = &"delay effect r"
 
 [node name="player_g3" type="AudioStreamPlayer" parent="playersamples"]
 stream = SubResource("AudioStreamRandomizer_morge")
-bus = &"delay effect r"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1
@@ -363,7 +348,6 @@ libraries = {
 
 [node name="delayproperties" type="Node" parent="."]
 script = ExtResource("23_sotti")
-delaytap1 = 250.0
-delaytap2 = 500.0
+delaytap1 = 205.0
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

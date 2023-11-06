@@ -3,6 +3,8 @@ extends Node
 @export var delaytap1 = 0.0 : set = _delaytap1_setter, get = _delaytap1_getter
 @export var delaytap2 = 0.0 : set = _delaytap2_setter, get = _delaytap2_getter
 
+#need to scale delay times with bpm
+
 func _ready():
 	_delaytap1_getter()
 	_delaytap2_getter()

@@ -2,7 +2,7 @@ extends Node3D
 
 func _ready():
 	$MainCam/Camera3D/AnimationPlayer.play("running")
-	$SongPlayer.play("Song1")
+	$SongPlayer.play("Song2")
 	#$"2_subdivisions".animation = $SongPlayer.get_animation("Song1")
 	$"4_subdivisions".animation = $SongPlayer.get_animation("Song1")
 	pass

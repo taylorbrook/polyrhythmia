@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="6_ms3k6"]
 [ext_resource type="AudioStream" uid="uid://u8dxrdnl6fc7" path="res://audio/harp_sampler/player_mono/a3_mf_2.wav" id="7_tcnid"]
 [ext_resource type="AudioStream" uid="uid://ct06jghm52ebe" path="res://audio/harp_sampler/player_mono/g3_mf_1.wav" id="8_wv1ap"]
-[ext_resource type="Shader" path="res://mesh/clouds.res" id="10_e6p8a"]
+[ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="10_e6p8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kadxq"]
 sky_top_color = Color(0.152941, 0.101961, 0.184314, 1)
@@ -150,7 +150,7 @@ mesh = SubResource("PlaneMesh_c12ko")
 transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="MainCam"]
-transform = Transform3D(0.999657, 0, 0.0261769, 0, 1, 0, -0.0261769, 0, 0.999657, 0.885, 1.147, 1.408)
+transform = Transform3D(0.999657, 0, 0.0261769, 0, 1, 0, -0.0261769, 0, 0.999657, 0.494269, 1.147, 2.32851)
 current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MainCam/Camera3D"]

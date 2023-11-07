@@ -309,7 +309,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qf124")
 [node name="samples" type="Node" parent="."]
 
 [node name="g0" type="AudioStreamPlayer" parent="samples"]
-bus = &"delay effect r"
 
 [node name="g1" type="AudioStreamPlayer" parent="samples"]
 stream = ExtResource("2_esryw")
@@ -348,11 +347,9 @@ stream = ExtResource("12_sfj56")
 
 [node name="player_a3" type="AudioStreamPlayer" parent="playersamples"]
 stream = SubResource("AudioStreamRandomizer_dpkyh")
-bus = &"delay effect r"
 
 [node name="player_g3" type="AudioStreamPlayer" parent="playersamples"]
 stream = SubResource("AudioStreamRandomizer_morge")
-bus = &"delay effect r"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1

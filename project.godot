@@ -32,3 +32,10 @@ button2={
 
 renderer/rendering_method.mobile="gl_compatibility"
 anti_aliasing/quality/msaa_3d=2
+
+[shader_globals]
+
+spectrum_texture={
+"type": "sampler2D",
+"value": "res://assets/textures/gradient.png"
+}

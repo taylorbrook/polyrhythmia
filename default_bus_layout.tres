@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dujyxjx06mqyn"]
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://dujyxjx06mqyn"]
 
 [sub_resource type="GDScript" id="GDScript_texjl"]
 
@@ -8,8 +8,15 @@ tap1_pan = -1.0
 tap2_pan = -1.0
 script = SubResource("GDScript_texjl")
 
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_acnsx"]
+resource_name = "Delay"
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_p404m"]
+resource_name = "SpectrumAnalyzer"
+buffer_length = 1.0
+
 [resource]
-bus/1/name = &"delay effect r"
+bus/1/name = &"player_left"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
@@ -17,3 +24,19 @@ bus/1/volume_db = -0.328256
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectDelay_jx3m1")
 bus/1/effect/0/enabled = true
+bus/2/name = &"player_right"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectDelay_acnsx")
+bus/2/effect/0/enabled = true
+bus/3/name = &"backing track"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_p404m")
+bus/3/effect/0/enabled = true

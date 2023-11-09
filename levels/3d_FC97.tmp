@@ -797,7 +797,6 @@ is_hemisphere = true
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
-SongName = "Song2"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")

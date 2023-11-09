@@ -67,15 +67,15 @@ transform = Transform3D(-1, -8.74228e-08, 4.37114e-08, 4.37114e-08, 1.91069e-15,
 mesh = SubResource("CylinderMesh_nvqjv")
 surface_material_override/0 = SubResource("StandardMaterial3D_xr822")
 
-[node name="Polymark" type="Node3D" parent="Wheel"]
+[node name="Polymark0" type="Node3D" parent="Wheel"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wheel/Polymark"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wheel/Polymark0"]
 transform = Transform3D(-3.69738e-09, -0.0845863, 0, -3.69738e-09, 1.61618e-16, 0.0845863, -0.0845863, 3.69738e-09, -3.69738e-09, -0.476, 0.0532149, -2.3261e-09)
 mesh = ExtResource("1_axvxf")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_srsk6")
 
-[node name="DebugMarker" type="Label3D" parent="Wheel/Polymark/MeshInstance3D"]
+[node name="DebugMarker" type="Label3D" parent="Wheel/Polymark0/MeshInstance3D"]
 transform = Transform3D(-4.37114e-08, -1, 4.37115e-08, 1, -4.37114e-08, 1.31134e-07, -1.31134e-07, 4.37114e-08, 1, -6.10586e-09, 0, 0.139686)
 visible = false
 billboard = 2

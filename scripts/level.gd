@@ -3,12 +3,13 @@ extends Node3D
 func _ready():
 	$MainCam/Camera3D/AnimationPlayer.play("running")
 	$"2_subdivisions".song_player = $SongPlayer
+	$"3_subdivisions".song_player = $SongPlayer
 	$"4_subdivisions".song_player = $SongPlayer
-	$"2_subdivisions".populate_wheel()
-	$"4_subdivisions".populate_wheel()
+	$"5_subdivisions".song_player = $SongPlayer
+	$"6_subdivisions".song_player = $SongPlayer
+	$"7_subdivisions".song_player = $SongPlayer
+	await get_tree().create_timer(1.0).timeout
 	$SongPlayer.play("Song1")
-	$"2_subdivisions".spinning=true
-	$"4_subdivisions".spinning=true
 
 func _on_v_slider_value_changed(value):
 	$"4_subdivisions".bpm=value

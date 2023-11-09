@@ -81,7 +81,7 @@ _data = {
 [sub_resource type="Animation" id="Animation_246lq"]
 resource_name = "Song1"
 length = 28.0
-loop_mode = 2
+loop_mode = 1
 step = 0.333
 tracks/0/type = "audio"
 tracks/0/imported = false
@@ -821,32 +821,6 @@ libraries = {
 "": SubResource("AnimationLibrary_c2brf")
 }
 
-[node name="6_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.07985, 1.289, 0)
-beats = 6
-spinning = true
-
-[node name="NotePlayer6" type="AudioStreamPlayer" parent="6_subdivisions"]
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="4_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.289, 0)
-spinning = true
-
-[node name="NotePlayer4" type="AudioStreamPlayer" parent="4_subdivisions"]
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="3_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38738, 1.289, 0)
-beats = 3
-spinning = true
-
-[node name="NotePlayer3" type="AudioStreamPlayer" parent="3_subdivisions"]
-max_polyphony = 8
-bus = &"player_left"
-
 [node name="2_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60636, 1.289, 0)
 beats = 2
@@ -857,21 +831,52 @@ direction = 1
 max_polyphony = 8
 bus = &"player_right"
 
+[node name="3_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.38738, 1.289, 0)
+beats = 3
+spinning = true
+track = 1
+
+[node name="NotePlayer3" type="AudioStreamPlayer" parent="3_subdivisions"]
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="4_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.289, 0)
+spinning = true
+track = 2
+
+[node name="NotePlayer4" type="AudioStreamPlayer" parent="4_subdivisions"]
+max_polyphony = 8
+bus = &"player_left"
+
 [node name="5_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85957, 1.289, 0)
 beats = 5
 spinning = true
 direction = 1
+track = 3
 
 [node name="NotePlayer5" type="AudioStreamPlayer" parent="5_subdivisions"]
 max_polyphony = 8
 bus = &"player_right"
+
+[node name="6_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.07985, 1.289, 0)
+beats = 6
+spinning = true
+track = 4
+
+[node name="NotePlayer6" type="AudioStreamPlayer" parent="6_subdivisions"]
+max_polyphony = 8
+bus = &"player_left"
 
 [node name="7_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.19583, 1.289, 0)
 beats = 7
 spinning = true
 direction = 1
+track = 5
 
 [node name="NotePlayer7" type="AudioStreamPlayer" parent="7_subdivisions"]
 max_polyphony = 8

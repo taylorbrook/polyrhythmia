@@ -75,6 +75,13 @@ mesh = ExtResource("1_axvxf")
 skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_srsk6")
 
+[node name="DebugMarker" type="Label3D" parent="Wheel/Polymark/MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, -1, 4.37115e-08, 1, -4.37114e-08, 1.31134e-07, -1.31134e-07, 4.37114e-08, 1, -6.10586e-09, 0, 0.139686)
+visible = false
+billboard = 2
+text = "1"
+font_size = 222
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03271)
 

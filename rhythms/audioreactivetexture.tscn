@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://drodr4g25354g"]
+[gd_scene load_steps=13 format=3 uid="uid://nn33iuqgl77t"]
 
 [ext_resource type="Shader" path="res://rhythms/musicreacttest.gdshader" id="1_ub4hw"]
 [ext_resource type="Texture2D" uid="uid://bwa0s0scw5s3w" path="res://assets/textures/gradient.png" id="2_nb0j3"]

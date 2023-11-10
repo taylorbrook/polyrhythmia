@@ -86,7 +86,6 @@ func _process(delta):
 				if marker.transparency != 0.0:
 					marker.transparency=0.0
 
-
 func _bpm_setter(val):
 	bpm=val
 	bps = (bpm/60.0)*beats

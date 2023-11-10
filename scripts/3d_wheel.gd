@@ -56,7 +56,7 @@ func _process(delta):
 	if is_instance_valid(song_player) and animation == null:
 		if !song_player.is_playing():
 			return
-		animation = song_player.get_animation("Song1")
+		animation = song_player.get_animation(get_parent().SongName)
 	if spinning:
 		if direction==directions.Clockwise:
 			$Wheel.rotation_degrees.x-=beat_steps * delta

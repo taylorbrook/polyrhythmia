@@ -48,7 +48,8 @@ bus = &"backing track"
 
 [node name="audio_spectrum_helper" type="Node" parent="."]
 script = ExtResource("4_mctq8")
-Multiplier = 1.0
+Multiplier = 2.0
+lerp_smoothing = 5.0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.978042, 0, -0.208407, 0, 1, 0, 0.208407, 0, 0.978042, -0.749171, 0.480906, 0)

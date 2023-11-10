@@ -13,9 +13,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_xum2d"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 602, 374, 0, 0, 0, 0, 433, 227, 0, 0, 0, 0, 603, 80, 0, 0, 0, 0, 765, 220, 0, 0, 0, 0, 602, 373)
+"points": PackedVector2Array(0, 0, 0, 0, 602, 374, 0, 0, 0, 0, 433, 227, 0, 0, 0, 0, 543, 132, 0, 0, 0, 0, 603, 80, 0, 0, 0, 0, 765, 220, 0, 0, 0, 0, 602, 373)
 }
-point_count = 5
+point_count = 6
 
 [node name="tutorial" type="Node2D"]
 position = Vector2(1, 1)
@@ -30,7 +30,7 @@ stream = ExtResource("3_o8cmq")
 volume_db = -3.0
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(22, 74)
+position = Vector2(-425, 52)
 curve = SubResource("Curve2D_xum2d")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -67,3 +67,20 @@ stream = ExtResource("9_sti04")
 
 [node name="a2" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("10_5djil")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 34.0
+offset_right = 883.0
+offset_bottom = 79.0
+text = "3d test scene"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 487.0
+offset_top = 106.0
+offset_right = 886.0
+offset_bottom = 151.0
+text = "audio reactive scene"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

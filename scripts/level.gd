@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var SongName: String = "Song1"
+@export var SongName: String = "Song2"
 
 func _ready():
 	$MainCam/Camera3D/AnimationPlayer.play("running")

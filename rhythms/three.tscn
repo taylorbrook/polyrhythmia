@@ -3,11 +3,11 @@
 [ext_resource type="ArrayMesh" uid="uid://b0esl445wk3h" path="res://mesh/3beats.tres" id="1_g3743"]
 [ext_resource type="Shader" path="res://mesh/outline.gdshader" id="2_hr10d"]
 [ext_resource type="Script" path="res://scripts/Rhythm3d.gd" id="3_6suqd"]
-[ext_resource type="AudioStream" uid="uid://n4v8arjed8a" path="res://audio/harp_sampler/player_mono/a3_mf_1.wav" id="4_5cyq6"]
+[ext_resource type="AudioStream" uid="uid://n4v8arjed8a" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_1.wav" id="4_5cyq6"]
 [ext_resource type="Shader" path="res://rhythms/musicreacttest.gdshader" id="4_ay1ig"]
-[ext_resource type="AudioStream" uid="uid://u8dxrdnl6fc7" path="res://audio/harp_sampler/player_mono/a3_mf_2.wav" id="5_fmb81"]
+[ext_resource type="AudioStream" uid="uid://u8dxrdnl6fc7" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_2.wav" id="5_fmb81"]
 [ext_resource type="Texture2D" uid="uid://bwa0s0scw5s3w" path="res://assets/textures/gradient.png" id="5_i2e3a"]
-[ext_resource type="AudioStream" uid="uid://ct06jghm52ebe" path="res://audio/harp_sampler/player_mono/g3_mf_1.wav" id="6_pt8qh"]
+[ext_resource type="AudioStream" uid="uid://ct06jghm52ebe" path="res://audio/harp_sampler/player_mono/octave3/g3_mf_1.wav" id="6_pt8qh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g46uo"]
 resource_name = "Material"

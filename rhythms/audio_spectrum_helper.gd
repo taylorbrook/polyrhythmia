@@ -21,7 +21,6 @@ func _ready():
 	RenderingServer.global_shader_parameter_set("spectrum_texture", image_texture)
 	spectrum = AudioServer.get_bus_effect_instance(3,0)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var prev_hz = 0

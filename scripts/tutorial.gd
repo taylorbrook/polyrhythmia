@@ -13,9 +13,6 @@ var beat2trigger_r = false
 var beat3trigger_r = false
 var beat4trigger_r = false
 
-
-
-
 #button inputs "D" and "J"
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("button1"):

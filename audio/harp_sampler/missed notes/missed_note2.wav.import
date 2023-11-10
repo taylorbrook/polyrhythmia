@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fdvtwtcvmnec"
+path="res://.godot/imported/missed_note2.wav-b2130cb23431d976b7ef2b8469ecc93b.sample"
+
+[deps]
+
+source_file="res://audio/harp_sampler/missed notes/missed_note2.wav"
+dest_files=["res://.godot/imported/missed_note2.wav-b2130cb23431d976b7ef2b8469ecc93b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

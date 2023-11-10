@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=47 format=3 uid="uid://bwrbp5hm8j3ht"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
@@ -34,7 +34,6 @@
 [ext_resource type="AudioStream" uid="uid://xu5ne4s11p3y" path="res://audio/harp_sampler/player_mono/octave3/g3_mf_2.wav" id="31_3en57"]
 [ext_resource type="AudioStream" uid="uid://cevde80rl2plp" path="res://audio/harp_sampler/player_mono/octave3/eb3_mf.wav" id="32_pghup"]
 [ext_resource type="AudioStream" uid="uid://c2eh6mdc5mkg" path="res://audio/harp_sampler/player_mono/octave3/ab1_mp.wav" id="33_4y61x"]
-[ext_resource type="Script" path="res://rhythms/SongPlayerSpeelScaling.gd" id="34_k5s0j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kadxq"]
 sky_top_color = Color(0.152941, 0.101961, 0.184314, 1)
@@ -373,7 +372,7 @@ tracks/5/use_blend = true
 tracks/6/type = "audio"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("BackingAudio/AudioStreamPlayer")
+tracks/6/path = NodePath("BackingAudio/accompaniment")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -821,7 +820,7 @@ light_color = Color(1, 1, 0.886275, 1)
 mesh = SubResource("PlaneMesh_c12ko")
 
 [node name="MainCam" type="Node3D" parent="."]
-transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 0, 0)
+transform = Transform3D(0.929669, 0, 0.368395, 0, 1, 0, -0.368395, 0, 0.929669, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="MainCam"]
 transform = Transform3D(0.965589, 0.254039, -0.0556958, -0.163601, 0.759793, 0.629244, 0.20217, -0.59848, 0.775209, 0.959937, 3.12978, 3.13565)
@@ -899,7 +898,6 @@ bus = &"player_right"
 libraries = {
 "": SubResource("AnimationLibrary_mug7h")
 }
-script = ExtResource("34_k5s0j")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 update_mode = 1
@@ -934,7 +932,7 @@ text = "30 BPM"
 
 [node name="BackingAudio" type="Node" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BackingAudio"]
+[node name="accompaniment" type="AudioStreamPlayer" parent="BackingAudio"]
 
 [connection signal="value_changed" from="UI/VSlider" to="." method="_on_v_slider_value_changed"]
 [connection signal="value_changed" from="UI/VSlider" to="2_subdivisions" method="_on_v_slider_value_changed"]

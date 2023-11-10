@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=9 format=3 uid="uid://dujyxjx06mqyn"]
+[gd_resource type="AudioBusLayout" load_steps=10 format=3 uid="uid://dujyxjx06mqyn"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_xm228"]
 resource_name = "Reverb"
@@ -26,6 +26,7 @@ pan = -1.0
 resource_name = "Delay"
 tap1_level_db = -10.0
 tap2_level_db = -15.0
+feedback_active = true
 
 [sub_resource type="AudioEffectPanner" id="AudioEffectPanner_0vgqy"]
 resource_name = "Panner"
@@ -37,12 +38,19 @@ buffer_length = 1.0
 
 [sub_resource type="AudioEffectDelay" id="AudioEffectDelay_6oo2o"]
 resource_name = "Delay"
-tap1_active = false
-tap1_level_db = -60.0
-tap2_active = false
+tap1_pan = -0.4
+tap2_level_db = -60.0
 feedback_active = true
 feedback_delay_ms = 250.0
-feedback_level_db = -9.0
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_xi25k"]
+resource_name = "Delay"
+tap1_delay_ms = 300.0
+tap1_pan = 0.4
+tap2_delay_ms = 600.0
+tap2_level_db = -9.0
+tap2_pan = 0.6
+feedback_active = true
 
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectReverb_xm228")
@@ -77,3 +85,5 @@ bus/3/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_p404m")
 bus/3/effect/0/enabled = true
 bus/3/effect/1/effect = SubResource("AudioEffectDelay_6oo2o")
 bus/3/effect/1/enabled = true
+bus/3/effect/2/effect = SubResource("AudioEffectDelay_xi25k")
+bus/3/effect/2/enabled = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://clwuud8tkwo1y"]
+[gd_scene load_steps=33 format=3 uid="uid://clwuud8tkwo1y"]
 
 [ext_resource type="Script" path="res://scripts/Rhythm.gd" id="1_n5yha"]
 [ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="2_esryw"]
@@ -113,33 +113,13 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3, 6)
 }
 tracks/0/use_blend = true
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("delayproperties:delaytap1")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 3, 6),
-"transitions": PackedFloat32Array(372.31, 36.5136, 32.0001),
-"update": 0,
-"values": [500.0, 250.0, 100.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("delayproperties:delaytap2")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(64, 29.857),
-"update": 0,
-"values": [500.0, 1000.0]
-}
+
+[sub_resource type="Animation" id="Animation_vkt4t"]
+length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sk1rf"]
 _data = {
+"RESET": SubResource("Animation_vkt4t"),
 "test_animation_taylor": SubResource("Animation_tnkr5")
 }
 
@@ -309,6 +289,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qf124")
 [node name="samples" type="Node" parent="."]
 
 [node name="g0" type="AudioStreamPlayer" parent="samples"]
+max_polyphony = 2
+bus = &"backing track"
 
 [node name="g1" type="AudioStreamPlayer" parent="samples"]
 stream = ExtResource("2_esryw")
@@ -358,9 +340,26 @@ libraries = {
 "": SubResource("AnimationLibrary_sk1rf")
 }
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationPlayer"]
+method_call_mode = 1
+audio_max_polyphony = 64
+libraries = {
+"": SubResource("AnimationLibrary_sk1rf")
+}
+
 [node name="delayproperties" type="Node" parent="."]
 script = ExtResource("23_sotti")
-delaytap1 = 500.0
-delaytap2 = 500.0
+delaytap_player_left1 = 250.0
+delaytap_player_left2 = 500.0
+feedback_player_left = 250.0
+delaytap_player_right1 = 571.0
+delaytap_player_right2 = 1143.0
+feedback_player_right = 286.0
+delaytap_backing_left1 = 500.0
+delaytap_backing_left2 = 500.0
+feedback_backing_left = 250.0
+delaytap_backing_right1 = 571.0
+delaytap_backing_right2 = 1143.0
+feedback_backing_right = 286.0
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]

@@ -6,17 +6,16 @@
 [sub_resource type="CylinderMesh" id="CylinderMesh_nvqjv"]
 height = 0.105
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xr822"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsk2r"]
 resource_local_to_scene = true
-albedo_color = Color(0.458824, 0.576471, 0.431373, 1)
-metallic = 0.66
-metallic_specular = 0.0
-roughness = 0.06
+albedo_color = Color(0.905882, 0.752941, 0.858824, 1)
+metallic = 0.8
+roughness = 0.12
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srsk6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88i48"]
 resource_local_to_scene = true
-transparency = 1
-albedo_color = Color(0.168627, 0.388235, 0.313726, 1)
+roughness = 0.43
+emission = Color(0.690196, 0.517647, 0.270588, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_k3aeg"]
 size = Vector2(0.965, 0.29)
@@ -65,7 +64,7 @@ script = ExtResource("1_p5eqy")
 [node name="Wheel" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, -8.74228e-08, 4.37114e-08, 4.37114e-08, 1.91069e-15, 1, -8.74228e-08, 1, 1.91069e-15, 0, 0, 0)
 mesh = SubResource("CylinderMesh_nvqjv")
-surface_material_override/0 = SubResource("StandardMaterial3D_xr822")
+surface_material_override/0 = SubResource("StandardMaterial3D_jsk2r")
 
 [node name="Polymark0" type="Node3D" parent="Wheel"]
 
@@ -73,7 +72,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_xr822")
 transform = Transform3D(-3.69738e-09, -0.0845863, 0, -3.69738e-09, 1.61618e-16, 0.0845863, -0.0845863, 3.69738e-09, -3.69738e-09, -0.476, 0.0532149, -2.3261e-09)
 mesh = ExtResource("1_axvxf")
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_srsk6")
+surface_material_override/0 = SubResource("StandardMaterial3D_88i48")
 
 [node name="DebugMarker" type="Label3D" parent="Wheel/Polymark0/MeshInstance3D"]
 transform = Transform3D(-4.37114e-08, -1, 4.37115e-08, 1, -4.37114e-08, 1.31134e-07, -1.31134e-07, 4.37114e-08, 1, -6.10586e-09, 0, 0.139686)

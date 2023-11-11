@@ -63,7 +63,7 @@ subdivide_depth = 50
 
 [sub_resource type="Animation" id="Animation_fsypk"]
 resource_name = "running"
-length = 10.0
+length = 30.0
 loop_mode = 1
 tracks/0/type = "rotation_3d"
 tracks/0/imported = false
@@ -71,7 +71,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("..")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.199368, 0, 0.979925, 3, 1, 0, -0.160743, 0, 0.986996, 5.1, 1, 0.0979069, 0.21111, -0.0212577, 0.972314, 7.2, 1, -0.0775973, -0.147354, -0.011597, 0.985967, 10, 1, 0, 0.199368, 0, 0.979925)
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.199368, 0, 0.979925, 9, 1, 0, -0.160743, 0, 0.986996, 21.6, 1, -0.0775973, -0.147354, -0.011597, 0.985967, 29.9, 1, 0, 0.199368, 0, 0.979925)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c2brf"]
 _data = {
@@ -384,7 +384,7 @@ tracks/6/use_blend = true
 [sub_resource type="Animation" id="Animation_1xgs8"]
 resource_name = "Song2"
 length = 28.0
-loop_mode = 2
+loop_mode = 1
 step = 0.5
 tracks/0/type = "audio"
 tracks/0/imported = false
@@ -813,7 +813,7 @@ script = ExtResource("1_u404x")
 environment = SubResource("Environment_07gvc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.861974, 0.506952, 0, -0.506952, -0.861974, 0, 8.36086, -21.1571)
+transform = Transform3D(1, 0, 0, 0, -0.998955, 0.0457121, 0, -0.0457121, -0.998955, 0, 6.63931, 2.46136)
 light_color = Color(1, 1, 0.886275, 1)
 
 [node name="Water" type="MeshInstance3D" parent="."]
@@ -915,25 +915,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VSlider" type="VSlider" parent="UI"]
-layout_mode = 0
-offset_right = 16.0
-offset_bottom = 248.0
-min_value = 20.0
-max_value = 120.0
-value = 30.0
-
-[node name="Label" type="Label" parent="UI"]
-layout_mode = 0
-offset_left = 16.0
-offset_right = 89.0
-offset_bottom = 26.0
-text = "30 BPM"
-
 [node name="BackingAudio" type="Node" parent="."]
 
 [node name="accompaniment" type="AudioStreamPlayer" parent="BackingAudio"]
-
-[connection signal="value_changed" from="UI/VSlider" to="." method="_on_v_slider_value_changed"]
-[connection signal="value_changed" from="UI/VSlider" to="2_subdivisions" method="_on_v_slider_value_changed"]
-[connection signal="value_changed" from="UI/VSlider" to="SongPlayer" method="_on_v_slider_value_changed"]

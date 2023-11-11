@@ -12,10 +12,12 @@ wet = 0.2
 
 [sub_resource type="AudioEffectDelay" id="AudioEffectDelay_jx3m1"]
 resource_name = "Delay"
-tap1_level_db = -10.0
+tap1_level_db = -60.0
 tap1_pan = -1.0
-tap2_level_db = -15.0
+tap2_level_db = -60.0
 tap2_pan = -1.0
+feedback_active = true
+feedback_level_db = -60.0
 script = SubResource("GDScript_texjl")
 
 [sub_resource type="AudioEffectPanner" id="AudioEffectPanner_ctqt2"]
@@ -24,9 +26,10 @@ pan = -1.0
 
 [sub_resource type="AudioEffectDelay" id="AudioEffectDelay_acnsx"]
 resource_name = "Delay"
-tap1_level_db = -10.0
-tap2_level_db = -15.0
+tap1_level_db = -60.0
+tap2_level_db = -60.0
 feedback_active = true
+feedback_level_db = -60.0
 
 [sub_resource type="AudioEffectPanner" id="AudioEffectPanner_0vgqy"]
 resource_name = "Panner"
@@ -38,19 +41,23 @@ buffer_length = 1.0
 
 [sub_resource type="AudioEffectDelay" id="AudioEffectDelay_6oo2o"]
 resource_name = "Delay"
+tap1_level_db = -60.0
 tap1_pan = -0.4
 tap2_level_db = -60.0
 feedback_active = true
 feedback_delay_ms = 250.0
+feedback_level_db = -60.0
 
 [sub_resource type="AudioEffectDelay" id="AudioEffectDelay_xi25k"]
 resource_name = "Delay"
 tap1_delay_ms = 300.0
+tap1_level_db = -60.0
 tap1_pan = 0.4
 tap2_delay_ms = 600.0
-tap2_level_db = -9.0
+tap2_level_db = -60.0
 tap2_pan = 0.6
 feedback_active = true
+feedback_level_db = -60.0
 
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectReverb_xm228")

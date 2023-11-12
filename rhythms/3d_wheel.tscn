@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cjg30qei3lmr" path="res://mesh/4beats.tres" id="1_axvxf"]
 [ext_resource type="Script" path="res://scripts/3d_wheel.gd" id="1_p5eqy"]
-[ext_resource type="Material" path="res://assets/textures/3d_wheel_texture.tres" id="2_y7pbx"]
+[ext_resource type="Material" uid="uid://bxky85qc7dvj2" path="res://assets/textures/3d_wheel_texture.tres" id="2_y7pbx"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_l0opf"]
 height = 0.105

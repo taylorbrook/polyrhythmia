@@ -89,7 +89,7 @@ light_color = Color(1, 1, 0.886275, 1)
 mesh = SubResource("PlaneMesh_c12ko")
 
 [node name="MainCam" type="Node3D" parent="."]
-transform = Transform3D(0.996841, 0, 0.0794254, 0, 1, 0, -0.0794254, 0, 0.996841, 0, 0, 0)
+transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 1.10695, 1.33727)
 
 [node name="Camera3D" type="Camera3D" parent="MainCam"]
 transform = Transform3D(0.980616, 0.163564, -0.107881, -0.0578545, 0.767749, 0.638134, 0.187201, -0.619523, 0.76233, 0.959937, 4.40788, 3.13565)
@@ -103,7 +103,7 @@ libraries = {
 }
 
 [node name="2_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -2.93226, 1.289, 0)
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -1.18452, 1.289, 1.41285)
 beats = 2
 spinning = true
 
@@ -113,7 +113,7 @@ max_polyphony = 8
 bus = &"player_left"
 
 [node name="2_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 3.22118, 1.289, 0)
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.4389, 1.289, 1.62834)
 beats = 2
 spinning = true
 direction = 1
@@ -122,60 +122,163 @@ track = 1
 [node name="NotePlayer2_R" type="AudioStreamPlayer" parent="2_subdivisions_counterclockwise"]
 volume_db = -3.0
 max_polyphony = 8
-bus = &"player_left"
+bus = &"player_right"
 
-[node name="3_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -1.6294, 1.289, -2.02756)
+[node name="3_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -1.42536, 1.289, -0.0148101)
 beats = 3
-spinning = true
-track = 1
-
-[node name="NotePlayer3" type="AudioStreamPlayer" parent="3_subdivisions"]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="4_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 0, 1.289, 0)
 spinning = true
 track = 2
 
-[node name="NotePlayer4" type="AudioStreamPlayer" parent="4_subdivisions"]
+[node name="NotePlayer3_L" type="AudioStreamPlayer" parent="3_subdivisions_clockwise"]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_left"
 
-[node name="5_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 2.74096, 1.289, -2.04332)
-beats = 5
+[node name="3_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.58275, 1.289, 0.128923)
+beats = 3
 spinning = true
 direction = 1
 track = 3
 
-[node name="NotePlayer5" type="AudioStreamPlayer" parent="5_subdivisions"]
+[node name="NotePlayer3_R" type="AudioStreamPlayer" parent="3_subdivisions_counterclockwise"]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_right"
 
-[node name="6_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -4.40504, 1.289, -4.20273)
-beats = 6
+[node name="4_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -1.69317, 1.289, -1.46076)
 spinning = true
 track = 4
 
-[node name="NotePlayer6" type="AudioStreamPlayer" parent="6_subdivisions"]
+[node name="NotePlayer4_L" type="AudioStreamPlayer" parent="4_subdivisions_clockwise"]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_left"
 
-[node name="7_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 4.19583, 1.289, -4.09386)
-beats = 7
+[node name="4_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.3866, 1.289, -1.37411)
 spinning = true
 direction = 1
 track = 5
 
-[node name="NotePlayer7" type="AudioStreamPlayer" parent="7_subdivisions"]
+[node name="NotePlayer4_R" type="AudioStreamPlayer" parent="4_subdivisions_counterclockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="5_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -2.13162, 1.289, -3.28237)
+beats = 5
+spinning = true
+track = 6
+
+[node name="NotePlayer5_L" type="AudioStreamPlayer" parent="5_subdivisions_clockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="5_subdivisions_counterclockwise2" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.18642, 1.289, -3.22585)
+beats = 5
+spinning = true
+direction = 1
+track = 7
+
+[node name="NotePlayer5_R" type="AudioStreamPlayer" parent="5_subdivisions_counterclockwise2"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="6_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -2.15272, 1.289, -5.16874)
+beats = 6
+spinning = true
+track = 8
+
+[node name="NotePlayer6_L" type="AudioStreamPlayer" parent="6_subdivisions_clockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="6_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.1443, 1.289, -5.14326)
+beats = 6
+spinning = true
+direction = 1
+track = 9
+
+[node name="NotePlayer6_R" type="AudioStreamPlayer" parent="6_subdivisions_counterclockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="7_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -2.43139, 1.289, -7.25267)
+beats = 7
+spinning = true
+track = 10
+
+[node name="NotePlayer7_L" type="AudioStreamPlayer" parent="7_subdivisions_clockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="7_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.1385, 1.289, -7.3943)
+beats = 7
+spinning = true
+direction = 1
+track = 11
+
+[node name="NotePlayer7_R" type="AudioStreamPlayer" parent="7_subdivisions_counterclockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="8_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -2.49513, 1.289, -9.37093)
+beats = 8
+spinning = true
+track = 12
+
+[node name="NotePlayer8_L" type="AudioStreamPlayer" parent="8_subdivisions_clockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="8_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.19809, 1.289, -9.38637)
+beats = 8
+spinning = true
+direction = 1
+track = 13
+
+[node name="NotePlayer8_R" type="AudioStreamPlayer" parent="8_subdivisions_counterclockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="9_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -2.45464, 1.289, -11.6118)
+beats = 9
+spinning = true
+track = 14
+
+[node name="NotePlayer9_L" type="AudioStreamPlayer" parent="9_subdivisions_clockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="9_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.18352, 1.289, -11.3867)
+beats = 9
+spinning = true
+direction = 1
+track = 15
+
+[node name="NotePlayer9_R" type="AudioStreamPlayer" parent="9_subdivisions_counterclockwise"]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_right"

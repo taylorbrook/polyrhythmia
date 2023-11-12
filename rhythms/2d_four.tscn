@@ -1,17 +1,17 @@
 [gd_scene load_steps=33 format=3 uid="uid://clwuud8tkwo1y"]
 
 [ext_resource type="Script" path="res://scripts/Rhythm.gd" id="1_n5yha"]
-[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="2_esryw"]
-[ext_resource type="AudioStream" uid="uid://d1tkiieg02b4b" path="res://audio/harp_sampler/accompaniment_stereo/a1_mp.wav" id="3_8x4wj"]
-[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="4_0dgdu"]
-[ext_resource type="AudioStream" uid="uid://bd3fioeqgibku" path="res://audio/harp_sampler/accompaniment_stereo/g2_mp.wav" id="5_qmwmu"]
-[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/a2_mp.wav" id="6_hyt87"]
-[ext_resource type="AudioStream" uid="uid://dw1owysn1mp6y" path="res://audio/harp_sampler/accompaniment_stereo/b2_mp.wav" id="7_pfy7a"]
-[ext_resource type="AudioStream" uid="uid://d4khf4pa2j6x4" path="res://audio/harp_sampler/accompaniment_stereo/c3_mp.wav" id="8_qmlis"]
-[ext_resource type="AudioStream" uid="uid://bc5g8sw0isa85" path="res://audio/harp_sampler/accompaniment_stereo/d3_mp.wav" id="9_4dyvb"]
-[ext_resource type="AudioStream" uid="uid://6s42mh0q4p8m" path="res://audio/harp_sampler/accompaniment_stereo/f#3_mp.wav" id="10_uwu07"]
-[ext_resource type="AudioStream" uid="uid://bdw08icnk8268" path="res://audio/harp_sampler/accompaniment_stereo/g3_mp.wav" id="11_go7ep"]
-[ext_resource type="AudioStream" uid="uid://cbh2bvh2n0hl" path="res://audio/harp_sampler/accompaniment_stereo/f3_mp.wav" id="12_sfj56"]
+[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/octave1/g1_mp.wav" id="2_wvpi2"]
+[ext_resource type="AudioStream" uid="uid://d1tkiieg02b4b" path="res://audio/harp_sampler/accompaniment_stereo/octave1/a1_mp.wav" id="3_khnwj"]
+[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/octave2/d2_mp.wav" id="4_51ph6"]
+[ext_resource type="AudioStream" uid="uid://bd3fioeqgibku" path="res://audio/harp_sampler/accompaniment_stereo/octave2/g2_mp.wav" id="5_kg1ve"]
+[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/octave2/a2_mp.wav" id="6_44cbe"]
+[ext_resource type="AudioStream" uid="uid://dw1owysn1mp6y" path="res://audio/harp_sampler/accompaniment_stereo/octave2/b2_mp.wav" id="7_ig65h"]
+[ext_resource type="AudioStream" uid="uid://d4khf4pa2j6x4" path="res://audio/harp_sampler/accompaniment_stereo/octave3/c3_mp.wav" id="8_pbhqf"]
+[ext_resource type="AudioStream" uid="uid://bc5g8sw0isa85" path="res://audio/harp_sampler/accompaniment_stereo/octave3/d3_mp.wav" id="9_glb20"]
+[ext_resource type="AudioStream" uid="uid://6s42mh0q4p8m" path="res://audio/harp_sampler/accompaniment_stereo/octave3/f#3_mp.wav" id="10_vx7g7"]
+[ext_resource type="AudioStream" uid="uid://bdw08icnk8268" path="res://audio/harp_sampler/accompaniment_stereo/octave2/g3_mp.wav" id="11_cym20"]
+[ext_resource type="AudioStream" uid="uid://cbh2bvh2n0hl" path="res://audio/harp_sampler/accompaniment_stereo/octave3/f3_mp.wav" id="12_paq12"]
 [ext_resource type="AudioStream" uid="uid://n4v8arjed8a" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_1.wav" id="13_2170l"]
 [ext_resource type="AudioStream" uid="uid://u8dxrdnl6fc7" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_2.wav" id="14_uk7ia"]
 [ext_resource type="AudioStream" uid="uid://c8jflbf8k8xvo" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_3.wav" id="15_nrlb2"]
@@ -103,15 +103,15 @@ tracks/0/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_8x4wj")
+"stream": ExtResource("3_khnwj")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_hyt87")
+"stream": ExtResource("6_44cbe")
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_hyt87")
+"stream": ExtResource("6_44cbe")
 }],
 "times": PackedFloat32Array(0, 3, 6)
 }
@@ -293,37 +293,37 @@ max_polyphony = 2
 bus = &"backing track"
 
 [node name="g1" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("2_esryw")
+stream = ExtResource("2_wvpi2")
 
 [node name="a1" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("3_8x4wj")
+stream = ExtResource("3_khnwj")
 
 [node name="d2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("4_0dgdu")
+stream = ExtResource("4_51ph6")
 
 [node name="g2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("5_qmwmu")
+stream = ExtResource("5_kg1ve")
 
 [node name="a2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("6_hyt87")
+stream = ExtResource("6_44cbe")
 
 [node name="b2" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("7_pfy7a")
+stream = ExtResource("7_ig65h")
 
 [node name="c3" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("8_qmlis")
+stream = ExtResource("8_pbhqf")
 
 [node name="d3" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("9_4dyvb")
+stream = ExtResource("9_glb20")
 
 [node name="fs3" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("10_uwu07")
+stream = ExtResource("10_vx7g7")
 
 [node name="g3" type="AudioStreamPlayer" parent="samples"]
-stream = ExtResource("11_go7ep")
+stream = ExtResource("11_cym20")
 
 [node name="f3" type="AudioStreamPlayer" parent="samples/g3"]
-stream = ExtResource("12_sfj56")
+stream = ExtResource("12_paq12")
 
 [node name="playersamples" type="Node" parent="."]
 

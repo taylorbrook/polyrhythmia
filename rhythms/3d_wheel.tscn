@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c50ac4wvpw0bg"]
+[gd_scene load_steps=14 format=3 uid="uid://c50ac4wvpw0bg"]
 
 [ext_resource type="ArrayMesh" uid="uid://cjg30qei3lmr" path="res://mesh/4beats.tres" id="1_axvxf"]
 [ext_resource type="Script" path="res://scripts/3d_wheel.gd" id="1_p5eqy"]
@@ -16,6 +16,9 @@ roughness = 0.12
 resource_local_to_scene = true
 roughness = 0.43
 emission = Color(0.690196, 0.517647, 0.270588, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oeoq0"]
+size = Vector3(2.14556, 2.411, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_k3aeg"]
 size = Vector2(0.965, 0.29)
@@ -36,6 +39,9 @@ albedo_texture = SubResource("GradientTexture2D_xh11v")
 emission_enabled = true
 emission = Color(0.176471, 0.917647, 0, 1)
 emission_energy_multiplier = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3n71x"]
+size = Vector3(0.252735, 0.249855, 0.226482)
 
 [sub_resource type="Animation" id="Animation_oh42v"]
 resource_name = "flash_trigger"
@@ -81,6 +87,11 @@ billboard = 2
 text = "1"
 font_size = 222
 
+[node name="MarkerShape" type="Area3D" parent="Wheel/Polymark0/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wheel/Polymark0/MeshInstance3D/MarkerShape"]
+shape = SubResource("BoxShape3D_oeoq0")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03271)
 
@@ -101,7 +112,14 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.5, 0
 mesh = SubResource("PlaneMesh_k3aeg")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
+[node name="TriggerShape" type="Area3D" parent="TriggerArea"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerArea/TriggerShape"]
+shape = SubResource("BoxShape3D_3n71x")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_w8spu")
 }
+
+[connection signal="area_exited" from="TriggerArea/TriggerShape" to="." method="_on_trigger_shape_area_exited"]

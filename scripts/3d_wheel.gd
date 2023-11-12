@@ -78,14 +78,15 @@ func _process(delta):
 				measure+=1
 			last_beat=beat
 		#look in the future 1.5 seconds and activate upcoming beats.
-		var cpos = song_player.current_animation_position+1.5
+		var cpos = song_player.current_animation_position+1.0
 		if cpos > song_player.current_animation_length:
 			cpos = abs(cpos - song_player.current_animation_length)
 		var fkey = animation.track_find_key(track,cpos,Animation.FIND_MODE_NEAREST)
 		if fkey > -1:
-			var gtime = abs(animation.track_get_key_time(track,fkey)-cpos)
-			if gtime <= ((bpm/60.0)/beats):
-				var fbeat = int(cpos*bps) % beats
+			var atime = animation.track_get_key_time(track,fkey)
+			var gtime = abs(atime-cpos)
+			if gtime < ((bpm/60.0)/beats):
+				var fbeat = int(snapped(cpos,(bpm/60.0)/beats)*bps) % beats
 				var marker = wheel.get_node("Polymark"+str(fbeat)+"/MeshInstance3D")
 				if marker.transparency != 0.0:
 					marker.get_surface_override_material(0).next_pass = load("res://mesh/outline.tres")
@@ -95,3 +96,9 @@ func _bpm_setter(val):
 	bpm=val
 	bps = (bpm/60.0)*beats
 	beat_steps = (360.0/beats * bps)
+
+func _on_trigger_shape_area_exited(area):
+	var current_marker = area.get_parent()
+	if current_marker.transparency == 0.0:
+		current_marker.transparency=0.7
+		current_marker.get_surface_override_material(0).next_pass=null

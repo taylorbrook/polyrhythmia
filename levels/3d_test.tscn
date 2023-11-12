@@ -79,8 +79,8 @@
 sky_top_color = Color(0.152941, 0.101961, 0.184314, 1)
 sky_horizon_color = Color(0.47451, 0.341176, 0.156863, 1)
 sky_curve = 0.0416089
-ground_bottom_color = Color(0.372549, 0.360784, 0.380392, 1)
-ground_horizon_color = Color(0.360784, 0.470588, 0.396078, 1)
+ground_bottom_color = Color(0.14902, 0.188235, 0.176471, 1)
+ground_horizon_color = Color(0.160784, 0.196078, 0.188235, 1)
 sun_angle_max = 51.95
 sun_curve = 0.126135
 
@@ -1095,652 +1095,6 @@ tracks/6/keys = {
 "times": PackedFloat32Array()
 }
 tracks/6/use_blend = true
-
-[sub_resource type="Animation" id="Animation_is4lk"]
-resource_name = "tutorial (one wheel at a time)"
-length = 50.0
-tracks/0/type = "audio"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("2_subdivisions/NotePlayer2")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_qrkcs")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_qrkcs")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("31_3en57")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_61lpc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_qrkcs")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_qrkcs")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("31_3en57")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_61lpc")
-}],
-"times": PackedFloat32Array(4, 5, 6, 7, 20, 21, 22.1, 23)
-}
-tracks/0/use_blend = true
-tracks/1/type = "audio"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("3_subdivisions/NotePlayer3")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("40_x5dv7")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("41_ex51q")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("17_08pjy")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_mcn8e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("44_6etw2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_mcn8e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("40_x5dv7")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("41_ex51q")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("17_08pjy")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_mcn8e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("44_6etw2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_mcn8e")
-}],
-"times": PackedFloat32Array(8, 8.666, 9.3333, 10, 10.666, 11.333, 24, 24.666, 25.3333, 26, 26.666, 27.333)
-}
-tracks/1/use_blend = true
-tracks/2/type = "audio"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("4_subdivisions/NotePlayer4")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_148yk")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_61lpc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("47_51mm0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("48_0dqhr")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("49_ivl0c")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("50_0qv3e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_k4y3f")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("52_0dsxj")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_148yk")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_61lpc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("47_51mm0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("48_0dqhr")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("49_ivl0c")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("50_0qv3e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_k4y3f")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("52_0dsxj")
-}],
-"times": PackedFloat32Array(12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 28, 28.5, 29, 29.5, 30, 30.5, 31, 31.5)
-}
-tracks/2/use_blend = true
-tracks/3/type = "audio"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("5_subdivisions/NotePlayer5")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("55_d4q1l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("27_ebvno")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_qrkcs")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("31_3en57")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("48_0dqhr")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_61lpc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("47_51mm0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_148yk")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("29_3rh3t")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_k4y3f")
-}],
-"times": PackedFloat32Array(32, 32.4, 32.8, 33.2, 33.6, 34, 34.4, 34.8, 35.2, 35.6)
-}
-tracks/3/use_blend = true
-tracks/4/type = "audio"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("6_subdivisions/NotePlayer6")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("26_1vtfe")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("11_asrqd")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("56_g2ys4")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("21_bymp6")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("57_3bedy")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("26_1vtfe")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("58_l80tn")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("50_0qv3e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_508w6")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("59_h1v5g")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_sh37g")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_11j84")
-}],
-"times": PackedFloat32Array(36, 36.333, 36.666, 37, 37.333, 37.666, 38, 38.333, 38.666, 39, 39.333, 39.666)
-}
-tracks/4/use_blend = true
-tracks/5/type = "audio"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("7_subdivisions/NotePlayer7")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("29_3rh3t")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_148yk")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("47_51mm0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("29_3rh3t")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_148yk")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("47_51mm0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_61lpc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("29_3rh3t")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_148yk")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("47_51mm0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("29_3rh3t")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_148yk")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("47_51mm0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_61lpc")
-}],
-"times": PackedFloat32Array(40, 40.2857, 40.5714, 40.8571, 41.1428, 41.42, 41.7058, 42, 42.2857, 42.5714, 42.8571, 43.1428, 43.42, 43.7058)
-}
-tracks/5/use_blend = true
-tracks/6/type = "audio"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("BackingAudio/accompaniment1")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("34_uu7me")
-}],
-"times": PackedFloat32Array(0, 4, 8.65231, 12, 16, 20, 24.6523, 28)
-}
-tracks/6/use_blend = true
-tracks/7/type = "audio"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("BackingAudio/accompaniment1")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_ba5kc")
-}],
-"times": PackedFloat32Array(1, 5, 9.333, 12.5, 17, 21, 25.333, 28.5)
-}
-tracks/7/use_blend = true
-tracks/8/type = "audio"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("BackingAudio/accompaniment1")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("51_542ha")
-}],
-"times": PackedFloat32Array(2, 5.98631, 10, 13, 18, 21.9863, 26, 29)
-}
-tracks/8/use_blend = true
-tracks/9/type = "audio"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("BackingAudio/accompaniment1")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_88uyg")
-}],
-"times": PackedFloat32Array(3, 7, 10.666, 13.5, 19, 23, 26.666, 29.5)
-}
-tracks/9/use_blend = true
-tracks/10/type = "audio"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("BackingAudio/accompaniment1")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("43_5n6rq")
-}],
-"times": PackedFloat32Array(3.5, 7.333, 11.333, 14, 19.5, 23.333, 27.333, 30)
-}
-tracks/10/use_blend = true
-tracks/11/type = "audio"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("BackingAudio/accompaniment1")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_3t177")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_3t177")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_3t177")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_3t177")
-}],
-"times": PackedFloat32Array(7.666, 14.5, 23.666, 30.5)
-}
-tracks/11/use_blend = true
-tracks/12/type = "audio"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("BackingAudio/accompaniment1")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("40_jng8p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("40_jng8p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("40_jng8p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("40_jng8p")
-}],
-"times": PackedFloat32Array(8, 15, 24, 31)
-}
-tracks/12/use_blend = true
-tracks/13/type = "audio"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("BackingAudio/accompaniment1")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("39_4oets")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("39_4oets")
-}],
-"times": PackedFloat32Array(15.5, 31.5)
-}
-tracks/13/use_blend = true
 
 [sub_resource type="Animation" id="Animation_iohy8"]
 resource_name = "speed_test"
@@ -2926,6 +2280,652 @@ tracks/15/keys = {
 }
 tracks/15/use_blend = true
 
+[sub_resource type="Animation" id="Animation_is4lk"]
+resource_name = "tutorial (one wheel at a time)"
+length = 50.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2_subdivisions/NotePlayer2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("36_qrkcs")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("36_qrkcs")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("31_3en57")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_61lpc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("36_qrkcs")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("36_qrkcs")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("31_3en57")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_61lpc")
+}],
+"times": PackedFloat32Array(4, 5, 6, 7, 20, 21, 22.1, 23)
+}
+tracks/0/use_blend = true
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("3_subdivisions/NotePlayer3")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("40_x5dv7")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("41_ex51q")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_08pjy")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_mcn8e")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("44_6etw2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_mcn8e")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("40_x5dv7")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("41_ex51q")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_08pjy")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_mcn8e")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("44_6etw2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_mcn8e")
+}],
+"times": PackedFloat32Array(8, 8.666, 9.3333, 10, 10.666, 11.333, 24, 24.666, 25.3333, 26, 26.666, 27.333)
+}
+tracks/1/use_blend = true
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("4_subdivisions/NotePlayer4")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_148yk")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_61lpc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_51mm0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_0dqhr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("49_ivl0c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("50_0qv3e")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_k4y3f")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_0dsxj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_148yk")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_61lpc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_51mm0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_0dqhr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("49_ivl0c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("50_0qv3e")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_k4y3f")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_0dsxj")
+}],
+"times": PackedFloat32Array(12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 28, 28.5, 29, 29.5, 30, 30.5, 31, 31.5)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("5_subdivisions/NotePlayer5")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_d4q1l")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27_ebvno")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("36_qrkcs")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("31_3en57")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_0dqhr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_61lpc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_51mm0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_148yk")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_3rh3t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_k4y3f")
+}],
+"times": PackedFloat32Array(32, 32.4, 32.8, 33.2, 33.6, 34, 34.4, 34.8, 35.2, 35.6)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("6_subdivisions/NotePlayer6")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26_1vtfe")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_asrqd")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("56_g2ys4")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21_bymp6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("57_3bedy")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26_1vtfe")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("58_l80tn")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("50_0qv3e")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_508w6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("59_h1v5g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_sh37g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_11j84")
+}],
+"times": PackedFloat32Array(36, 36.333, 36.666, 37, 37.333, 37.666, 38, 38.333, 38.666, 39, 39.333, 39.666)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("7_subdivisions/NotePlayer7")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_3rh3t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_148yk")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_51mm0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_3rh3t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_148yk")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_51mm0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_61lpc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_3rh3t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_148yk")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_51mm0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_3rh3t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_148yk")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_51mm0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_61lpc")
+}],
+"times": PackedFloat32Array(40, 40.2857, 40.5714, 40.8571, 41.1428, 41.42, 41.7058, 42, 42.2857, 42.5714, 42.8571, 43.1428, 43.42, 43.7058)
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BackingAudio/accompaniment1")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_uu7me")
+}],
+"times": PackedFloat32Array(0, 4, 8.65231, 12, 16, 20, 24.6523, 28)
+}
+tracks/6/use_blend = true
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BackingAudio/accompaniment1")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_ba5kc")
+}],
+"times": PackedFloat32Array(1, 5, 9.333, 12.5, 17, 21, 25.333, 28.5)
+}
+tracks/7/use_blend = true
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BackingAudio/accompaniment1")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_542ha")
+}],
+"times": PackedFloat32Array(2, 5.98631, 10, 13, 18, 21.9863, 26, 29)
+}
+tracks/8/use_blend = true
+tracks/9/type = "audio"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BackingAudio/accompaniment1")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_88uyg")
+}],
+"times": PackedFloat32Array(3, 7, 10.666, 13.5, 19, 23, 26.666, 29.5)
+}
+tracks/9/use_blend = true
+tracks/10/type = "audio"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BackingAudio/accompaniment1")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("43_5n6rq")
+}],
+"times": PackedFloat32Array(3.5, 7.333, 11.333, 14, 19.5, 23.333, 27.333, 30)
+}
+tracks/10/use_blend = true
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BackingAudio/accompaniment1")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("37_3t177")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("37_3t177")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("37_3t177")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("37_3t177")
+}],
+"times": PackedFloat32Array(7.666, 14.5, 23.666, 30.5)
+}
+tracks/11/use_blend = true
+tracks/12/type = "audio"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BackingAudio/accompaniment1")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("40_jng8p")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("40_jng8p")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("40_jng8p")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("40_jng8p")
+}],
+"times": PackedFloat32Array(8, 15, 24, 31)
+}
+tracks/12/use_blend = true
+tracks/13/type = "audio"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BackingAudio/accompaniment1")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("39_4oets")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("39_4oets")
+}],
+"times": PackedFloat32Array(15.5, 31.5)
+}
+tracks/13/use_blend = true
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
 "Song1": SubResource("Animation_246lq"),
@@ -2948,6 +2948,7 @@ is_hemisphere = true
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
+SongName = "SongNotAllSubdivisions"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")
@@ -3043,7 +3044,7 @@ libraries = {
 update_mode = 1
 intensity = 0.33
 max_distance = 20.9
-size = Vector3(8.39568, 20, 7.98332)
+size = Vector3(8.39568, 12.6418, 7.98332)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00479043, -0.0146146, 0)

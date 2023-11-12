@@ -1,16 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://c50ac4wvpw0bg"]
+[gd_scene load_steps=15 format=3 uid="uid://c50ac4wvpw0bg"]
 
 [ext_resource type="ArrayMesh" uid="uid://cjg30qei3lmr" path="res://mesh/4beats.tres" id="1_axvxf"]
 [ext_resource type="Script" path="res://scripts/3d_wheel.gd" id="1_p5eqy"]
+[ext_resource type="Shader" path="res://rhythms/musicreacttest.gdshader" id="2_jo7xu"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_nvqjv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6gup"]
+render_priority = 0
+shader = ExtResource("2_jo7xu")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_l0opf"]
+material = SubResource("ShaderMaterial_q6gup")
 height = 0.105
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsk2r"]
-resource_local_to_scene = true
-albedo_color = Color(0.905882, 0.752941, 0.858824, 1)
-metallic = 0.8
-roughness = 0.12
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88i48"]
 resource_local_to_scene = true
@@ -69,8 +69,7 @@ script = ExtResource("1_p5eqy")
 
 [node name="Wheel" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, -8.74228e-08, 4.37114e-08, 4.37114e-08, 1.91069e-15, 1, -8.74228e-08, 1, 1.91069e-15, 0, 0, 0)
-mesh = SubResource("CylinderMesh_nvqjv")
-surface_material_override/0 = SubResource("StandardMaterial3D_jsk2r")
+mesh = SubResource("CylinderMesh_l0opf")
 
 [node name="Polymark0" type="Node3D" parent="Wheel"]
 

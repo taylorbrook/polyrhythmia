@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dhx5xcxg3hgxl" path="res://icon.svg" id="4_7eqhp"]
 [ext_resource type="Script" path="res://scripts/right_patch_follow.gd" id="4_tyoug"]
 [ext_resource type="Script" path="res://scripts/delayrslider.gd" id="6_y0eit"]
-[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="7_00v1u"]
-[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="8_oh3tt"]
-[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="9_sti04"]
-[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/a2_mp.wav" id="10_5djil"]
+[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/octave0/g0_mf_1.wav" id="7_00v1u"]
+[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/octave1/g1_mp.wav" id="8_oh3tt"]
+[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/octave2/d2_mp.wav" id="9_sti04"]
+[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/octave2/a2_mp.wav" id="10_5djil"]
 
 [sub_resource type="Curve2D" id="Curve2D_xum2d"]
 _data = {

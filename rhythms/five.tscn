@@ -3,11 +3,11 @@
 [ext_resource type="ArrayMesh" uid="uid://creuj3ywmy85d" path="res://mesh/5beats.tres" id="1_6xd5m"]
 [ext_resource type="Shader" path="res://mesh/outline.gdshader" id="2_7ynya"]
 [ext_resource type="Script" path="res://scripts/Rhythm3d.gd" id="3_3ndbg"]
-[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/g0_mf_1.wav" id="4_7dyyy"]
-[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/g1_mp.wav" id="5_g52fv"]
-[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/d2_mp.wav" id="6_xoq7b"]
-[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/a2_mp.wav" id="7_c4cgb"]
-[ext_resource type="AudioStream" uid="uid://d4khf4pa2j6x4" path="res://audio/harp_sampler/accompaniment_stereo/c3_mp.wav" id="8_gt4r4"]
+[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/octave0/g0_mf_1.wav" id="4_7dyyy"]
+[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/octave1/g1_mp.wav" id="5_g52fv"]
+[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/octave2/d2_mp.wav" id="6_xoq7b"]
+[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/octave2/a2_mp.wav" id="7_c4cgb"]
+[ext_resource type="AudioStream" uid="uid://d4khf4pa2j6x4" path="res://audio/harp_sampler/accompaniment_stereo/octave3/c3_mp.wav" id="8_gt4r4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fm3mn"]
 render_priority = 0

@@ -1,15 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=21 format=3 uid="uid://bnelqphec6ki1"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
-[ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
-[ext_resource type="PackedScene" uid="uid://c50ac4wvpw0bg" path="res://rhythms/3d_wheel.tscn" id="3_2bv1u"]
-[ext_resource type="Animation" uid="uid://bawd5t1e1pn3" path="res://animations/tutorial_onewheel.res" id="4_haxis"]
-[ext_resource type="Animation" uid="uid://cbky10ohdo4p5" path="res://animations/tests/TestSong1.res" id="5_xg450"]
-[ext_resource type="Animation" uid="uid://d102wckqp5no" path="res://animations/tests/TestSong2.res" id="6_yj7cp"]
-[ext_resource type="Animation" uid="uid://dp1xrdrhlv8vr" path="res://animations/tests/SpeedTest.res" id="7_ad5lr"]
-[ext_resource type="Animation" uid="uid://bn3dvg6vmyvaq" path="res://animations/beginner_prelude.res" id="8_6ka7k"]
-[ext_resource type="Animation" uid="uid://b5mltnm8tivct" path="res://animations/tests/TestSong3.res" id="8_f1m7n"]
-[ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="10_e6p8a"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_b581p"]
+[ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_haxes"]
+[ext_resource type="PackedScene" uid="uid://c50ac4wvpw0bg" path="res://rhythms/3d_wheel.tscn" id="3_gxfkc"]
+[ext_resource type="Animation" uid="uid://dp1xrdrhlv8vr" path="res://animations/tests/SpeedTest.res" id="4_825s6"]
+[ext_resource type="Animation" uid="uid://cbky10ohdo4p5" path="res://animations/tests/TestSong1.res" id="5_ac835"]
+[ext_resource type="Animation" uid="uid://d102wckqp5no" path="res://animations/tests/TestSong2.res" id="6_irfhu"]
+[ext_resource type="Animation" uid="uid://b5mltnm8tivct" path="res://animations/tests/TestSong3.res" id="7_sdova"]
+[ext_resource type="Animation" uid="uid://bn3dvg6vmyvaq" path="res://animations/beginner_prelude.res" id="8_qv3um"]
+[ext_resource type="Animation" uid="uid://bawd5t1e1pn3" path="res://animations/tutorial_onewheel.res" id="9_vjuv7"]
+[ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="10_wdewn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kadxq"]
 sky_top_color = Color(0.152941, 0.101961, 0.184314, 1)
@@ -29,7 +29,7 @@ sky = SubResource("Sky_arhvc")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bngas"]
 render_priority = 0
-shader = ExtResource("2_80fs5")
+shader = ExtResource("2_haxes")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c12ko"]
 material = SubResource("ShaderMaterial_bngas")
@@ -56,17 +56,17 @@ _data = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
-"SpeedTest": ExtResource("7_ad5lr"),
-"TestSong1": ExtResource("5_xg450"),
-"TestSong2": ExtResource("6_yj7cp"),
-"TestSong3": ExtResource("8_f1m7n"),
-"beginner_prelude": ExtResource("8_6ka7k"),
-"tutorial_onewheel": ExtResource("4_haxis")
+"SpeedTest": ExtResource("4_825s6"),
+"TestSong1": ExtResource("5_ac835"),
+"TestSong2": ExtResource("6_irfhu"),
+"TestSong3": ExtResource("7_sdova"),
+"beginner_prelude": ExtResource("8_qv3um"),
+"tutorial_onewheel": ExtResource("9_vjuv7")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m8iya"]
 render_priority = 0
-shader = ExtResource("10_e6p8a")
+shader = ExtResource("10_wdewn")
 
 [sub_resource type="SphereMesh" id="SphereMesh_hljms"]
 material = SubResource("ShaderMaterial_m8iya")
@@ -76,7 +76,7 @@ height = 5.49
 is_hemisphere = true
 
 [node name="3dTest" type="Node3D"]
-script = ExtResource("1_u404x")
+script = ExtResource("1_b581p")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")
@@ -89,10 +89,10 @@ light_color = Color(1, 1, 0.886275, 1)
 mesh = SubResource("PlaneMesh_c12ko")
 
 [node name="MainCam" type="Node3D" parent="."]
-transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 0, 0)
+transform = Transform3D(0.996841, 0, 0.0794254, 0, 1, 0, -0.0794254, 0, 0.996841, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="MainCam"]
-transform = Transform3D(0.982621, 0.140592, -0.121204, -0.090541, 0.933022, 0.348241, 0.162046, -0.331215, 0.929537, 0.959937, 3.55664, 3.13565)
+transform = Transform3D(0.980616, 0.163564, -0.107881, -0.0578545, 0.767749, 0.638134, 0.187201, -0.619523, 0.76233, 0.959937, 4.40788, 3.13565)
 current = true
 fov = 52.8573
 
@@ -102,18 +102,29 @@ libraries = {
 "": SubResource("AnimationLibrary_c2brf")
 }
 
-[node name="2_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.60636, 1.289, 0)
+[node name="2_subdivisions_clockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -2.93226, 1.289, 0)
+beats = 2
+spinning = true
+
+[node name="NotePlayer2_L" type="AudioStreamPlayer" parent="2_subdivisions_clockwise"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="2_subdivisions_counterclockwise" parent="." instance=ExtResource("3_gxfkc")]
+transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 3.22118, 1.289, 0)
 beats = 2
 spinning = true
 direction = 1
+track = 1
 
-[node name="NotePlayer2" type="AudioStreamPlayer" parent="2_subdivisions"]
+[node name="NotePlayer2_R" type="AudioStreamPlayer" parent="2_subdivisions_counterclockwise"]
 volume_db = -3.0
 max_polyphony = 8
-bus = &"player_right"
+bus = &"player_left"
 
-[node name="3_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+[node name="3_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
 transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -1.6294, 1.289, -2.02756)
 beats = 3
 spinning = true
@@ -124,7 +135,7 @@ volume_db = -3.0
 max_polyphony = 8
 bus = &"player_left"
 
-[node name="4_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+[node name="4_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
 transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 0, 1.289, 0)
 spinning = true
 track = 2
@@ -134,7 +145,7 @@ volume_db = -3.0
 max_polyphony = 8
 bus = &"player_left"
 
-[node name="5_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+[node name="5_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
 transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 2.74096, 1.289, -2.04332)
 beats = 5
 spinning = true
@@ -146,7 +157,7 @@ volume_db = -3.0
 max_polyphony = 8
 bus = &"player_right"
 
-[node name="6_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+[node name="6_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
 transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -4.40504, 1.289, -4.20273)
 beats = 6
 spinning = true
@@ -157,7 +168,7 @@ volume_db = -3.0
 max_polyphony = 8
 bus = &"player_left"
 
-[node name="7_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
+[node name="7_subdivisions" parent="." instance=ExtResource("3_gxfkc")]
 transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 4.19583, 1.289, -4.09386)
 beats = 7
 spinning = true
@@ -186,7 +197,7 @@ max_distance = 20.9
 size = Vector3(8.39568, 12.6418, 7.98332)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00479043, -0.0146146, 0)
+transform = Transform3D(0.999846, -0.0175571, 0, 0.0175571, 0.999846, 0, 0, 0, 1, -0.00479043, -0.0146146, 0)
 mesh = SubResource("SphereMesh_hljms")
 
 [node name="UI" type="Control" parent="."]

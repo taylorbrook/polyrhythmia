@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
-[ext_resource type="PackedScene" uid="uid://c50ac4wvpw0bg" path="res://rhythms/3d_wheel.tscn" id="3_2bv1u"]
+[ext_resource type="Script" path="res://scripts/BigWheels.gd" id="3_o0j0e"]
 [ext_resource type="Animation" uid="uid://bawd5t1e1pn3" path="res://animations/tutorial_onewheel.res" id="4_haxis"]
 [ext_resource type="Animation" uid="uid://cbky10ohdo4p5" path="res://animations/tests/TestSong1.res" id="5_xg450"]
 [ext_resource type="Animation" uid="uid://d102wckqp5no" path="res://animations/tests/TestSong2.res" id="6_yj7cp"]
@@ -27,16 +27,6 @@ sky_material = SubResource("ProceduralSkyMaterial_kadxq")
 background_mode = 2
 sky = SubResource("Sky_arhvc")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bngas"]
-render_priority = 0
-shader = ExtResource("2_80fs5")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_c12ko"]
-material = SubResource("ShaderMaterial_bngas")
-size = Vector2(100, 100)
-subdivide_width = 50
-subdivide_depth = 50
-
 [sub_resource type="Animation" id="Animation_fsypk"]
 resource_name = "running"
 length = 30.0
@@ -53,6 +43,16 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.199368, 0, 0.979925, 9, 1, 0, -0.1
 _data = {
 "running": SubResource("Animation_fsypk")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bngas"]
+render_priority = 0
+shader = ExtResource("2_80fs5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c12ko"]
+material = SubResource("ShaderMaterial_bngas")
+size = Vector2(100, 100)
+subdivide_width = 50
+subdivide_depth = 50
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
@@ -77,6 +77,7 @@ is_hemisphere = true
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
+SongName = "TestSong2"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")
@@ -85,86 +86,109 @@ environment = SubResource("Environment_07gvc")
 transform = Transform3D(1, 0, 0, 0, -0.998955, 0.0457121, 0, -0.0457121, -0.998955, 0, 6.63931, 2.46136)
 light_color = Color(1, 1, 0.886275, 1)
 
-[node name="Water" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_c12ko")
+[node name="BigWheels" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.41837, 0)
+script = ExtResource("3_o0j0e")
 
-[node name="MainCam" type="Node3D" parent="."]
-transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 0, 0)
+[node name="Right" type="Node3D" parent="BigWheels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="MainCam"]
-transform = Transform3D(0.982621, 0.140592, -0.121204, -0.090541, 0.933022, 0.348241, 0.162046, -0.331215, 0.929537, 0.959937, 3.55664, 3.13565)
+[node name="Left" type="Node3D" parent="BigWheels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="MainCam" type="Node3D" parent="BigWheels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29, 14.8833)
+
+[node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 current = true
 fov = 52.8573
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainCam/Camera3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BigWheels/MainCam/Camera3D"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_c2brf")
 }
 
-[node name="2_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 1.60636, 1.289, 0)
-beats = 2
-spinning = true
-direction = 1
+[node name="Water" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_c12ko")
 
-[node name="NotePlayer2" type="AudioStreamPlayer" parent="2_subdivisions"]
+[node name="NotePlayer2_L" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer2_R" type="AudioStreamPlayer" parent="."]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_right"
 
-[node name="3_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -1.6294, 1.289, -2.02756)
-beats = 3
-spinning = true
-track = 1
-
-[node name="NotePlayer3" type="AudioStreamPlayer" parent="3_subdivisions"]
+[node name="NotePlayer3_L" type="AudioStreamPlayer" parent="."]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_left"
 
-[node name="4_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 0, 1.289, 0)
-spinning = true
-track = 2
-
-[node name="NotePlayer4" type="AudioStreamPlayer" parent="4_subdivisions"]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="5_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 2.74096, 1.289, -2.04332)
-beats = 5
-spinning = true
-direction = 1
-track = 3
-
-[node name="NotePlayer5" type="AudioStreamPlayer" parent="5_subdivisions"]
+[node name="NotePlayer3_R" type="AudioStreamPlayer" parent="."]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_right"
 
-[node name="6_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, -4.40504, 1.289, -4.20273)
-beats = 6
-spinning = true
-track = 4
-
-[node name="NotePlayer6" type="AudioStreamPlayer" parent="6_subdivisions"]
+[node name="NotePlayer4_L" type="AudioStreamPlayer" parent="."]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_left"
 
-[node name="7_subdivisions" parent="." instance=ExtResource("3_2bv1u")]
-transform = Transform3D(1, 0, 0, 0, 0.176844, 0.984239, 0, -0.984239, 0.176844, 4.19583, 1.289, -4.09386)
-beats = 7
-spinning = true
-direction = 1
-track = 5
+[node name="NotePlayer4_R" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
 
-[node name="NotePlayer7" type="AudioStreamPlayer" parent="7_subdivisions"]
+[node name="NotePlayer5_L" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer5_R" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer6_L" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer6_R" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer7_L" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer7_R" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer8_L" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer8_R" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer9_L" type="AudioStreamPlayer" parent="."]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer9_R" type="AudioStreamPlayer" parent="."]
 volume_db = -3.0
 max_polyphony = 8
 bus = &"player_right"
@@ -186,7 +210,7 @@ max_distance = 20.9
 size = Vector3(8.39568, 12.6418, 7.98332)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00479043, -0.0146146, 0)
+transform = Transform3D(0.999846, -0.0175571, 0, 0.0175571, 0.999846, 0, 0, 0, 1, -0.00479043, -0.0146146, 0)
 mesh = SubResource("SphereMesh_hljms")
 
 [node name="UI" type="Control" parent="."]

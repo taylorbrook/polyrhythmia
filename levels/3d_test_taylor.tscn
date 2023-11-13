@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bnelqphec6ki1"]
+[gd_scene load_steps=21 format=3 uid="uid://citympwu0qk83"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_b581p"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_haxes"]

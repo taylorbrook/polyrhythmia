@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=54 format=3 uid="uid://bwrbp5hm8j3ht"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
@@ -10,6 +10,38 @@
 [ext_resource type="Animation" uid="uid://bn3dvg6vmyvaq" path="res://animations/beginner_prelude.res" id="8_6ka7k"]
 [ext_resource type="Animation" uid="uid://b5mltnm8tivct" path="res://animations/tests/TestSong3.res" id="8_f1m7n"]
 [ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="10_e6p8a"]
+[ext_resource type="AudioStream" uid="uid://huelf2awk8ln" path="res://audio/harp_sampler/player_mono/octave1/g1_mf.wav" id="10_hh0sh"]
+[ext_resource type="AudioStream" uid="uid://b83kg0djybeee" path="res://audio/harp_sampler/player_mono/octave1/b1_mp.wav" id="11_367ds"]
+[ext_resource type="AudioStream" uid="uid://dg0t5ccewwoxr" path="res://audio/harp_sampler/player_mono/octave1/g1_mp.wav" id="12_pgdgj"]
+[ext_resource type="AudioStream" uid="uid://b8ce58s2yn2pc" path="res://audio/harp_sampler/player_mono/octave3/d3_mp.wav" id="13_q2aqi"]
+[ext_resource type="AudioStream" uid="uid://cjmsi5olinxqy" path="res://audio/harp_sampler/player_mono/octave3/d3_p.wav" id="14_u3ue2"]
+[ext_resource type="AudioStream" uid="uid://c1ef3w7xbd28q" path="res://audio/harp_sampler/player_mono/octave3/g3_mp.wav" id="15_wcgts"]
+[ext_resource type="AudioStream" uid="uid://dm40sbq27qxaq" path="res://audio/harp_sampler/player_mono/octave3/g3_p.wav" id="16_l2hvr"]
+[ext_resource type="AudioStream" uid="uid://ilmtgn333ixg" path="res://audio/harp_sampler/player_mono/octave3/fs3_mf.wav" id="17_3dydr"]
+[ext_resource type="AudioStream" uid="uid://xu5ne4s11p3y" path="res://audio/harp_sampler/player_mono/octave3/g3_mf_2.wav" id="18_1mv65"]
+[ext_resource type="AudioStream" uid="uid://begtl6igwf6ol" path="res://audio/harp_sampler/player_mono/octave3/e3_mp.wav" id="19_yk04g"]
+[ext_resource type="AudioStream" uid="uid://cevde80rl2plp" path="res://audio/harp_sampler/player_mono/octave3/eb3_mf.wav" id="20_aium4"]
+[ext_resource type="AudioStream" uid="uid://c2eh6mdc5mkg" path="res://audio/harp_sampler/player_mono/octave3/ab1_mp.wav" id="21_ifpv6"]
+[ext_resource type="AudioStream" uid="uid://dl5rs8e8ahlve" path="res://audio/harp_sampler/player_mono/octave2/f2_mp.wav" id="22_i3abj"]
+[ext_resource type="AudioStream" uid="uid://bdmck58fdtrym" path="res://audio/harp_sampler/player_mono/octave2/b2_mp.wav" id="23_n0e05"]
+[ext_resource type="AudioStream" uid="uid://x7m3cri5enjc" path="res://audio/harp_sampler/player_mono/octave2/a2_mf.wav" id="24_dpy6g"]
+[ext_resource type="AudioStream" uid="uid://q3kf7nk8gmmo" path="res://audio/harp_sampler/player_mono/octave2/d2_p.wav" id="25_hetsb"]
+[ext_resource type="AudioStream" uid="uid://cqw5fc2i6jc35" path="res://audio/harp_sampler/player_mono/octave2/e2_mp.wav" id="26_3icla"]
+[ext_resource type="AudioStream" uid="uid://dx5blweybd34k" path="res://audio/harp_sampler/player_mono/octave2/d2_mf.wav" id="27_68xjy"]
+[ext_resource type="AudioStream" uid="uid://b2ex7txg1odti" path="res://audio/harp_sampler/player_mono/octave3/g3_mf_5.wav" id="28_ud3ft"]
+[ext_resource type="AudioStream" uid="uid://citdyi610am33" path="res://audio/harp_sampler/player_mono/octave3/g3_mf_4.wav" id="29_hhhw7"]
+[ext_resource type="AudioStream" uid="uid://bcppja1ks5tvb" path="res://audio/harp_sampler/player_mono/octave3/c3_mp.wav" id="30_oshfq"]
+[ext_resource type="AudioStream" uid="uid://c8jflbf8k8xvo" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_3.wav" id="31_62j36"]
+[ext_resource type="AudioStream" uid="uid://cy7n7beb8sslr" path="res://audio/harp_sampler/player_mono/octave2/g2_mp.wav" id="32_14b8c"]
+[ext_resource type="AudioStream" uid="uid://dxgpbqolqdulg" path="res://audio/harp_sampler/player_mono/octave3/cs3_mp.wav" id="33_e80oc"]
+[ext_resource type="AudioStream" uid="uid://dcxbovt4l3hcc" path="res://audio/harp_sampler/player_mono/octave3/d3_mf.wav" id="34_yxgly"]
+[ext_resource type="AudioStream" uid="uid://pxexbt2ot2k3" path="res://audio/harp_sampler/player_mono/octave2/d2_mp.wav" id="35_l7ujj"]
+[ext_resource type="AudioStream" uid="uid://b7yxbq1fgc0g5" path="res://audio/harp_sampler/player_mono/octave2/g2_mf.wav" id="36_1ior6"]
+[ext_resource type="AudioStream" uid="uid://b20u1mvnsojac" path="res://audio/harp_sampler/player_mono/octave2/f2_mf.wav" id="37_t6udv"]
+[ext_resource type="AudioStream" uid="uid://do5s2qybuhl4k" path="res://audio/harp_sampler/player_mono/octave3/cs3_mf.wav" id="38_aderi"]
+[ext_resource type="AudioStream" uid="uid://elya6khlppne" path="res://audio/harp_sampler/player_mono/octave3/e3_mf.wav" id="39_5r6j5"]
+[ext_resource type="AudioStream" uid="uid://585g4ne7uolc" path="res://audio/harp_sampler/player_mono/octave3/f3_mf.wav" id="40_dvlkx"]
+[ext_resource type="AudioStream" uid="uid://ceu0yf74usrba" path="res://audio/harp_sampler/player_mono/octave3/g3_mf.wav" id="41_ael1l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kadxq"]
 sky_top_color = Color(0.152941, 0.101961, 0.184314, 1)
@@ -54,12 +86,643 @@ size = Vector2(100, 100)
 subdivide_width = 50
 subdivide_depth = 50
 
+[sub_resource type="Animation" id="Animation_m1xv5"]
+resource_name = "TestSong4"
+length = 64.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotePlayer2_L")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_hh0sh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_hh0sh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_pgdgj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_hh0sh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_pgdgj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_hh0sh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_pgdgj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_367ds")
+}],
+"times": PackedFloat32Array(0, 1, 3, 3.996, 4.996, 5.996, 6.996, 8, 9, 10, 11, 20, 21, 22, 23)
+}
+tracks/0/use_blend = true
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotePlayer2_R")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_q2aqi")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_u3ue2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_q2aqi")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_u3ue2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}],
+"times": PackedFloat32Array(4, 5, 6, 7, 12, 13, 14, 15)
+}
+tracks/1/use_blend = true
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NotePlayer3_L")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24_dpy6g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_hetsb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26_3icla")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_n0e05")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27_68xjy")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24_dpy6g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_n0e05")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_hetsb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26_3icla")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_i3abj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27_68xjy")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24_dpy6g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_n0e05")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_hetsb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26_3icla")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_i3abj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27_68xjy")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24_dpy6g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_n0e05")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_hetsb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("26_3icla")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_i3abj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("27_68xjy")
+}],
+"times": PackedFloat32Array(28, 29, 30, 30.5, 31.5, 36, 37, 37.5, 38, 39, 39.5, 40, 41, 41.5, 42, 43, 43.5, 44, 45, 45.5, 46, 47, 47.5)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NotePlayer3_R")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("28_ud3ft")
+}],
+"times": PackedFloat32Array(2, 2.64667, 3.31367, 16.0193, 16.666, 17.333, 18, 18.6467, 19.3137, 20, 20.6467, 21.3137, 21.9807, 22.6273, 23.2943, 24, 24.6467, 25.3137, 25.9807, 26.6273, 27.2943, 27.9807, 28.6273, 29.2943, 29.9613, 30.608, 31.275)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NotePlayer4_L")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_hhhw7")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_yk04g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_q2aqi")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("30_oshfq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("31_62j36")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("32_14b8c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("33_e80oc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_yxgly")
+}],
+"times": PackedFloat32Array(4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NotePlayer4_R")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("NotePlayer5_L")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_hh0sh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("35_l7ujj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("32_14b8c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_hetsb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_i3abj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("36_1ior6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_yxgly")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("32_14b8c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_hetsb")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("37_t6udv")
+}],
+"times": PackedFloat32Array(12, 12.4, 12.8, 13.2, 13.6, 14, 14.4, 14.8, 15.2, 15.6)
+}
+tracks/6/use_blend = true
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("NotePlayer5_R")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/7/use_blend = true
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("NotePlayer6_L")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_pgdgj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_i3abj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("32_14b8c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("31_62j36")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("30_oshfq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("38_aderi")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("34_yxgly")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("39_5r6j5")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("40_dvlkx")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("41_ael1l")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_wcgts")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_l2hvr")
+}],
+"times": PackedFloat32Array(16, 16.33, 16.66, 17, 17.33, 17.66, 18, 18.33, 18.66, 19, 19.33, 19.66)
+}
+tracks/8/use_blend = true
+tracks/9/type = "audio"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("NotePlayer6_R")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/9/use_blend = true
+tracks/10/type = "audio"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("NotePlayer7_L")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_hh0sh")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_3dydr")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_1mv65")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_yk04g")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_aium4")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_q2aqi")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21_ifpv6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_i3abj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_n0e05")
+}],
+"times": PackedFloat32Array(52, 52.5, 53, 53.5, 54, 54.5, 55, 55.5, 56)
+}
+tracks/10/use_blend = true
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("NotePlayer7_R")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/11/use_blend = true
+tracks/12/type = "audio"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("NotePlayer8_L")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/12/use_blend = true
+tracks/13/type = "audio"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("NotePlayer8_R")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/13/use_blend = true
+tracks/14/type = "audio"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("NotePlayer9_L")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/14/use_blend = true
+tracks/15/type = "audio"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("NotePlayer9_R")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/15/use_blend = true
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
 "SpeedTest": ExtResource("7_ad5lr"),
 "TestSong1": ExtResource("5_xg450"),
 "TestSong2": ExtResource("6_yj7cp"),
 "TestSong3": ExtResource("8_f1m7n"),
+"TestSong4": SubResource("Animation_m1xv5"),
 "beginner_prelude": ExtResource("8_6ka7k"),
 "tutorial_onewheel": ExtResource("4_haxis")
 }
@@ -77,7 +740,6 @@ is_hemisphere = true
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
-SongName = "TestSong2"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")
@@ -97,10 +759,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29, 14.8833)
+transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 1.29, 14.8833)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 current = true
 fov = 52.8573
 

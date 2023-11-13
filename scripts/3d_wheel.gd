@@ -13,7 +13,7 @@ enum directions {Clockwise,CounterClockwise}
 @onready var animation:Animation
 
 var last_played_degrees = 0  # variable to keep track of the last played beat
-
+var beat = 0
 var ready_notes = []
 var ready_color = Color(0.169, 0.388, 0.314)
 #@onready var audio_streams = $samples.get_children()  # Array containing all AudioStreamPlayer nodes
@@ -22,11 +22,11 @@ var ready_color = Color(0.169, 0.388, 0.314)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var nbeats = 1
-	#var mat:StandardMaterial3D = $Wheel/Polymark0/MeshInstance3D.get_surface_override_material(0)
-	#mat.albedo_color= Color(randf_range(0.3,0.8),randf_range(0.3,0.8),randf_range(0.3,0.8),1.0)
-	#var nc = mat.albedo_color
+	var mat:StandardMaterial3D = $Wheel/Polymark0/MeshInstance3D.get_surface_override_material(0)
+	mat.albedo_color= Color(randf_range(0.3,0.8),randf_range(0.3,0.8),randf_range(0.3,0.8),1.0)
+	var nc = mat.albedo_color
 	#nc.a=0.5
-	#wheel.get_surface_override_material(0).albedo_color=nc
+	wheel.get_surface_override_material(0).albedo_color=nc
 	if FileAccess.file_exists("res://mesh/"+str(beats)+"beats.tres"):
 		$Wheel/Polymark0/MeshInstance3D.mesh=load("res://mesh/"+str(beats)+"beats.tres")
 	$Wheel/Polymark0/MeshInstance3D.transparency=1.0
@@ -35,7 +35,7 @@ func _ready():
 		var new_mark = $Wheel/Polymark0.duplicate()
 		new_mark.name="Polymark"+str(nbeats)
 		var nmesh = new_mark.get_node("MeshInstance3D")
-		#nmesh.set_surface_override_material(0,nmesh.get_surface_override_material(0).duplicate())
+		nmesh.set_surface_override_material(0,nmesh.get_surface_override_material(0).duplicate())
 		wheel.add_child(new_mark)
 		#change the direction depending on which way this wheel spins
 		if direction == directions.CounterClockwise:
@@ -68,7 +68,7 @@ func _process(delta):
 			wheel.rotation_degrees.x-=beat_steps * delta
 		else:
 			wheel.rotation_degrees.x+=beat_steps * delta
-		var beat = int(song_player.current_animation_position*bps) % beats
+		beat = int(song_player.current_animation_position*bps) % beats
 		if last_beat!=beat:
 			#flash the marker when an active polymarker goes by.
 			var current_marker = wheel.get_child(beat).get_node("MeshInstance3D")
@@ -98,7 +98,7 @@ func _process(delta):
 
 func _bpm_setter(val):
 	bpm=val
-	bps = (bpm/60.0)*beats
+	bps = (Globals.bpm/60.0)*beats
 	beat_steps = (360.0/beats * bps)
 
 func _on_trigger_shape_area_exited(area):

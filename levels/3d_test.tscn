@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=24 format=3 uid="uid://bwrbp5hm8j3ht"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
@@ -28,6 +28,34 @@ sky_material = SubResource("ProceduralSkyMaterial_kadxq")
 [sub_resource type="Environment" id="Environment_07gvc"]
 background_mode = 2
 sky = SubResource("Sky_arhvc")
+fog_density = 0.0
+fog_sky_affect = 0.453
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_length = 8.06
+
+[sub_resource type="Animation" id="Animation_lswjq"]
+resource_name = "entry"
+length = 3.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 15.07, 3, 1, 0, 0, 6.6)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../..:Fog")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.85, 0.0]
+}
 
 [sub_resource type="Animation" id="Animation_fsypk"]
 resource_name = "running"
@@ -43,8 +71,20 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.199368, 0, 0.979925, 9, 1, 0, -0.1
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c2brf"]
 _data = {
+"entry": SubResource("Animation_lswjq"),
 "running": SubResource("Animation_fsypk")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m8iya"]
+render_priority = 0
+shader = ExtResource("10_e6p8a")
+
+[sub_resource type="SphereMesh" id="SphereMesh_hljms"]
+material = SubResource("ShaderMaterial_m8iya")
+flip_faces = true
+radius = 17.995
+height = 8.535
+is_hemisphere = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bngas"]
 render_priority = 0
@@ -68,19 +108,10 @@ _data = {
 "tutorial_onewheel": ExtResource("4_haxis")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_m8iya"]
-render_priority = 0
-shader = ExtResource("10_e6p8a")
-
-[sub_resource type="SphereMesh" id="SphereMesh_hljms"]
-material = SubResource("ShaderMaterial_m8iya")
-flip_faces = true
-radius = 12.51
-height = 5.49
-is_hemisphere = true
-
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
+SongName = "TestSong2"
+Fog = 0.85
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_07gvc")
@@ -90,7 +121,7 @@ transform = Transform3D(1, 0, 0, 0, -0.998955, 0.0457121, 0, -0.0457121, -0.9989
 light_color = Color(1, 1, 0.886275, 1)
 
 [node name="BigWheels" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.41837, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.493, 0)
 script = ExtResource("3_o0j0e")
 
 [node name="Right" type="Node3D" parent="BigWheels"]
@@ -100,17 +131,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(0.920505, 0, 0.390731, 0, 1, 0, -0.390731, 0, 0.920505, 0, 1.29, 14.8833)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.07)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
 current = true
 fov = 52.8573
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BigWheels/MainCam/Camera3D"]
-speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_c2brf")
 }
+
+[node name="Clouds" type="MeshInstance3D" parent="BigWheels/MainCam"]
+transform = Transform3D(0.999846, -0.0175571, 0, 0.0175571, 0.999846, 0, 0, 0, 1, -0.00479043, -1.50761, -11.195)
+mesh = SubResource("SphereMesh_hljms")
+skeleton = NodePath("../../..")
 
 [node name="Water" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_c12ko")
@@ -210,10 +245,6 @@ update_mode = 1
 intensity = 0.33
 max_distance = 20.9
 size = Vector3(8.39568, 12.6418, 7.98332)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.999846, -0.0175571, 0, 0.0175571, 0.999846, 0, 0, 0, 1, -0.00479043, -0.0146146, 0)
-mesh = SubResource("SphereMesh_hljms")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

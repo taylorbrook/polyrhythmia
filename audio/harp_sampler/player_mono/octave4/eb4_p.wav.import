@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dkf7rve65xb7f"
-path="res://.godot/imported/ee4_p.wav-c70d9264c8b3142f3eb431c7470dc0cf.sample"
+path="res://.godot/imported/eb4_p.wav-16032d3f56eee6b2fb6c048cb3e27c18.sample"
 
 [deps]
 
-source_file="res://audio/harp_sampler/player_mono/octave4/ee4_p.wav"
-dest_files=["res://.godot/imported/ee4_p.wav-c70d9264c8b3142f3eb431c7470dc0cf.sample"]
+source_file="res://audio/harp_sampler/player_mono/octave4/eb4_p.wav"
+dest_files=["res://.godot/imported/eb4_p.wav-16032d3f56eee6b2fb6c048cb3e27c18.sample"]
 
 [params]
 

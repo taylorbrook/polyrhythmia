@@ -110,7 +110,6 @@ _data = {
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
-SongName = "TestSong2"
 Fog = 0.85
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

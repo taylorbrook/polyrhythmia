@@ -24,7 +24,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("..")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 15.07, 3, 1, 0, 0, 6.6)
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 15.07, 3, 1, 0, 0, 4.4)
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -151,7 +151,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
 current = true
@@ -317,9 +317,10 @@ environment = ExtResource("13_kavhm")
 [node name="Sunset" type="Node3D" parent="Backdrop"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Backdrop/Sunset"]
-transform = Transform3D(1, 0, 0, 0, -0.991216, 0.132256, 0, -0.132256, -0.991216, 0, 6.63931, 2.46136)
+transform = Transform3D(1, 0, 0, 0, -0.99961, 0.0279215, 0, -0.0279215, -0.99961, 0, 6.63931, 2.46136)
 light_color = Color(1, 1, 0.886275, 1)
-light_energy = 1.162
+light_angular_distance = 4.49
+shadow_enabled = true
 shadow_bias = 2.98
 shadow_opacity = 0.3
 

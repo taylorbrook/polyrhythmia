@@ -9,6 +9,6 @@ func _ready():
 	$SongPlayer.play(SongName)
 
 func fog_setter(val):
-	if is_instance_valid($WorldEnvironment):
-		var env:Environment = $WorldEnvironment.environment
+	if is_instance_valid($Backdrop/WorldEnvironment):
+		var env:Environment = $Backdrop/WorldEnvironment.environment
 		env.volumetric_fog_density=val

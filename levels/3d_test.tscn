@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=32 format=3 uid="uid://bwrbp5hm8j3ht"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
@@ -12,27 +12,8 @@
 [ext_resource type="Animation" uid="uid://b5mltnm8tivct" path="res://animations/tests/TestSong3.res" id="8_f1m7n"]
 [ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="10_e6p8a"]
 [ext_resource type="Animation" uid="uid://dm2xlqip5rjsx" path="res://animations/song_template.res" id="11_xcpil"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kadxq"]
-sky_top_color = Color(0.152941, 0.101961, 0.184314, 1)
-sky_horizon_color = Color(0.47451, 0.341176, 0.156863, 1)
-sky_curve = 0.0416089
-ground_bottom_color = Color(0.14902, 0.188235, 0.176471, 1)
-ground_horizon_color = Color(0.160784, 0.196078, 0.188235, 1)
-sun_angle_max = 51.95
-sun_curve = 0.126135
-
-[sub_resource type="Sky" id="Sky_arhvc"]
-sky_material = SubResource("ProceduralSkyMaterial_kadxq")
-
-[sub_resource type="Environment" id="Environment_07gvc"]
-background_mode = 2
-sky = SubResource("Sky_arhvc")
-fog_density = 0.0
-fog_sky_affect = 0.453
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
-volumetric_fog_length = 8.06
+[ext_resource type="Environment" uid="uid://daq2qgxejb7j3" path="res://assets/environments/Sunset.tres" id="13_kavhm"]
+[ext_resource type="Script" path="res://rhythms/audio_spectrum_helper.gd" id="14_e4pch"]
 
 [sub_resource type="Animation" id="Animation_lswjq"]
 resource_name = "entry"
@@ -75,26 +56,43 @@ _data = {
 "running": SubResource("Animation_fsypk")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_m8iya"]
-render_priority = 0
-shader = ExtResource("10_e6p8a")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86f8w"]
+albedo_color = Color(0.239216, 0.619608, 0.309804, 1)
+roughness = 0.0
+emission = Color(0.239216, 0.619608, 0.309804, 1)
+emission_energy_multiplier = 0.79
 
-[sub_resource type="SphereMesh" id="SphereMesh_hljms"]
-material = SubResource("ShaderMaterial_m8iya")
-flip_faces = true
-radius = 17.995
-height = 8.535
-is_hemisphere = true
+[sub_resource type="TextMesh" id="TextMesh_c5u4q"]
+material = SubResource("StandardMaterial3D_86f8w")
+text = "Almost!"
+font_size = 27
+pixel_size = 0.013
+depth = 0.26
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bngas"]
-render_priority = 0
-shader = ExtResource("2_80fs5")
+[sub_resource type="Gradient" id="Gradient_0x4q1"]
+offsets = PackedFloat32Array(0.503937, 0.629921)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_c12ko"]
-material = SubResource("ShaderMaterial_bngas")
-size = Vector2(100, 100)
-subdivide_width = 50
-subdivide_depth = 50
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sxq6u"]
+gradient = SubResource("Gradient_0x4q1")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_roy2t"]
+transparency = 1
+albedo_texture = SubResource("GradientTexture2D_sxq6u")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xjg5b"]
+material = SubResource("StandardMaterial3D_roy2t")
+
+[sub_resource type="TextMesh" id="TextMesh_0bo5k"]
+material = SubResource("StandardMaterial3D_86f8w")
+text = "Nice!"
+font_size = 27
+pixel_size = 0.013
+depth = 0.26
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
@@ -108,16 +106,39 @@ _data = {
 "tutorial_onewheel": ExtResource("4_haxis")
 }
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ih4hn"]
+frequency = 0.0074
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7d8me"]
+seamless = true
+as_normal_map = true
+bump_strength = 32.0
+noise = SubResource("FastNoiseLite_ih4hn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bngas"]
+render_priority = 0
+shader = ExtResource("2_80fs5")
+shader_parameter/Texture2DParameter = SubResource("NoiseTexture2D_7d8me")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c12ko"]
+material = SubResource("ShaderMaterial_bngas")
+size = Vector2(100, 100)
+subdivide_width = 50
+subdivide_depth = 50
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m8iya"]
+render_priority = 0
+shader = ExtResource("10_e6p8a")
+
+[sub_resource type="SphereMesh" id="SphereMesh_hljms"]
+material = SubResource("ShaderMaterial_m8iya")
+flip_faces = true
+radius = 17.995
+height = 8.535
+is_hemisphere = true
+
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
-Fog = 0.85
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_07gvc")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.998955, 0.0457121, 0, -0.0457121, -0.998955, 0, 6.63931, 2.46136)
-light_color = Color(1, 1, 0.886275, 1)
 
 [node name="BigWheels" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.493, 0)
@@ -130,7 +151,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.07)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.6)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
 current = true
@@ -141,13 +162,35 @@ libraries = {
 "": SubResource("AnimationLibrary_c2brf")
 }
 
-[node name="Clouds" type="MeshInstance3D" parent="BigWheels/MainCam"]
-transform = Transform3D(0.999846, -0.0175571, 0, 0.0175571, 0.999846, 0, 0, 0, 1, -0.00479043, -1.50761, -11.195)
-mesh = SubResource("SphereMesh_hljms")
-skeleton = NodePath("../../..")
+[node name="ReactionNoteRight" type="MeshInstance3D" parent="BigWheels"]
+transform = Transform3D(0.925085, 0.0423427, -0.25303, 0, 0.946834, 0.158446, 0.256549, -0.152683, 0.912398, 0.865, -0.49, 3.345)
+visible = false
+mesh = SubResource("TextMesh_c5u4q")
+skeleton = NodePath("../Right")
 
-[node name="Water" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_c12ko")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigWheels/ReactionNoteRight"]
+transform = Transform3D(1.13, 0, 0, 0, -4.37114e-08, -0.445, 0, 1, -1.94516e-08, 0, -0.04, 0)
+mesh = SubResource("PlaneMesh_xjg5b")
+
+[node name="ReactionNoteLeft" type="MeshInstance3D" parent="BigWheels"]
+transform = Transform3D(0.925085, -0.0423427, 0.25303, 0, 0.946834, 0.158446, -0.256549, -0.152683, 0.912398, -0.865, -0.49, 3.345)
+visible = false
+mesh = SubResource("TextMesh_0bo5k")
+skeleton = NodePath("../Right")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigWheels/ReactionNoteLeft"]
+transform = Transform3D(1.13, 0, 0, 0, -4.37114e-08, -0.445, 0, 1, -1.94516e-08, 0, -0.04, 0)
+mesh = SubResource("PlaneMesh_xjg5b")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="BigWheels"]
+transform = Transform3D(0.963631, 0, -0.267238, 0, 1, 0, 0.267238, 0, 0.96363, -0.252, -0.535, 4.08)
+light_color = Color(0.494118, 0.901961, 0.854902, 1)
+light_energy = 0.97
+light_specular = 1.335
+shadow_enabled = true
+shadow_bias = 0.125
+shadow_normal_bias = 9.586
+shadow_blur = 4.737
 
 [node name="NotePlayer2_L" type="AudioStreamPlayer" parent="."]
 volume_db = -3.0
@@ -240,7 +283,6 @@ libraries = {
 }
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-update_mode = 1
 intensity = 0.33
 max_distance = 20.9
 size = Vector3(8.39568, 12.6418, 7.98332)
@@ -262,3 +304,30 @@ bus = &"backing track"
 volume_db = -6.0
 max_polyphony = 8
 bus = &"backing track"
+
+[node name="audio_spectrum_helper" type="Node" parent="."]
+script = ExtResource("14_e4pch")
+Multiplier = 8.91
+
+[node name="Backdrop" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Backdrop"]
+environment = ExtResource("13_kavhm")
+
+[node name="Sunset" type="Node3D" parent="Backdrop"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Backdrop/Sunset"]
+transform = Transform3D(1, 0, 0, 0, -0.991216, 0.132256, 0, -0.132256, -0.991216, 0, 6.63931, 2.46136)
+light_color = Color(1, 1, 0.886275, 1)
+light_energy = 1.162
+shadow_bias = 2.98
+shadow_opacity = 0.3
+
+[node name="Water" type="MeshInstance3D" parent="Backdrop/Sunset"]
+mesh = SubResource("PlaneMesh_c12ko")
+skeleton = NodePath("../../..")
+
+[node name="Clouds" type="MeshInstance3D" parent="Backdrop/Sunset"]
+transform = Transform3D(0.999846, -0.0175571, 0, 0.0175571, 0.999846, 0, 0, 0, 1, -0.00479043, -0.0146099, -4.595)
+mesh = SubResource("SphereMesh_hljms")
+skeleton = NodePath("../../..")

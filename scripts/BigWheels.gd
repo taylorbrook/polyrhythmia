@@ -14,7 +14,7 @@ func _process(delta):
 		time_gap = abs(song_player.current_animation_position - wheel_sets.front().time)
 	if time_gap <= 2.0 and !wheel_sets.front().node.tracking:
 		wheel_sets.front().node.tracking=true
-	if time_gap <= 0.1 and wheel_sets.front().node.beat == 0:
+	if time_gap <= 0.333 and wheel_sets.front().node.beat == 0:
 		var current_wheel = wheel_sets.pop_front()
 		var small_wheel = current_wheel.node
 		rcount+=1
@@ -31,7 +31,7 @@ func _ready():
 	read_animation(song_player.get_animation(get_tree().current_scene.SongName))
 	var wheels = [$Left,$Right]
 	var side = false
-	spoke_step = 360.0 / round(wheel_sets.size())
+	spoke_step = clamp(360.0 / round(wheel_sets.size()),10.0,24.0)
 	var on_rot_l = 0.0
 	var on_rot_r= 0.0
 	var wi = 0
@@ -94,6 +94,3 @@ func read_animation(anim:Animation):
 					else:
 						cleft=tpath
 	print("checked "+str(t))
-func next_subwheel():
-	#cycle to the next big wheel position, alternating left and right.
-	pass

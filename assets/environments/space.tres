@@ -1,0 +1,64 @@
+[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://olpw5vaof1fy"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_1cyhe"]
+input_name = "screen_uv"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8etrf"]
+noise_type = 4
+frequency = 0.1494
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_t5wts"]
+width = 1024
+height = 1024
+invert = true
+seamless = true
+seamless_blend_skirt = 0.0
+noise = SubResource("FastNoiseLite_8etrf")
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_ap5dt"]
+texture = SubResource("NoiseTexture2D_t5wts")
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_c6fi6"]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0.8, 0.8, 0.8)]
+operator = 1
+
+[resource]
+code = "shader_type sky;
+uniform sampler2D tex_sky_3;
+
+
+
+void sky() {
+// Input:2
+	vec2 n_out2p0 = SCREEN_UV;
+
+
+// Texture2D:3
+	vec4 n_out3p0 = texture(tex_sky_3, n_out2p0);
+
+
+// VectorOp:4
+	vec3 n_in4p1 = vec3(0.80000, 0.80000, 0.80000);
+	vec3 n_out4p0 = vec3(n_out3p0.xyz) - n_in4p1;
+
+
+// Output:0
+	COLOR = n_out4p0;
+
+
+}
+"
+mode = 3
+flags/use_half_res_pass = false
+flags/use_quarter_res_pass = false
+flags/disable_fog = false
+flags/use_debanding = false
+nodes/sky/0/position = Vector2(580, 140)
+nodes/sky/2/node = SubResource("VisualShaderNodeInput_1cyhe")
+nodes/sky/2/position = Vector2(-760, 40)
+nodes/sky/3/node = SubResource("VisualShaderNodeTexture_ap5dt")
+nodes/sky/3/position = Vector2(27.8444, 60.5907)
+nodes/sky/4/node = SubResource("VisualShaderNodeVectorOp_c6fi6")
+nodes/sky/4/position = Vector2(312.905, 105.685)
+nodes/sky/connections = PackedInt32Array(2, 0, 3, 0, 3, 0, 4, 0, 4, 0, 0, 0)

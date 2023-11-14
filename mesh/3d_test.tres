@@ -1,8 +1,12 @@
-[gd_resource type="VisualShader" load_steps=25 format=3 uid="uid://b0il2ry0653b0"]
+[gd_resource type="VisualShader" load_steps=26 format=3 uid="uid://b0il2ry0653b0"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_bj3sl"]
+constant = 0.22
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_ljrwg"]
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_u15sr"]
+parameter_name = "Texture2DParameter"
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_6hd7o"]
 constant = Color(0.150487, 0.310982, 0.247753, 1)
@@ -17,6 +21,7 @@ bump_strength = 32.0
 noise = SubResource("FastNoiseLite_ih4hn")
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_wvuq5"]
+source = 5
 texture = SubResource("NoiseTexture2D_gwklv")
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_rb8k6"]
@@ -74,7 +79,7 @@ code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
 
 uniform sampler2D tex_vtx_8;
-uniform sampler2D tex_frg_3;
+uniform sampler2D Texture2DParameter;
 
 
 
@@ -168,14 +173,20 @@ void fragment() {
 	vec3 n_out6p0 = vec3(n_out9p0, n_out8p1, n_in6p2);
 
 
+	vec4 n_out3p0;
 // Texture2D:3
-	vec4 n_out3p0 = texture(tex_frg_3, vec2(n_out6p0.xy));
+	n_out3p0 = texture(Texture2DParameter, vec2(n_out6p0.xy));
+
+
+// FloatConstant:10
+	float n_out10p0 = 0.220000;
 
 
 // Output:0
 	ALBEDO = vec3(n_out2p0.xyz);
 	METALLIC = n_out11p0;
 	ROUGHNESS = n_out3p0.x;
+	SPECULAR = n_out10p0;
 
 
 }
@@ -205,7 +216,7 @@ nodes/vertex/connections = PackedInt32Array(3, 0, 5, 0, 2, 0, 4, 0, 5, 0, 6, 0, 
 nodes/fragment/2/node = SubResource("VisualShaderNodeColorConstant_6hd7o")
 nodes/fragment/2/position = Vector2(134, 173)
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_wvuq5")
-nodes/fragment/3/position = Vector2(-220, 300)
+nodes/fragment/3/position = Vector2(-400, -20)
 nodes/fragment/4/node = SubResource("VisualShaderNodeInput_rb8k6")
 nodes/fragment/4/position = Vector2(-1340, 280)
 nodes/fragment/5/node = SubResource("VisualShaderNodeFloatOp_8713o")
@@ -222,4 +233,6 @@ nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_bj3sl")
 nodes/fragment/10/position = Vector2(80, 360)
 nodes/fragment/11/node = SubResource("VisualShaderNodeFloatConstant_ljrwg")
 nodes/fragment/11/position = Vector2(40, 260)
-nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 4, 0, 5, 0, 7, 0, 8, 0, 8, 1, 6, 1, 6, 0, 3, 0, 8, 0, 9, 0, 5, 0, 9, 1, 9, 0, 6, 0, 11, 0, 0, 2, 3, 0, 0, 3)
+nodes/fragment/12/node = SubResource("VisualShaderNodeTexture2DParameter_u15sr")
+nodes/fragment/12/position = Vector2(-1000, -180)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 4, 0, 5, 0, 7, 0, 8, 0, 8, 1, 6, 1, 6, 0, 3, 0, 8, 0, 9, 0, 5, 0, 9, 1, 9, 0, 6, 0, 11, 0, 0, 2, 3, 0, 0, 3, 12, 0, 3, 2, 10, 0, 0, 4)

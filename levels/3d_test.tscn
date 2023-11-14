@@ -152,7 +152,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.4)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
 current = true
@@ -279,7 +279,7 @@ libraries = {
 }
 script = ExtResource("11_04d0m")
 
-[node name="SongPlayer" type="AnimationPlayer" parent="SongPlayer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SongPlayer"]
 libraries = {
 "": SubResource("AnimationLibrary_mug7h")
 }

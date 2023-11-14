@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://c50ac4wvpw0bg"]
+[gd_scene load_steps=15 format=3 uid="uid://c50ac4wvpw0bg"]
 
 [ext_resource type="ArrayMesh" uid="uid://cjg30qei3lmr" path="res://mesh/4beats.tres" id="1_axvxf"]
 [ext_resource type="Script" path="res://scripts/3d_wheel.gd" id="1_p5eqy"]
+[ext_resource type="FontFile" uid="uid://cwgup3btg70pd" path="res://assets/fonts/GreatVibes-Regular.otf" id="3_aqypc"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_l0opf"]
 height = 0.105
@@ -98,15 +99,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03271)
 editor_only = true
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0624498)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0319973, 0.0624498)
 pixel_size = 0.0024
 billboard = 2
 double_sided = false
 no_depth_test = true
 texture_filter = 0
+modulate = Color(0.87451, 0.85098, 0.886275, 0.784314)
 text = "1"
+font = ExtResource("3_aqypc")
 font_size = 297
-outline_size = 32
+outline_size = 16
 
 [node name="TriggerArea" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.5, 0, 0)

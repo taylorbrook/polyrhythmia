@@ -5,8 +5,9 @@ resource_name = "Reverb"
 predelay_msec = 20.0
 predelay_feedback = 0.2
 room_size = 0.5
+damping = 0.4
 hipass = 1.0
-wet = 0.2
+wet = 0.25
 
 [sub_resource type="GDScript" id="GDScript_texjl"]
 

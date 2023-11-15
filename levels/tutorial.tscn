@@ -5,27 +5,30 @@
 [ext_resource type="Script" path="res://scripts/delayrslider.gd" id="6_y0eit"]
 
 [node name="tutorial" type="Node2D"]
-position = Vector2(1, 1)
+position = Vector2(0, -2)
 script = ExtResource("1_cm87e")
 
 [node name="HSlider" type="HSlider" parent="."]
-offset_left = 65.0
-offset_top = 104.0
-offset_right = 359.0
-offset_bottom = 120.0
+offset_left = 419.0
+offset_top = 257.0
+offset_right = 713.0
+offset_bottom = 273.0
 tooltip_text = "set BPM"
 min_value = 20.0
 max_value = 120.0
 value = 30.0
 ticks_on_borders = true
 script = ExtResource("6_y0eit")
+metadata/_edit_use_anchors_ = true
 
 [node name="bpmTitle" type="Label" parent="HSlider"]
+layout_mode = 0
 offset_left = 117.0
 offset_top = -38.0
 offset_right = 180.0
 offset_bottom = -12.0
 text = "set BPM"
+metadata/_edit_use_anchors_ = true
 
 [node name="bpmValue" type="Label" parent="HSlider"]
 layout_mode = 0
@@ -33,20 +36,14 @@ offset_left = 130.0
 offset_top = 21.0
 offset_right = 170.0
 offset_bottom = 44.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 484.0
-offset_top = 34.0
-offset_right = 883.0
-offset_bottom = 79.0
-text = "3d test scene"
-
-[node name="Button2" type="Button" parent="."]
-offset_left = 487.0
-offset_top = 106.0
-offset_right = 886.0
-offset_bottom = 151.0
-text = "audio reactive scene"
+offset_left = 368.0
+offset_top = 320.0
+offset_right = 767.0
+offset_bottom = 365.0
+text = "Start"
 
 [node name="menuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_j57bs")
@@ -54,4 +51,3 @@ volume_db = -6.0
 autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

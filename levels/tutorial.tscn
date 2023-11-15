@@ -1,72 +1,38 @@
-[gd_scene load_steps=12 format=3 uid="uid://bj3bc4ejjg88h"]
+[gd_scene load_steps=4 format=3 uid="uid://bj3bc4ejjg88h"]
 
 [ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_cm87e"]
-[ext_resource type="AudioStream" uid="uid://lvrevyr13n8o" path="res://audio/temp/sfx_ui_enter.wav" id="2_5h34v"]
-[ext_resource type="AudioStream" uid="uid://bx7k310yhyrbg" path="res://audio/temp/sfx_ui_start.wav" id="3_o8cmq"]
-[ext_resource type="Texture2D" uid="uid://dhx5xcxg3hgxl" path="res://icon.svg" id="4_7eqhp"]
-[ext_resource type="Script" path="res://scripts/right_patch_follow.gd" id="4_tyoug"]
+[ext_resource type="AudioStream" uid="uid://w7vxpltjpm4x" path="res://audio/polyrhythmia_menu_loop_90.ogg" id="3_j57bs"]
 [ext_resource type="Script" path="res://scripts/delayrslider.gd" id="6_y0eit"]
-[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/octave0/g0_mf_1.wav" id="7_00v1u"]
-[ext_resource type="AudioStream" uid="uid://dm46fnid5mrxh" path="res://audio/harp_sampler/accompaniment_stereo/octave1/g1_mp.wav" id="8_oh3tt"]
-[ext_resource type="AudioStream" uid="uid://b0uiix6mbv2sm" path="res://audio/harp_sampler/accompaniment_stereo/octave2/d2_mp.wav" id="9_sti04"]
-[ext_resource type="AudioStream" uid="uid://ix5pwu8pnc6q" path="res://audio/harp_sampler/accompaniment_stereo/octave2/a2_mp.wav" id="10_5djil"]
-
-[sub_resource type="Curve2D" id="Curve2D_xum2d"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 602, 374, 0, 0, 0, 0, 433, 227, 0, 0, 0, 0, 543, 132, 0, 0, 0, 0, 603, 80, 0, 0, 0, 0, 765, 220, 0, 0, 0, 0, 602, 373)
-}
-point_count = 6
 
 [node name="tutorial" type="Node2D"]
 position = Vector2(1, 1)
 script = ExtResource("1_cm87e")
 
-[node name="button1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_5h34v")
-volume_db = -3.0
-
-[node name="button2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_o8cmq")
-volume_db = -3.0
-
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2(-425, 52)
-curve = SubResource("Curve2D_xum2d")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(602, 374)
-rotation = -2.4257
-script = ExtResource("4_tyoug")
-
-[node name="Icon" type="Sprite2D" parent="Path2D/PathFollow2D"]
-position = Vector2(0.162231, 7.86758)
-scale = Vector2(0.429688, 0.445313)
-texture = ExtResource("4_7eqhp")
-
 [node name="HSlider" type="HSlider" parent="."]
-offset_left = 13.0
-offset_top = 87.0
-offset_right = 307.0
-offset_bottom = 103.0
-min_value = 100.0
-max_value = 1000.0
-value = 100.0
+offset_left = 65.0
+offset_top = 104.0
+offset_right = 359.0
+offset_bottom = 120.0
+tooltip_text = "set BPM"
+min_value = 20.0
+max_value = 120.0
+value = 30.0
+ticks_on_borders = true
 script = ExtResource("6_y0eit")
-bus_name = null
 
-[node name="Node" type="Node" parent="."]
+[node name="bpmTitle" type="Label" parent="HSlider"]
+offset_left = 117.0
+offset_top = -38.0
+offset_right = 180.0
+offset_bottom = -12.0
+text = "set BPM"
 
-[node name="g0" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("7_00v1u")
-
-[node name="g1" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("8_oh3tt")
-
-[node name="d2" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("9_sti04")
-
-[node name="a2" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("10_5djil")
+[node name="bpmValue" type="Label" parent="HSlider"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 21.0
+offset_right = 170.0
+offset_bottom = 44.0
 
 [node name="Button" type="Button" parent="."]
 offset_left = 484.0
@@ -81,6 +47,11 @@ offset_top = 106.0
 offset_right = 886.0
 offset_bottom = 151.0
 text = "audio reactive scene"
+
+[node name="menuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j57bs")
+volume_db = -6.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

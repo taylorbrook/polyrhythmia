@@ -1,12 +1,8 @@
 extends HSlider
 
-@export 
-var bus_name: String
-var effect_name: String
+func _ready():
+	$bpmValue.text = str(Globals.bpm)
 
-var bus_index: int
-var effect_index: int
-
-func _ready() -> void:
-	bus_index = AudioServer.get_bus_index(bus_name)
-	
+func _value_changed(new_value):
+	Globals.bpm = value
+	$bpmValue.text = str(Globals.bpm)

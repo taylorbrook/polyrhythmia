@@ -11,7 +11,6 @@ var spectrum
 var image_texture: ImageTexture
 var image: Image
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	lerped_spectrum.resize(VU_COUNT)
 	image = Image.create(VU_COUNT,1,false, Image.FORMAT_RGBA8)
@@ -19,9 +18,8 @@ func _ready():
 		image.set_pixel(i,0, Color.BLACK)
 	image_texture = ImageTexture.create_from_image(image)
 	RenderingServer.global_shader_parameter_set("spectrum_texture", image_texture)
-	spectrum = AudioServer.get_bus_effect_instance(3,0)
+	spectrum = AudioServer.get_bus_effect_instance(0,1)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var prev_hz = 0
 	

@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=10 format=3 uid="uid://dujyxjx06mqyn"]
+[gd_resource type="AudioBusLayout" load_steps=11 format=3 uid="uid://dujyxjx06mqyn"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_xm228"]
 resource_name = "Reverb"
@@ -8,6 +8,11 @@ room_size = 0.5
 damping = 0.4
 hipass = 1.0
 wet = 0.25
+
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_litd3"]
+resource_name = "SpectrumAnalyzer"
+buffer_length = 1.0
+fft_size = 1
 
 [sub_resource type="GDScript" id="GDScript_texjl"]
 
@@ -63,6 +68,8 @@ feedback_level_db = -60.0
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectReverb_xm228")
 bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectSpectrumAnalyzer_litd3")
+bus/0/effect/1/enabled = true
 bus/1/name = &"player_left"
 bus/1/solo = false
 bus/1/mute = false

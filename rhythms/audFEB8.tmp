@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://nn33iuqgl77t"]
+[gd_scene load_steps=15 format=3 uid="uid://nn33iuqgl77t"]
 
 [ext_resource type="Shader" path="res://rhythms/musicreacttest.gdshader" id="1_ub4hw"]
 [ext_resource type="Texture2D" uid="uid://bwa0s0scw5s3w" path="res://assets/textures/gradient.png" id="2_nb0j3"]
@@ -7,7 +7,6 @@
 [ext_resource type="Shader" path="res://rhythms/spectrumvisualizer.gdshader" id="5_b4okd"]
 [ext_resource type="Script" path="res://scripts/AudioReactiveColor.gd" id="6_4pkmu"]
 [ext_resource type="Shader" path="res://rhythms/audioreactive_scale.gdshader" id="6_tyhvn"]
-[ext_resource type="Script" path="res://scripts/grab_audio_samples.gd" id="8_abwmr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ssj7f"]
 render_priority = 0
@@ -70,6 +69,3 @@ surface_material_override/0 = SubResource("ShaderMaterial_wm8qv")
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.959697, -0.281035, 0, 0.281035, 0.959697, 1.78547, 0.233198, -0.19188)
 mesh = SubResource("TorusMesh_yafyh")
-
-[node name="grab_audio_samples" type="Node" parent="."]
-script = ExtResource("8_abwmr")

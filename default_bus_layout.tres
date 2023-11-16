@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=11 format=3 uid="uid://dujyxjx06mqyn"]
+[gd_resource type="AudioBusLayout" load_steps=12 format=3 uid="uid://dujyxjx06mqyn"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_xm228"]
 resource_name = "Reverb"
@@ -13,6 +13,9 @@ wet = 0.25
 resource_name = "SpectrumAnalyzer"
 buffer_length = 1.0
 fft_size = 1
+
+[sub_resource type="AudioEffectCapture" id="AudioEffectCapture_wg6hv"]
+resource_name = "Capture"
 
 [sub_resource type="GDScript" id="GDScript_texjl"]
 
@@ -70,6 +73,8 @@ bus/0/effect/0/effect = SubResource("AudioEffectReverb_xm228")
 bus/0/effect/0/enabled = true
 bus/0/effect/1/effect = SubResource("AudioEffectSpectrumAnalyzer_litd3")
 bus/0/effect/1/enabled = true
+bus/0/effect/2/effect = SubResource("AudioEffectCapture_wg6hv")
+bus/0/effect/2/enabled = true
 bus/1/name = &"player_left"
 bus/1/solo = false
 bus/1/mute = false

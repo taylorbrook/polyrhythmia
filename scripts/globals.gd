@@ -10,7 +10,6 @@ var Multiplier:float = 6
 const VU_COUNT = 12
 const FREQ_MAX = 10000.0
 const MIN_DB = 66
-
 var lerp_smoothing: float = 4
 var lerped_spectrum: Array[float] = []
 var spectrum

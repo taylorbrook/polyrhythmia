@@ -23,4 +23,3 @@ func map_spectrum_to_color(value: float) -> Color:
 	var green = value
 	var blue = .5 - (value * .5)
 	return Color(red, green, blue)
-	print(value)

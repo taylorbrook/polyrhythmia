@@ -9,7 +9,7 @@ var bpm = 30.0
 var Multiplier:float = 6
 const VU_COUNT = 12
 const FREQ_MAX = 10000.0
-const MIN_DB = 66
+const MIN_DB = 72
 var lerp_smoothing: float = 4
 var lerped_spectrum: Array[float] = []
 var spectrum
@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 		var magnitude: float = spectrum.get_magnitude_for_frequency_range(prev_hz, hz).length()
 		var energy = clamp((MIN_DB + linear_to_db(magnitude)) / MIN_DB, 0, 1)
 		var effect = energy * Multiplier
-		lerped_spectrum[i-1] = lerp(lerped_spectrum[i-1],effect,delta * 4)
+		lerped_spectrum[i-1] = lerp(lerped_spectrum[i-1],effect,delta * 2)
 		image.set_pixel(i-1,0, Color.WHITE * lerped_spectrum[i-1])
 		prev_hz = hz
 		

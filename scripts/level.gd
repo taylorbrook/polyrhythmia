@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var SongName: String = "beginner_vines"
+@export var SongName: String = "beginner_prelude"
 @export var Fog = 0.0 : set = fog_setter
 
 func _ready():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=70 format=3 uid="uid://bwrbp5hm8j3ht"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
@@ -41,8 +41,12 @@
 [ext_resource type="AudioStream" uid="uid://cc2ik7hk8p4be" path="res://audio/harp_sampler/player_mono/octave4/f4_mf.wav" id="20_8sgtp"]
 [ext_resource type="AudioStream" uid="uid://dhujhdfkgxyxq" path="res://audio/harp_sampler/player_mono/octave4/e4_mp.wav" id="21_h4e1l"]
 [ext_resource type="AudioStream" uid="uid://s3f828odne2l" path="res://audio/harp_sampler/player_mono/octave4/e4_mf.wav" id="21_sljy0"]
+[ext_resource type="AudioStream" uid="uid://b3dn73myj34va" path="res://audio/harp_sampler/player_mono/octave4/D4_f.wav" id="22_4yxyo"]
 [ext_resource type="AudioStream" uid="uid://b1glimnmth0y3" path="res://audio/harp_sampler/player_mono/octave4/C#4_f.wav" id="22_k1w22"]
 [ext_resource type="AudioStream" uid="uid://c2p3x6omrbqv8" path="res://audio/harp_sampler/player_mono/octave4/f4_f.wav" id="23_0bqi8"]
+[ext_resource type="AudioStream" uid="uid://l4j3fbm5nu1s" path="res://audio/harp_sampler/player_mono/octave4/g4_mf.wav" id="23_k7wgd"]
+[ext_resource type="AudioStream" uid="uid://cncg35dt4bpwu" path="res://audio/harp_sampler/player_mono/octave4/fs4_mf.wav" id="24_awojq"]
+[ext_resource type="AudioStream" uid="uid://ddlt8iyibqtq" path="res://audio/harp_sampler/player_mono/octave4/a4_f.wav" id="25_75oiu"]
 [ext_resource type="AudioStream" uid="uid://cbh2bvh2n0hl" path="res://audio/harp_sampler/accompaniment_stereo/octave3/f3_mp.wav" id="35_kwmfi"]
 [ext_resource type="AudioStream" uid="uid://dpbprmhwyjqnb" path="res://audio/harp_sampler/accompaniment_stereo/octave3/g3_mf.wav" id="36_ylf5e"]
 [ext_resource type="AudioStream" uid="uid://da2sjlu6st262" path="res://audio/harp_sampler/accompaniment_stereo/octave2/g2_mf.wav" id="37_4scel"]
@@ -134,7 +138,7 @@ step = 0.25
 tracks/0/type = "audio"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../NotePlayer2_L")
+tracks/0/path = NodePath("NotePlayer2_L")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -145,7 +149,7 @@ tracks/0/use_blend = true
 tracks/1/type = "audio"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../NotePlayer2_R")
+tracks/1/path = NodePath("NotePlayer2_R")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -156,7 +160,7 @@ tracks/1/use_blend = true
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../NotePlayer3_L")
+tracks/2/path = NodePath("NotePlayer3_L")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -167,7 +171,7 @@ tracks/2/use_blend = true
 tracks/3/type = "audio"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../NotePlayer3_R")
+tracks/3/path = NodePath("NotePlayer3_R")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -178,7 +182,7 @@ tracks/3/use_blend = true
 tracks/4/type = "audio"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../NotePlayer4_L")
+tracks/4/path = NodePath("NotePlayer4_L")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -189,7 +193,7 @@ tracks/4/use_blend = true
 tracks/5/type = "audio"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../NotePlayer4_R")
+tracks/5/path = NodePath("NotePlayer4_R")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -200,7 +204,7 @@ tracks/5/use_blend = true
 tracks/6/type = "audio"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../NotePlayer5_L")
+tracks/6/path = NodePath("NotePlayer5_L")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -211,7 +215,7 @@ tracks/6/use_blend = true
 tracks/7/type = "audio"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../NotePlayer5_R")
+tracks/7/path = NodePath("NotePlayer5_R")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -222,7 +226,7 @@ tracks/7/use_blend = true
 tracks/8/type = "audio"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../NotePlayer6_L")
+tracks/8/path = NodePath("NotePlayer6_L")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -233,7 +237,7 @@ tracks/8/use_blend = true
 tracks/9/type = "audio"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("../NotePlayer6_R")
+tracks/9/path = NodePath("NotePlayer6_R")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -244,7 +248,7 @@ tracks/9/use_blend = true
 tracks/10/type = "audio"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("../NotePlayer7_L")
+tracks/10/path = NodePath("NotePlayer7_L")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -255,7 +259,7 @@ tracks/10/use_blend = true
 tracks/11/type = "audio"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("../NotePlayer7_R")
+tracks/11/path = NodePath("NotePlayer7_R")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -266,7 +270,7 @@ tracks/11/use_blend = true
 tracks/12/type = "audio"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("../NotePlayer8_L")
+tracks/12/path = NodePath("NotePlayer8_L")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -329,7 +333,7 @@ tracks/12/use_blend = true
 tracks/13/type = "audio"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("../NotePlayer8_R")
+tracks/13/path = NodePath("NotePlayer8_R")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -392,7 +396,7 @@ tracks/13/use_blend = true
 tracks/14/type = "audio"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("../NotePlayer9_L")
+tracks/14/path = NodePath("NotePlayer9_L")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -403,7 +407,7 @@ tracks/14/use_blend = true
 tracks/15/type = "audio"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("../NotePlayer9_R")
+tracks/15/path = NodePath("NotePlayer9_R")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -414,10 +418,152 @@ tracks/15/use_blend = true
 tracks/16/type = "audio"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("../BackingAudio/accompaniment1")
+tracks/16/path = NodePath("SongPlayer/NotePlayer10_L")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/16/use_blend = true
+tracks/17/type = "audio"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("SongPlayer/NotePlayer10_R")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/17/use_blend = true
+tracks/18/type = "audio"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("SongPlayer/NotePlayer11_L")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/18/use_blend = true
+tracks/19/type = "audio"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("SongPlayer/NotePlayer11_R")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/19/use_blend = true
+tracks/20/type = "audio"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("SongPlayer/NotePlayer12_L")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/20/use_blend = true
+tracks/21/type = "audio"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("SongPlayer/NotePlayer12_R")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_sw4ib")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_fuql6")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_5ov08")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_b276y")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_oob8v")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_pi6gc")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_4yxyo")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_8sgtp")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("23_k7wgd")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("24_awojq")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("25_75oiu")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_sb075")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_8sgtp")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21_sljy0")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_oob8v")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_b276y")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_4yxyo")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_oob8v")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("22_4yxyo")
+}],
+"times": PackedFloat32Array(12, 12.1667, 12.3333, 12.5, 12.8333, 13, 13.1667, 13.3333, 13.6667, 13.8333, 14, 14.1667, 14.3333, 14.5, 14.6666, 14.8333, 15, 15.3333, 15.6667)
+}
+tracks/21/use_blend = true
+tracks/22/type = "audio"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../BackingAudio/accompaniment1")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -893,14 +1039,14 @@ tracks/16/keys = {
 }],
 "times": PackedFloat32Array(0, 0.25, 0.75, 1, 1.25, 1.75, 2, 2.25, 2.75, 3, 3.25, 3.75, 4, 4.25, 4.75, 5, 5.25, 5.75, 6, 6.25, 6.75, 7, 7.25, 7.75, 8, 8.25, 8.75, 9, 9.25, 9.75, 10, 10.25, 10.75, 11, 11.25, 11.5, 11.6667, 11.8333, 12, 12.1667, 12.3333, 12.6667, 12.8333, 13, 13.1667, 13.3333, 13.6667, 13.8333, 14, 14.1667, 14.3333, 14.6667, 14.8333, 15, 15.1667, 15.3333, 15.6875, 15.8125, 16, 16.1667, 16.3333, 16.6667, 16.8333, 17, 17.1667, 17.3333, 17.6667, 17.8333, 18, 18.1667, 18.3333, 18.6667, 18.8333, 19, 19.1667, 19.3333, 19.6875, 19.8125, 20, 20.1667, 20.3333, 20.6667, 20.8333, 21, 21.1667, 21.3333, 21.6667, 21.8333, 22, 22.1667, 22.3333, 22.6667, 22.8333, 23, 23.1667, 23.3333, 23.6875, 23.8125, 24, 24.1667, 24.3333, 24.6667, 24.8333, 25, 25.1667, 25.3333, 25.6667, 25.8333, 26, 26.1667, 26.3333, 26.6667, 26.8333, 27, 27.1667, 27.3333, 27.6875, 27.8125)
 }
-tracks/16/use_blend = true
-tracks/17/type = "audio"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../BackingAudio/accompaniment2")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/22/use_blend = true
+tracks/23/type = "audio"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../BackingAudio/accompaniment2")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -968,7 +1114,7 @@ tracks/17/keys = {
 }],
 "times": PackedFloat32Array(0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60)
 }
-tracks/17/use_blend = true
+tracks/23/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
@@ -1019,7 +1165,6 @@ is_hemisphere = true
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
-SongName = "beginner_prelude"
 Fog = 0.85
 
 [node name="BigWheels" type="Node3D" parent="."]
@@ -1074,96 +1219,121 @@ shadow_bias = 0.125
 shadow_normal_bias = 9.586
 shadow_blur = 4.737
 
-[node name="NotePlayer2_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer2_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
-[node name="NotePlayer3_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer3_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
-[node name="NotePlayer4_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer4_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
-[node name="NotePlayer5_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer5_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
-[node name="NotePlayer6_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer6_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
-[node name="NotePlayer7_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer7_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
-[node name="NotePlayer8_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer8_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
-[node name="NotePlayer9_L" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_left"
-
-[node name="NotePlayer9_R" type="AudioStreamPlayer" parent="."]
-volume_db = -3.0
-max_polyphony = 8
-bus = &"player_right"
-
 [node name="SongPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_mug7h")
 }
 script = ExtResource("11_04d0m")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SongPlayer"]
-libraries = {
-"": SubResource("AnimationLibrary_mug7h")
-}
+[node name="NotePlayer2_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer2_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer3_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer3_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer4_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer4_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer5_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer5_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer6_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer6_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer7_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer7_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer8_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer8_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer9_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer9_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer10_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer10_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer11_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer11_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
+
+[node name="NotePlayer12_L" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_left"
+
+[node name="NotePlayer12_R" type="AudioStreamPlayer" parent="SongPlayer"]
+volume_db = -3.0
+max_polyphony = 8
+bus = &"player_right"
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 intensity = 0.33

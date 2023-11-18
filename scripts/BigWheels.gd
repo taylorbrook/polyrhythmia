@@ -1,7 +1,6 @@
 extends Node3D
 
 var wheel_sets = []
-
 var spoke_step = 0.0
 @onready var song_player:AnimationPlayer = get_tree().current_scene.get_node("SongPlayer")
 

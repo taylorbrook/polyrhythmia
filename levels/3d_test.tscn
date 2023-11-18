@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=48 format=3 uid="uid://bwrbp5hm8j3ht"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
@@ -11,46 +11,24 @@
 [ext_resource type="Animation" uid="uid://d3unmkknw4lnh" path="res://animations/tests/TestSong4.res" id="8_2lskv"]
 [ext_resource type="Animation" uid="uid://bn3dvg6vmyvaq" path="res://animations/beginner_prelude.res" id="8_6ka7k"]
 [ext_resource type="Animation" uid="uid://b5mltnm8tivct" path="res://animations/tests/TestSong3.res" id="8_f1m7n"]
+[ext_resource type="Animation" uid="uid://csu2yusiebsq8" path="res://animations/advanced_whirl.res" id="8_rphrv"]
 [ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="10_e6p8a"]
 [ext_resource type="Script" path="res://scripts/SongPlayerBpmScale.gd" id="11_04d0m"]
 [ext_resource type="Animation" uid="uid://wxey7xwd1f1r" path="res://animations/intermediate_hocket_canon.res" id="11_h17fc"]
-[ext_resource type="Animation" uid="uid://dm2xlqip5rjsx" path="res://animations/song_template.res" id="11_xcpil"]
-[ext_resource type="Animation" uid="uid://cdqdu5cfajq16" path="res://animations/beginner_vines.res" id="12_ah7e0"]
-[ext_resource type="AudioStream" uid="uid://dcbj4q0cksmka" path="res://audio/harp_sampler/accompaniment_stereo/octave0/g0_mf_1.wav" id="13_gj5ll"]
 [ext_resource type="Environment" uid="uid://daq2qgxejb7j3" path="res://assets/environments/Sunset.tres" id="13_kavhm"]
-[ext_resource type="AudioStream" uid="uid://dqx81odr1pcij" path="res://audio/harp_sampler/accompaniment_stereo/octave2/g2_f.wav" id="13_nxb66"]
-[ext_resource type="AudioStream" uid="uid://d1204xskusk47" path="res://audio/harp_sampler/accompaniment_stereo/octave2/g2_mp2.wav" id="13_stpi3"]
-[ext_resource type="AudioStream" uid="uid://dqf72i5g8es27" path="res://audio/harp_sampler/player_mono/octave3/g3_f.wav" id="13_sw4ib"]
-[ext_resource type="AudioStream" uid="uid://bc5g8sw0isa85" path="res://audio/harp_sampler/accompaniment_stereo/octave3/d3_mp.wav" id="14_84x2l"]
-[ext_resource type="AudioStream" uid="uid://ctd411fmjbyv0" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_4.wav" id="14_fuql6"]
-[ext_resource type="AudioStream" uid="uid://n4v8arjed8a" path="res://audio/harp_sampler/player_mono/octave3/a3_mf_1.wav" id="14_h3qsr"]
-[ext_resource type="AudioStream" uid="uid://crvxiufxdqnlk" path="res://audio/harp_sampler/accompaniment_stereo/octave3/d3_f.wav" id="14_lwexg"]
-[ext_resource type="AudioStream" uid="uid://ch2324qi038eh" path="res://audio/harp_sampler/accompaniment_stereo/octave0/g0_mf_2.wav" id="14_trild"]
-[ext_resource type="AudioStream" uid="uid://cojl70snb868f" path="res://audio/harp_sampler/player_mono/octave3/B3_mf.wav" id="15_5ov08"]
-[ext_resource type="AudioStream" uid="uid://bgjhn2oi5g8so" path="res://audio/harp_sampler/accompaniment_stereo/octave0/g0_mf_3.wav" id="15_8ydnf"]
-[ext_resource type="AudioStream" uid="uid://cn76lp22egyrb" path="res://audio/harp_sampler/accompaniment_stereo/octave3/d3_mf.wav" id="15_lcm4p"]
-[ext_resource type="AudioStream" uid="uid://bgder1ve7yeir" path="res://audio/harp_sampler/player_mono/octave4/C#4_mf.wav" id="16_b276y"]
-[ext_resource type="AudioStream" uid="uid://m50dh1dqyoti" path="res://audio/harp_sampler/accompaniment_stereo/octave0/g0_mf_4.wav" id="16_uy08s"]
-[ext_resource type="AudioStream" uid="uid://hd1kycocqkk" path="res://audio/harp_sampler/player_mono/octave4/D4_mp.wav" id="17_qnn0x"]
-[ext_resource type="AudioStream" uid="uid://bd3fioeqgibku" path="res://audio/harp_sampler/accompaniment_stereo/octave2/g2_mp.wav" id="18_b8m48"]
-[ext_resource type="AudioStream" uid="uid://d1m3rypoh4dcj" path="res://audio/harp_sampler/player_mono/octave4/D4_mf.wav" id="18_oob8v"]
-[ext_resource type="AudioStream" uid="uid://bker7kqs3ur7e" path="res://audio/harp_sampler/player_mono/octave4/g4_f.wav" id="18_sb075"]
-[ext_resource type="AudioStream" uid="uid://br4yms6f3n13p" path="res://audio/harp_sampler/accompaniment_stereo/octave3/d3_p.wav" id="19_n4i47"]
-[ext_resource type="AudioStream" uid="uid://qds0wy32g6iv" path="res://audio/harp_sampler/player_mono/octave4/e4_f.wav" id="19_pi6gc"]
-[ext_resource type="AudioStream" uid="uid://cnsqumukyd5h4" path="res://audio/harp_sampler/accompaniment_stereo/octave3/d3_pp.wav" id="20_6t4et"]
-[ext_resource type="AudioStream" uid="uid://cc2ik7hk8p4be" path="res://audio/harp_sampler/player_mono/octave4/f4_mf.wav" id="20_8sgtp"]
-[ext_resource type="AudioStream" uid="uid://dhujhdfkgxyxq" path="res://audio/harp_sampler/player_mono/octave4/e4_mp.wav" id="21_h4e1l"]
-[ext_resource type="AudioStream" uid="uid://s3f828odne2l" path="res://audio/harp_sampler/player_mono/octave4/e4_mf.wav" id="21_sljy0"]
-[ext_resource type="AudioStream" uid="uid://b3dn73myj34va" path="res://audio/harp_sampler/player_mono/octave4/D4_f.wav" id="22_4yxyo"]
-[ext_resource type="AudioStream" uid="uid://b1glimnmth0y3" path="res://audio/harp_sampler/player_mono/octave4/C#4_f.wav" id="22_k1w22"]
-[ext_resource type="AudioStream" uid="uid://c2p3x6omrbqv8" path="res://audio/harp_sampler/player_mono/octave4/f4_f.wav" id="23_0bqi8"]
-[ext_resource type="AudioStream" uid="uid://l4j3fbm5nu1s" path="res://audio/harp_sampler/player_mono/octave4/g4_mf.wav" id="23_k7wgd"]
-[ext_resource type="AudioStream" uid="uid://cncg35dt4bpwu" path="res://audio/harp_sampler/player_mono/octave4/fs4_mf.wav" id="24_awojq"]
-[ext_resource type="AudioStream" uid="uid://ddlt8iyibqtq" path="res://audio/harp_sampler/player_mono/octave4/a4_f.wav" id="25_75oiu"]
-[ext_resource type="AudioStream" uid="uid://cbh2bvh2n0hl" path="res://audio/harp_sampler/accompaniment_stereo/octave3/f3_mp.wav" id="35_kwmfi"]
-[ext_resource type="AudioStream" uid="uid://dpbprmhwyjqnb" path="res://audio/harp_sampler/accompaniment_stereo/octave3/g3_mf.wav" id="36_ylf5e"]
-[ext_resource type="AudioStream" uid="uid://da2sjlu6st262" path="res://audio/harp_sampler/accompaniment_stereo/octave2/g2_mf.wav" id="37_4scel"]
-[ext_resource type="AudioStream" uid="uid://wxmyysgorkqq" path="res://audio/harp_sampler/accompaniment_stereo/octave3/g3_mp.wav" id="38_kv3o2"]
+[ext_resource type="AudioStream" uid="uid://dylxv2p83xj8a" path="res://audio/harp_sampler/accompaniment_stereo/octave2/e2_mp.wav" id="46_lki1w"]
+[ext_resource type="AudioStream" uid="uid://begtl6igwf6ol" path="res://audio/harp_sampler/player_mono/octave3/e3_mp.wav" id="47_jdd5t"]
+[ext_resource type="AudioStream" uid="uid://gum0atahxd34" path="res://audio/harp_sampler/player_mono/octave3/fs3_p.wav" id="48_45n80"]
+[ext_resource type="AudioStream" uid="uid://y168khq56p6n" path="res://audio/harp_sampler/player_mono/octave3/e3_p.wav" id="49_n28ck"]
+[ext_resource type="AudioStream" uid="uid://c1ef3w7xbd28q" path="res://audio/harp_sampler/player_mono/octave3/g3_mp.wav" id="50_tg1g8"]
+[ext_resource type="AudioStream" uid="uid://dm40sbq27qxaq" path="res://audio/harp_sampler/player_mono/octave3/g3_p.wav" id="51_hrgw3"]
+[ext_resource type="AudioStream" uid="uid://kgcsb33hutfn" path="res://audio/harp_sampler/player_mono/octave3/a3_p.wav" id="52_d4x1m"]
+[ext_resource type="AudioStream" uid="uid://domvhurr0hig1" path="res://audio/harp_sampler/player_mono/octave3/B3_mp.wav" id="53_viaj1"]
+[ext_resource type="AudioStream" uid="uid://cwqb63ttjso5f" path="res://audio/harp_sampler/player_mono/octave3/B3_p2.wav" id="54_byiby"]
+[ext_resource type="AudioStream" uid="uid://dkx3y014lvwt2" path="res://audio/harp_sampler/player_mono/octave3/B3_p.wav" id="55_3nx7c"]
+[ext_resource type="AudioStream" uid="uid://dasqqbahl5e3p" path="res://audio/harp_sampler/player_mono/octave3/a3_pp.wav" id="56_b5qkx"]
+[ext_resource type="AudioStream" uid="uid://bdbxavd2ujpcx" path="res://audio/harp_sampler/player_mono/octave4/C4_p.wav" id="57_vvwx2"]
+[ext_resource type="AudioStream" uid="uid://4ioefms6ut4y" path="res://audio/harp_sampler/player_mono/octave4/C4_p2.wav" id="58_oceiv"]
 
 [sub_resource type="Animation" id="Animation_lswjq"]
 resource_name = "entry"
@@ -131,14 +109,14 @@ font_size = 27
 pixel_size = 0.013
 depth = 0.26
 
-[sub_resource type="Animation" id="Animation_gx34v"]
-resource_name = "advanced_whirl"
-length = 150.0
-step = 0.25
+[sub_resource type="Animation" id="Animation_nvb8a"]
+resource_name = "intermediate_vines"
+length = 24.0
+step = 0.5
 tracks/0/type = "audio"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("NotePlayer2_L")
+tracks/0/path = NodePath("SongPlayer/NotePlayer2_L")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -149,7 +127,7 @@ tracks/0/use_blend = true
 tracks/1/type = "audio"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("NotePlayer2_R")
+tracks/1/path = NodePath("SongPlayer/NotePlayer2_R")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -160,7 +138,7 @@ tracks/1/use_blend = true
 tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("NotePlayer3_L")
+tracks/2/path = NodePath("SongPlayer/NotePlayer3_L")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -171,7 +149,7 @@ tracks/2/use_blend = true
 tracks/3/type = "audio"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("NotePlayer3_R")
+tracks/3/path = NodePath("SongPlayer/NotePlayer3_R")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -182,18 +160,82 @@ tracks/3/use_blend = true
 tracks/4/type = "audio"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("NotePlayer4_L")
+tracks/4/path = NodePath("SongPlayer/NotePlayer4_L")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"clips": [],
-"times": PackedFloat32Array()
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("47_jdd5t")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_45n80")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("49_n28ck")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_45n80")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("50_tg1g8")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_45n80")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_hrgw3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_45n80")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.01,
+"stream": ExtResource("50_tg1g8")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("50_tg1g8")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("48_45n80")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("51_hrgw3")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.01,
+"stream": ExtResource("50_tg1g8")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_d4x1m")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.01,
+"stream": ExtResource("50_tg1g8")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_d4x1m")
+}],
+"times": PackedFloat32Array(4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5)
 }
 tracks/4/use_blend = true
 tracks/5/type = "audio"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("NotePlayer4_R")
+tracks/5/path = NodePath("SongPlayer/NotePlayer4_R")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -204,7 +246,7 @@ tracks/5/use_blend = true
 tracks/6/type = "audio"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("NotePlayer5_L")
+tracks/6/path = NodePath("SongPlayer/NotePlayer5_L")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -215,7 +257,7 @@ tracks/6/use_blend = true
 tracks/7/type = "audio"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("NotePlayer5_R")
+tracks/7/path = NodePath("SongPlayer/NotePlayer5_R")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -226,7 +268,7 @@ tracks/7/use_blend = true
 tracks/8/type = "audio"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("NotePlayer6_L")
+tracks/8/path = NodePath("SongPlayer/NotePlayer6_L")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -237,18 +279,114 @@ tracks/8/use_blend = true
 tracks/9/type = "audio"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("NotePlayer6_R")
+tracks/9/path = NodePath("SongPlayer/NotePlayer6_R")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"clips": [],
-"times": PackedFloat32Array()
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("53_viaj1")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_d4x1m")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("54_byiby")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_d4x1m")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("56_b5qkx")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("53_viaj1")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_d4x1m")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("54_byiby")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("52_d4x1m")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("56_b5qkx")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("57_vvwx2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("58_oceiv")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("57_vvwx2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("57_vvwx2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("58_oceiv")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("57_vvwx2")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("55_3nx7c")
+}],
+"times": PackedFloat32Array(4, 4.3333, 4.6666, 5, 5.333, 5.6666, 6, 6.3333, 6.6666, 7, 7.333, 7.6666, 8, 8.3333, 8.6667, 9, 9.3333, 9.6667, 10, 10.3333, 10.6667, 11, 11.3333, 11.6667)
 }
 tracks/9/use_blend = true
 tracks/10/type = "audio"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("NotePlayer7_L")
+tracks/10/path = NodePath("SongPlayer/NotePlayer7_L")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -259,7 +397,7 @@ tracks/10/use_blend = true
 tracks/11/type = "audio"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("NotePlayer7_R")
+tracks/11/path = NodePath("SongPlayer/NotePlayer7_R")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -270,133 +408,29 @@ tracks/11/use_blend = true
 tracks/12/type = "audio"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("NotePlayer8_L")
+tracks/12/path = NodePath("SongPlayer/NotePlayer8_L")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_sw4ib")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_fuql6")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_5ov08")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_b276y")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_oob8v")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_sb075")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_pi6gc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_8sgtp")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("21_h4e1l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_b276y")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_5ov08")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_oob8v")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("23_0bqi8")
-}],
-"times": PackedFloat32Array(8, 8.25, 8.5, 8.75, 9.25, 9.75, 10, 10.25, 10.5, 10.75, 11, 11.25, 11.75)
+"clips": [],
+"times": PackedFloat32Array()
 }
 tracks/12/use_blend = true
 tracks/13/type = "audio"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("NotePlayer8_R")
+tracks/13/path = NodePath("SongPlayer/NotePlayer8_R")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_sw4ib")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_h3qsr")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_5ov08")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_b276y")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("17_qnn0x")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_oob8v")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_pi6gc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_8sgtp")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("21_sljy0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("22_k1w22")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_5ov08")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_oob8v")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("17_qnn0x")
-}],
-"times": PackedFloat32Array(4, 4.25, 4.5, 4.75, 5.25, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.75)
+"clips": [],
+"times": PackedFloat32Array()
 }
 tracks/13/use_blend = true
 tracks/14/type = "audio"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("NotePlayer9_L")
+tracks/14/path = NodePath("SongPlayer/NotePlayer9_L")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
@@ -407,7 +441,7 @@ tracks/14/use_blend = true
 tracks/15/type = "audio"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("NotePlayer9_R")
+tracks/15/path = NodePath("SongPlayer/NotePlayer9_R")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
@@ -418,18 +452,50 @@ tracks/15/use_blend = true
 tracks/16/type = "audio"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("SongPlayer/NotePlayer10_L")
+tracks/16/path = NodePath("BackingAudio/accompaniment1")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"clips": [],
-"times": PackedFloat32Array()
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("46_lki1w")
+}],
+"times": PackedFloat32Array(0, 2, 4, 6, 9, 11, 13, 15)
 }
 tracks/16/use_blend = true
 tracks/17/type = "audio"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("SongPlayer/NotePlayer10_R")
+tracks/17/path = NodePath("BackingAudio/accompaniment2")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
@@ -437,684 +503,6 @@ tracks/17/keys = {
 "times": PackedFloat32Array()
 }
 tracks/17/use_blend = true
-tracks/18/type = "audio"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("SongPlayer/NotePlayer11_L")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"clips": [],
-"times": PackedFloat32Array()
-}
-tracks/18/use_blend = true
-tracks/19/type = "audio"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("SongPlayer/NotePlayer11_R")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"clips": [],
-"times": PackedFloat32Array()
-}
-tracks/19/use_blend = true
-tracks/20/type = "audio"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("SongPlayer/NotePlayer12_L")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"clips": [],
-"times": PackedFloat32Array()
-}
-tracks/20/use_blend = true
-tracks/21/type = "audio"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("SongPlayer/NotePlayer12_R")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_sw4ib")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_fuql6")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_5ov08")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_b276y")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_oob8v")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_pi6gc")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("22_4yxyo")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_8sgtp")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("23_k7wgd")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("24_awojq")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("25_75oiu")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_sb075")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_8sgtp")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("21_sljy0")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_oob8v")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_b276y")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("22_4yxyo")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_oob8v")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("22_4yxyo")
-}],
-"times": PackedFloat32Array(12, 12.1667, 12.3333, 12.5, 12.8333, 13, 13.1667, 13.3333, 13.6667, 13.8333, 14, 14.1667, 14.3333, 14.5, 14.6666, 14.8333, 15, 15.3333, 15.6667)
-}
-tracks/21/use_blend = true
-tracks/22/type = "audio"
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/path = NodePath("../BackingAudio/accompaniment1")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_nxb66")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_lwexg")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_lcm4p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_stpi3")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_lcm4p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_stpi3")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_lcm4p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_stpi3")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_lcm4p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_6t4et")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_6t4et")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("20_6t4et")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("18_b8m48")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("19_n4i47")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_lcm4p")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("35_kwmfi")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("37_4scel")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("36_ylf5e")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_84x2l")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("38_kv3o2")
-}],
-"times": PackedFloat32Array(0, 0.25, 0.75, 1, 1.25, 1.75, 2, 2.25, 2.75, 3, 3.25, 3.75, 4, 4.25, 4.75, 5, 5.25, 5.75, 6, 6.25, 6.75, 7, 7.25, 7.75, 8, 8.25, 8.75, 9, 9.25, 9.75, 10, 10.25, 10.75, 11, 11.25, 11.5, 11.6667, 11.8333, 12, 12.1667, 12.3333, 12.6667, 12.8333, 13, 13.1667, 13.3333, 13.6667, 13.8333, 14, 14.1667, 14.3333, 14.6667, 14.8333, 15, 15.1667, 15.3333, 15.6875, 15.8125, 16, 16.1667, 16.3333, 16.6667, 16.8333, 17, 17.1667, 17.3333, 17.6667, 17.8333, 18, 18.1667, 18.3333, 18.6667, 18.8333, 19, 19.1667, 19.3333, 19.6875, 19.8125, 20, 20.1667, 20.3333, 20.6667, 20.8333, 21, 21.1667, 21.3333, 21.6667, 21.8333, 22, 22.1667, 22.3333, 22.6667, 22.8333, 23, 23.1667, 23.3333, 23.6875, 23.8125, 24, 24.1667, 24.3333, 24.6667, 24.8333, 25, 25.1667, 25.3333, 25.6667, 25.8333, 26, 26.1667, 26.3333, 26.6667, 26.8333, 27, 27.1667, 27.3333, 27.6875, 27.8125)
-}
-tracks/22/use_blend = true
-tracks/23/type = "audio"
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/path = NodePath("../BackingAudio/accompaniment2")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_gj5ll")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_trild")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_8ydnf")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_uy08s")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_gj5ll")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_trild")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_8ydnf")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_uy08s")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_gj5ll")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_trild")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_8ydnf")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_uy08s")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("13_gj5ll")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("14_trild")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("15_8ydnf")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_uy08s")
-}],
-"times": PackedFloat32Array(0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60)
-}
-tracks/23/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
@@ -1123,11 +511,10 @@ _data = {
 "TestSong2": ExtResource("6_yj7cp"),
 "TestSong3": ExtResource("8_f1m7n"),
 "TestSong4": ExtResource("8_2lskv"),
-"advanced_whirl": SubResource("Animation_gx34v"),
+"advanced_whirl": ExtResource("8_rphrv"),
 "beginner_prelude": ExtResource("8_6ka7k"),
 "intermediate_hocket_canon": ExtResource("11_h17fc"),
-"intermediate_vines": ExtResource("12_ah7e0"),
-"song_template": ExtResource("11_xcpil"),
+"intermediate_vines": SubResource("Animation_nvb8a"),
 "tutorial_onewheel": ExtResource("4_haxis")
 }
 
@@ -1220,6 +607,7 @@ shadow_normal_bias = 9.586
 shadow_blur = 4.737
 
 [node name="SongPlayer" type="AnimationPlayer" parent="."]
+audio_max_polyphony = 64
 libraries = {
 "": SubResource("AnimationLibrary_mug7h")
 }

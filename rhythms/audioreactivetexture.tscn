@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://scripts/grab_audio_samples.gd" id="8_abwmr"]
 [ext_resource type="Material" uid="uid://bxky85qc7dvj2" path="res://assets/textures/3d_wheel_texture.tres" id="9_8arok"]
 [ext_resource type="Script" path="res://scripts/AudioReactiveParticles.gd" id="10_58rb2"]
-[ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D.gd" id="11_ypme8"]
+[ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D_2.gd" id="11_pb8jx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ssj7f"]
 render_priority = 0
@@ -116,4 +116,4 @@ script = ExtResource("10_58rb2")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.877213, 0.248634, -0.410705, 0, 0.855455, 0.517878, 0.480101, -0.454289, 0.750416, -6.85172, 2.08129, 3.65052)
 light_energy = 2.007
-script = ExtResource("11_ypme8")
+script = ExtResource("11_pb8jx")

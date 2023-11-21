@@ -114,33 +114,33 @@ _data = {
 "tutorial_onewheel": ExtResource("4_haxis")
 }
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_ih4hn"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0l7p0"]
 frequency = 0.0074
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7d8me"]
 seamless = true
 as_normal_map = true
 bump_strength = 32.0
-noise = SubResource("FastNoiseLite_ih4hn")
+noise = SubResource("FastNoiseLite_0l7p0")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bngas"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dxe38"]
 render_priority = 0
 shader = ExtResource("2_80fs5")
 shader_parameter/Texture2DParameter = SubResource("NoiseTexture2D_7d8me")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c12ko"]
 lightmap_size_hint = Vector2i(502, 502)
-material = SubResource("ShaderMaterial_bngas")
+material = SubResource("ShaderMaterial_dxe38")
 size = Vector2(100, 100)
 subdivide_width = 50
 subdivide_depth = 50
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_m8iya"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hclrk"]
 render_priority = 0
 shader = ExtResource("10_e6p8a")
 
 [sub_resource type="SphereMesh" id="SphereMesh_hljms"]
-material = SubResource("ShaderMaterial_m8iya")
+material = SubResource("ShaderMaterial_hclrk")
 flip_faces = true
 radius = 17.995
 height = 8.535

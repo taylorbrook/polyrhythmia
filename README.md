@@ -8,3 +8,5 @@ using Euclidean rhythms. <br>
 Lead Programmer: https://smokin-joe.itch.io/ <br>
 Game design by Taylor Brook <br>
 Music and technical audio by Taylor Brook <br>
+
+developed in Godot 4.1

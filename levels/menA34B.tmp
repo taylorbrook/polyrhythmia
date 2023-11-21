@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://1il1symgxhtg"]
+[gd_scene load_steps=26 format=3 uid="uid://1il1symgxhtg"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_hm1dg"]
 [ext_resource type="Material" uid="uid://bxky85qc7dvj2" path="res://assets/textures/3d_wheel_texture.tres" id="2_bo4w5"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scripts/AudioReactiveLabel.gd" id="4_i4ng6"]
 [ext_resource type="Script" path="res://scripts/TempoWheel.gd" id="4_wtar3"]
 [ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D_2.gd" id="4_yhj0m"]
-[ext_resource type="Script" path="res://scripts/MouseSelectCamera.gd" id="5_blarc"]
 [ext_resource type="Environment" uid="uid://daq2qgxejb7j3" path="res://assets/environments/Sunset.tres" id="7_aq5qb"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="8_h2jbp"]
 [ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="9_eq2w6"]
@@ -99,18 +98,14 @@ is_hemisphere = true
 [node name="menu" type="Node3D"]
 script = ExtResource("1_hm1dg")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.989533, 0, 0.144304, 0, 1, 0, -0.144304, 0, 0.989533, -0.25, 1.5, 1.384)
-script = ExtResource("5_blarc")
-
 [node name="LevelWheel" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.980519, -0.196425, 4.28598e-08, 4.37114e-08, 1.91069e-15, 1, -0.196425, 0.980519, 8.58603e-09, 0.24, 1.384, 0.01)
+transform = Transform3D(-0.980519, -0.196425, 4.28598e-08, 4.37114e-08, 1.91069e-15, 1, -0.196425, 0.980519, 8.58603e-09, 0.240156, 1.38413, -0.0341376)
 material_override = ExtResource("2_bo4w5")
 mesh = SubResource("CylinderMesh_l0opf")
 surface_material_override/0 = SubResource("StandardMaterial3D_k3boh")
 
 [node name="Trigger1" type="MeshInstance3D" parent="LevelWheel"]
-transform = Transform3D(-4.37114e-08, -0.190809, 0.981627, 1.77081e-15, 0.981627, 0.190809, -1, 8.34052e-09, -4.29083e-08, -0.0420526, -0.00842434, 0.396189)
+transform = Transform3D(-4.37114e-08, -0.190809, 0.981627, 3.17173e-16, 0.981627, 0.190809, -1, 8.34052e-09, -4.29083e-08, -0.0420526, -0.00842433, 0.396189)
 mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
@@ -118,7 +113,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 [node name="TriggerShape" type="Area3D" parent="LevelWheel/Trigger1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger1/TriggerShape"]
-transform = Transform3D(1, 3.55271e-15, -2.55788e-35, -3.55271e-15, 1, 0, 2.55788e-35, 0, 1, -0.176, 0, 0)
+transform = Transform3D(1, 0, -2.11758e-22, -3.55271e-15, 1, -3.55271e-15, 0, 0, 1, -0.176424, -1.22785e-08, 0)
 shape = SubResource("BoxShape3D_3n71x")
 
 [node name="Trigger2" type="MeshInstance3D" parent="LevelWheel"]
@@ -227,7 +222,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_k3boh")
 script = ExtResource("4_wtar3")
 
 [node name="Trigger1" type="MeshInstance3D" parent="TempoWheel"]
-transform = Transform3D(-4.37114e-08, -0.190809, 0.981627, -1.42109e-14, 0.981627, 0.190809, -1, 8.34052e-09, -4.29083e-08, -0.0420523, -0.00842437, 0.396189)
+transform = Transform3D(-4.37114e-08, -0.190809, 0.981627, 3.17173e-16, 0.981627, 0.190809, -1, 8.34052e-09, -4.29083e-08, -0.0420526, -0.00842433, 0.396189)
 mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
@@ -348,6 +343,9 @@ text = "60
 font = ExtResource("3_llyuo")
 font_size = 96
 outline_size = 2
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.989533, 0, 0.144304, 0, 1, 0, -0.144304, 0, 0.989533, -0.25, 1.5, 1.384)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 editor_only = true

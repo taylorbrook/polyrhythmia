@@ -1,13 +1,14 @@
 extends Node3D
 enum directions {Clockwise,CounterClockwise}
 @export var beats = 4
-@export var bpm = 30 : set = _bpm_setter
+@export var bpm = Globals.bpm : set = _bpm_setter
 @export var spinning = false
 @export var direction:directions = directions.Clockwise
 @export var track = 0
 @export var tracking = false
 @onready var time = 0.0
 @onready var bps = (bpm/60.0)*beats
+@onready var beat_length = (60.0/bpm) / beats
 @onready var beat_steps = (360.0/beats * bps)
 @onready var song_player:AnimationPlayer = get_tree().current_scene.get_node("SongPlayer")
 @onready var animation:Animation
@@ -68,7 +69,8 @@ func _process(delta):
 			wheel.rotation_degrees.x-=beat_steps * delta
 		else:
 			wheel.rotation_degrees.x+=beat_steps * delta
-		beat = int(song_player.current_animation_position*bps) % beats
+		#beat = int((song_player.current_animation_position/60.0)/bpm) % beats
+		beat = int(snapped(song_player.current_animation_position,(bpm/60.0)/beats)*bps) % beats
 		if Input.is_action_just_pressed("button1") and tracking and $"../..".name=="Left":
 			print("LEFT: "+str(wheel.rotation_degrees.x))
 		if Input.is_action_just_pressed("button2") and tracking and $"../..".name=="Right":
@@ -86,7 +88,7 @@ func _process(delta):
 	
 		#look in the future 1.5 seconds and activate upcoming beats.
 		if tracking:
-			var cpos = song_player.current_animation_position+1.5
+			var cpos = song_player.current_animation_position+1.8
 			if cpos > song_player.current_animation_length:
 				cpos = abs(cpos - song_player.current_animation_length)
 			var fkey = animation.track_find_key(track,cpos,Animation.FIND_MODE_NEAREST)
@@ -95,6 +97,7 @@ func _process(delta):
 				var gtime = abs(atime-cpos)
 				if gtime <= ((bpm/60.0)/beats):
 					var fbeat = int(snapped(cpos,(bpm/60.0)/beats)*bps) % beats
+					#var fbeat = int((song_player.current_animation_position/60.0)/bpm) % beats
 					var marker = wheel.get_node("Polymark"+str(fbeat)+"/MeshInstance3D")
 					if marker.transparency != 0.0:
 						marker.get_surface_override_material(0).next_pass = load("res://mesh/outline.tres")
@@ -106,7 +109,9 @@ func _bpm_setter(val):
 	beat_steps = (360.0/beats * bps)
 
 func _on_trigger_shape_area_exited(area):
-	var current_marker = area.get_parent()
-	if current_marker.transparency == 0.0:
-		current_marker.transparency=1.0
-		current_marker.get_surface_override_material(0).next_pass=null
+	if area.get_node("..").transparency == 0.0:
+		$AnimationPlayer.play("flash_trigger",0.0)
+		var current_marker = area.get_parent()
+		if current_marker.transparency == 0.0:
+			current_marker.transparency=1.0
+			current_marker.get_surface_override_material(0).next_pass=null

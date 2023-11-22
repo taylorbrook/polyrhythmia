@@ -9,11 +9,14 @@ func _process(delta):
 	if !song_player.is_playing():
 		return
 	var time_gap = 10.0
+	var next_marker = null
+	if wheel_sets.size() > 1:
+		next_marker=wheel_sets[1]
 	if wheel_sets.size() > 0:
 		time_gap = abs(song_player.current_animation_position - wheel_sets.front().time)
-	if time_gap <= 2.0 and !wheel_sets.front().node.tracking:
+	if time_gap <= 5.0 and !wheel_sets.front().node.tracking:
 		wheel_sets.front().node.tracking=true
-	if time_gap <= 0.333 and wheel_sets.front().node.beat == 0:
+	if wheel_sets.size() > 0 and time_gap <= wheel_sets.front().node.beat_length/2.0 and wheel_sets.front().node.beat == 0:
 		var current_wheel = wheel_sets.pop_front()
 		var small_wheel = current_wheel.node
 		rcount+=1
@@ -24,13 +27,13 @@ func _process(delta):
 				stepper= -spoke_step
 			var tween = get_tree().create_tween()
 			var big_wheel = small_wheel.get_parent().get_parent()
-			tween.tween_property(big_wheel,"rotation_degrees:z",big_wheel.rotation_degrees.z-stepper,0.25)
+			tween.tween_property(big_wheel,"rotation_degrees:z",big_wheel.rotation_degrees.z-stepper,0.15)
 
 func _ready():
 	read_animation(song_player.get_animation(get_tree().current_scene.SongName))
 	var wheels = [$Left,$Right]
 	var side = false
-	spoke_step = clamp(360.0 / round(wheel_sets.size()),10.0,24.0)
+	spoke_step = clamp(360.0/wheel_sets.size(),10.0,20.0)
 	var on_rot_l = 0.0
 	var on_rot_r= 0.0
 	var wi = 0
@@ -45,6 +48,7 @@ func _ready():
 		new_wheel.beats=beats
 		new_wheel.bpm=Globals.bpm
 		new_wheel.track=d.track
+		#new_wheel.position.z+=0.2
 		var new_pivot = Node3D.new()
 		if side:
 			new_wheel.direction = new_wheel.directions.CounterClockwise
@@ -87,7 +91,7 @@ func read_animation(anim:Animation):
 					side=true
 				var asize = wheel_sets.size()
 				if (side and cright != tpath) or (!side and cleft != tpath):
-					wheel_sets.append({time=y,track=x,path=tpath,node=null,beats=0})
+					wheel_sets.append({time=anim.track_get_key_time(x,key),track=x,path=tpath,node=null,beats=0})
 					if side:
 						cright=tpath
 					else:

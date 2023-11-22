@@ -14,65 +14,97 @@ func raycast_from_mouse(m_pos, collision_mask):
 	var ray_end = ray_start + project_ray_normal(m_pos) * 100
 	var world3d : World3D = get_world_3d()
 	var space_state = world3d.direct_space_state
-	
+
 	if space_state == null:
 		return
-	
+
 	var query = PhysicsRayQueryParameters3D.create(ray_start, ray_end, collision_mask)
 	query.collide_with_areas = true
 	var result = space_state.intersect_ray(query)
-	
+
+	if result.is_empty():
+		return
+
+	#start game button
+	if result.collider == %startGame:
+		get_tree().change_scene_to_file("res://levels/3d_test.tscn")
+		Sound.transition_start()
+		
 	#level select wheel buttons
-	if result.collider_id == 33084671161:
-		print("button1")
+	if result.collider == %TriggerShape1:
+		$"../LevelWheel/levelName".text = "tutorial"
+		$"../LevelWheel/levelDifficulty".text = "beginner"
 
-	if result.collider_id == 33135002834:
-		print("button2")
-		
-	if result.collider_id == 33185334566:
-		print("button3")
-		
-	if result.collider_id == 33235666217:
-		print("button4")
-		
-	if result.collider_id == 33285997868:
-		print("button5")
-		
-	if result.collider_id == 33336329519:
-		print("button6")
-	
-	if result.collider_id == 33386661170:
-		print("button7")
-		
-	if result.collider_id == 33436992821:
-		print("button8")
-	
+	if result.collider == %TriggerShape2:
+		$"../LevelWheel/levelName".text = "prelude"
+		$"../LevelWheel/levelDifficulty".text = "beginner"
+
+	if result.collider == %TriggerShape3:
+		$"../LevelWheel/levelName".text = "vines"
+		$"../LevelWheel/levelDifficulty".text = "beginner"
+
+	if result.collider == %TriggerShape4:
+		$"../LevelWheel/levelName".text = "spinning"
+		$"../LevelWheel/levelDifficulty".text = "intermediate"
+
+	if result.collider == %TriggerShape5:
+		$"../LevelWheel/levelName".text = "hocket canon"
+		$"../LevelWheel/levelDifficulty".text = "intermediate"
+
+	if result.collider == %TriggerShape6:
+		$"../LevelWheel/levelName".text = "whirl"
+		$"../LevelWheel/levelDifficulty".text = "advanced"
+
+	if result.collider == %TriggerShape7:
+		$"../LevelWheel/levelName".text = "coming soon!"
+		$"../LevelWheel/levelDifficulty".text = "advanced"
+
+	if result.collider == %TriggerShape8:
+		$"../LevelWheel/levelName".text = "coming soon!"
+		$"../LevelWheel/levelDifficulty".text = "advanced"
+
 	#tempo select wheel
-	if result.collider_id == 33520878906:
-		print("button1")
+	if result.collider == %TempoTrigger1:
+		$"../TempoWheel/tempoDisplay".text = "50"
+		$"../TempoWheel/difficultylevel".text = "beginner"
+		Globals.bpm = 25
 
-	if result.collider_id == 33571210557:
-		print("button2")
-		
-	if result.collider_id == 33621542208:
-		print("button3")
-		
-	if result.collider_id == 33671873859:
-		print("button4")
-		
-	if result.collider_id == 33722205510:
-		print("button5")
-		
-	if result.collider_id == 33772537161:
-		print("button6")
-	
-	if result.collider_id == 33822868812:
-		print("button7")
-		
-	if result.collider_id == 33873200463:
-		print("button8")
-	
+	if result.collider == %TempoTrigger2:
+		$"../TempoWheel/tempoDisplay".text = "60"
+		$"../TempoWheel/difficultylevel".text = "easy"
+		Globals.bpm = 30
+
+	if result.collider == %TempoTrigger3:
+		$"../TempoWheel/tempoDisplay".text = "70"
+		$"../TempoWheel/difficultylevel".text = "easy"
+		Globals.bpm = 35
+
+	if result.collider == %TempoTrigger4:
+		$"../TempoWheel/tempoDisplay".text = "80"
+		$"../TempoWheel/difficultylevel".text = "advanced"
+		Globals.bpm = 40
+
+	if result.collider == %TempoTrigger5:
+		$"../TempoWheel/tempoDisplay".text = "90"
+		$"../TempoWheel/difficultylevel".text = "advanced"
+		Globals.bpm = 45
+
+	if result.collider == %TempoTrigger6:
+		$"../TempoWheel/tempoDisplay".text = "100"
+		$"../TempoWheel/difficultylevel".text = "difficult"
+		Globals.bpm = 50
+
+	if result.collider == %TempoTrigger7:
+		$"../TempoWheel/tempoDisplay".text = "110"
+		$"../TempoWheel/difficultylevel".text = "difficult"
+		Globals.bpm = 55
+
+	if result.collider == %TempoTrigger8:
+		$"../TempoWheel/tempoDisplay".text = "120"
+		$"../TempoWheel/difficultylevel".text = "hardcore!"
+		Globals.bpm = 60
+
+	#find collider IDs
 	if not result.is_empty():
-		print(result.collider_id)
-
-
+		print(result.collider)
+		#print(result)

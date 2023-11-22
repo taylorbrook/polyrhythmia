@@ -118,7 +118,6 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
 [node name="TriggerShape1" type="Area3D" parent="LevelWheel/Trigger1"]
-unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger1/TriggerShape1"]
 transform = Transform3D(1, 3.55271e-15, -2.55788e-35, -3.55271e-15, 1, 0, 2.55788e-35, 0, 1, -0.176, 0, 0)
@@ -143,10 +142,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TriggerShape3" type="Area3D" parent="LevelWheel/Trigger3"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="LevelWheel/Trigger3"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger3/TriggerShape3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger3/TriggerShape"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104476, 0, 0)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -156,10 +154,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TriggerShape4" type="Area3D" parent="LevelWheel/Trigger4"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="LevelWheel/Trigger4"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger4/TriggerShape4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger4/TriggerShape"]
 transform = Transform3D(1, 0, -3.33204e-16, 0, 1, -3.55271e-15, -2.72601e-16, -1.77636e-15, 1, 0.104476, -3.72529e-09, -1.19209e-07)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -169,10 +166,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TriggerShape5" type="Area3D" parent="LevelWheel/Trigger5"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="LevelWheel/Trigger5"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger5/TriggerShape5"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger5/TriggerShape"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -182,10 +178,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TriggerShape6" type="Area3D" parent="LevelWheel/Trigger6"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="LevelWheel/Trigger6"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger6/TriggerShape6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger6/TriggerShape"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -195,10 +190,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TriggerShape7" type="Area3D" parent="LevelWheel/Trigger7"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="LevelWheel/Trigger7"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger7/TriggerShape7"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/Trigger7/TriggerShape"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -209,7 +203,6 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
 [node name="TriggerShape8" type="Area3D" parent="LevelWheel/Trigger8"]
-unique_name_in_owner = true
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="LevelWheel/Trigger8/TriggerShape8"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
@@ -242,10 +235,9 @@ font = ExtResource("3_llyuo")
 font_size = 96
 outline_size = 2
 
-[node name="startGame" type="StaticBody3D" parent="LevelWheel/levelName"]
-unique_name_in_owner = true
+[node name="StaticBody3D" type="StaticBody3D" parent="LevelWheel/levelName"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/levelName/startGame"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelWheel/levelName/StaticBody3D"]
 transform = Transform3D(-1.31134e-08, 0.3, -1.31134e-08, -8.47033e-22, -1.31134e-08, -0.3, -0.3, -1.31134e-08, 5.73206e-16, 0, 0.0130774, 0)
 shape = SubResource("CapsuleShape3D_8y8ii")
 
@@ -275,10 +267,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger1" type="Area3D" parent="TempoWheel/Trigger1"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger1/TempoTrigger1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger1/TriggerShape"]
 transform = Transform3D(1, 0, -2.11758e-22, -3.55271e-15, 1, -3.55271e-15, 0, 0, 1, -0.176424, -1.22785e-08, 0)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -288,10 +279,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger2" type="Area3D" parent="TempoWheel/Trigger2"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger2/TempoTrigger2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger2/TriggerShape"]
 transform = Transform3D(1, 0, -2.11758e-22, -3.55271e-15, 1, -3.55271e-15, 0, 0, 1, -0.176424, -1.22785e-08, 0)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -301,10 +291,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger3" type="Area3D" parent="TempoWheel/Trigger3"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger3"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger3/TempoTrigger3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger3/TriggerShape"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104476, 0, 0)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -314,10 +303,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger4" type="Area3D" parent="TempoWheel/Trigger4"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger4"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger4/TempoTrigger4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger4/TriggerShape"]
 transform = Transform3D(1, 0, -3.33204e-16, 0, 1, -3.55271e-15, -2.72601e-16, -1.77636e-15, 1, 0.104476, -3.72529e-09, -1.19209e-07)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -327,10 +315,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger5" type="Area3D" parent="TempoWheel/Trigger5"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger5"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger5/TempoTrigger5"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger5/TriggerShape"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -340,10 +327,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger6" type="Area3D" parent="TempoWheel/Trigger6"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger6"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger6/TempoTrigger6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger6/TriggerShape"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -353,10 +339,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger7" type="Area3D" parent="TempoWheel/Trigger7"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger7"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger7/TempoTrigger7"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger7/TriggerShape"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
 shape = SubResource("BoxShape3D_3n71x")
 
@@ -366,10 +351,9 @@ mesh = SubResource("PlaneMesh_k3aeg")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_s2p7i")
 
-[node name="TempoTrigger8" type="Area3D" parent="TempoWheel/Trigger8"]
-unique_name_in_owner = true
+[node name="TriggerShape" type="Area3D" parent="TempoWheel/Trigger8"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger8/TempoTrigger8"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TempoWheel/Trigger8/TriggerShape"]
 transform = Transform3D(1, 1.77636e-15, -1.59765e-15, 0, 1, -1.42109e-14, -4.65662e-10, 0, 1, 0.16981, 3.72529e-09, -0.000296474)
 shape = SubResource("BoxShape3D_3n71x")
 

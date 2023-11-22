@@ -149,6 +149,7 @@ is_hemisphere = true
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
 SongName = "intermediate_vines"
+Fog = 0.85
 
 [node name="BigWheels" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.493, 0)
@@ -161,7 +162,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.07)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
 current = true

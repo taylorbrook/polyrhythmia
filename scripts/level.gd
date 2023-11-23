@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var SongName: String = "advanced_whirl"
+@export var SongName: String = Globals.levelName
 @export var Fog = 0.0 : set = fog_setter
 
 func _ready():

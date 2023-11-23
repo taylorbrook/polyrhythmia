@@ -122,26 +122,32 @@ func raycast_from_mouse(m_pos, collision_mask):
 	if result.collider == %TriggerShape1:
 		$"../LevelWheel/levelName".text = "tutorial"
 		$"../LevelWheel/levelDifficulty".text = "beginner"
+		Globals.levelName = "tutorial_onewheel"
 
 	if result.collider == %TriggerShape2:
 		$"../LevelWheel/levelName".text = "prelude"
 		$"../LevelWheel/levelDifficulty".text = "beginner"
+		Globals.levelName = "beginner_prelude"
 
 	if result.collider == %TriggerShape3:
 		$"../LevelWheel/levelName".text = "vines"
 		$"../LevelWheel/levelDifficulty".text = "intermediate"
+		Globals.levelName = "intermediate_vines"
 
 	if result.collider == %TriggerShape4:
 		$"../LevelWheel/levelName".text = "spinning"
 		$"../LevelWheel/levelDifficulty".text = "intermediate"
+		Globals.levelName = "intermediate_spinning"
 
 	if result.collider == %TriggerShape5:
 		$"../LevelWheel/levelName".text = "hocket canon"
 		$"../LevelWheel/levelDifficulty".text = "intermediate"
+		Globals.levelName = "intermediate_hocket_canon"
 
 	if result.collider == %TriggerShape6:
 		$"../LevelWheel/levelName".text = "whirl"
 		$"../LevelWheel/levelDifficulty".text = "advanced"
+		Globals.levelName = "advanced_whirl"
 
 	if result.collider == %TriggerShape7:
 		$"../LevelWheel/levelName".text = "coming soon!"

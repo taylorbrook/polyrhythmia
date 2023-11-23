@@ -6,3 +6,7 @@ func _ready():
 	var tween = create_tween().set_loops()
 	tween.tween_property($LevelWheel/levelName, "scale", Vector3(1.1,1.1,1.1), 1).from_current().set_ease(Tween.EASE_OUT)
 	#tween.tween_property($LevelWheel/levelName, "scale", Vector3(.95,.95,.95), .5).from_current().set_ease(Tween.EASE_IN)
+
+
+func _on_button_pressed():
+	$GUI/settings.visible = false	

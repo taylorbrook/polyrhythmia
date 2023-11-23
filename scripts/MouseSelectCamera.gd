@@ -118,6 +118,10 @@ func raycast_from_mouse(m_pos, collision_mask):
 		get_tree().change_scene_to_file("res://levels/3d_test.tscn")
 		Sound.transition_start()
 		
+	#settings
+	if result.collider == %settings:
+		$"../GUI/settings".visible = true
+		
 	#level select wheel buttons
 	if result.collider == %TriggerShape1:
 		$"../LevelWheel/levelName".text = "tutorial"

@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://tpra2tp1a0sq"]
+
+[ext_resource type="FontFile" uid="uid://nbjcntuombpn" path="res://assets/fonts/Pacifico.ttf" id="1_w5pp4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnnc0"]
+bg_color = Color(0, 0, 0, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_408vn"]
+bg_color = Color(1, 1, 1, 0.392157)
+
+[node name="InputButton" type="Button"]
+custom_minimum_size = Vector2(0, 64)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_mnnc0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_408vn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_408vn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="LabelAction" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.913725, 0.537255, 0.796078, 1)
+theme_override_fonts/font = ExtResource("1_w5pp4")
+theme_override_font_sizes/font_size = 48
+text = "action name"
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="LabelInput" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.913725, 0.537255, 0.796078, 1)
+theme_override_fonts/font = ExtResource("1_w5pp4")
+theme_override_font_sizes/font_size = 48
+text = "input key
+"
+vertical_alignment = 1

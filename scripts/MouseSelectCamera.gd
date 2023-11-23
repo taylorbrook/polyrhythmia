@@ -129,7 +129,7 @@ func raycast_from_mouse(m_pos, collision_mask):
 
 	if result.collider == %TriggerShape3:
 		$"../LevelWheel/levelName".text = "vines"
-		$"../LevelWheel/levelDifficulty".text = "beginner"
+		$"../LevelWheel/levelDifficulty".text = "intermediate"
 
 	if result.collider == %TriggerShape4:
 		$"../LevelWheel/levelName".text = "spinning"
@@ -193,6 +193,6 @@ func raycast_from_mouse(m_pos, collision_mask):
 		Globals.bpm = 60
 
 	#find collider IDs
-	if not result.is_empty():
-		print(result.collider)
+	#if not result.is_empty():
+		#print(result.collider)
 		#print(result)

@@ -148,6 +148,7 @@ is_hemisphere = true
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
+SongName = "intermediate_vines"
 Fog = 0.85
 
 [node name="BigWheels" type="Node3D" parent="."]

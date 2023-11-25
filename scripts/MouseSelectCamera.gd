@@ -163,44 +163,44 @@ func raycast_from_mouse(m_pos, collision_mask):
 
 	#tempo select wheel
 	if result.collider == %TempoTrigger1:
-		$"../TempoWheel/tempoDisplay".text = "50"
 		$"../TempoWheel/difficultylevel".text = "beginner"
 		Globals.bpm = 25
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	if result.collider == %TempoTrigger2:
-		$"../TempoWheel/tempoDisplay".text = "60"
 		$"../TempoWheel/difficultylevel".text = "easy"
 		Globals.bpm = 30
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	if result.collider == %TempoTrigger3:
-		$"../TempoWheel/tempoDisplay".text = "70"
 		$"../TempoWheel/difficultylevel".text = "easy"
 		Globals.bpm = 35
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	if result.collider == %TempoTrigger4:
-		$"../TempoWheel/tempoDisplay".text = "80"
 		$"../TempoWheel/difficultylevel".text = "advanced"
 		Globals.bpm = 40
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	if result.collider == %TempoTrigger5:
-		$"../TempoWheel/tempoDisplay".text = "90"
 		$"../TempoWheel/difficultylevel".text = "advanced"
 		Globals.bpm = 45
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	if result.collider == %TempoTrigger6:
-		$"../TempoWheel/tempoDisplay".text = "100"
 		$"../TempoWheel/difficultylevel".text = "difficult"
 		Globals.bpm = 50
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	if result.collider == %TempoTrigger7:
-		$"../TempoWheel/tempoDisplay".text = "110"
 		$"../TempoWheel/difficultylevel".text = "difficult"
 		Globals.bpm = 55
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	if result.collider == %TempoTrigger8:
-		$"../TempoWheel/tempoDisplay".text = "120"
 		$"../TempoWheel/difficultylevel".text = "hardcore!"
 		Globals.bpm = 60
+		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 
 	#find collider IDs
 	#if not result.is_empty():

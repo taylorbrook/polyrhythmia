@@ -5,7 +5,3 @@ extends MeshInstance3D
 func _ready():
 	Globals.bpm = 30
 	$tempoDisplay.text = str(Globals.bpm * 2)
-
-
-func clicked():
-	print("clicked")

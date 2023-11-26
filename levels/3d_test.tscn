@@ -374,23 +374,33 @@ script = ExtResource("29_8bmsu")
 [node name="ui" type="CanvasLayer" parent="."]
 
 [node name="scoreLabel" type="Label" parent="ui"]
-offset_left = 33.0
-offset_top = 18.0
-offset_right = 231.0
-offset_bottom = 66.0
+offset_left = 30.0
+offset_top = 10.0
+offset_right = 228.0
+offset_bottom = 58.0
 theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
 theme_override_fonts/font = ExtResource("20_65ke1")
 theme_override_font_sizes/font_size = 24
 text = "score:"
 
 [node name="score" type="Label" parent="ui"]
-offset_left = 37.0
-offset_top = 34.0
-offset_right = 212.0
-offset_bottom = 127.0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 205.0
+offset_bottom = 113.0
 theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
 theme_override_fonts/font = ExtResource("20_65ke1")
 theme_override_font_sizes/font_size = 48
 text = "0"
+
+[node name="scoreFeedback" type="Label" parent="ui"]
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 228.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
+theme_override_fonts/font = ExtResource("20_65ke1")
+theme_override_font_sizes/font_size = 24
+text = "combo!"
 
 [connection signal="animation_finished" from="SongPlayer" to="." method="_on_song_player_animation_finished"]

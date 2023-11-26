@@ -53,17 +53,13 @@ func _perfect():
 	scoreFeedback = "perfect!"
 	_update_score(10)
 	combo_counter += 1
-	pass
 	
 func _good():
 	scoreFeedback = "good!"
 	_update_score(5)
 	combo_counter += 1
-	pass
 
 func _miss():
 	scoreFeedback = "miss!"
 	_update_score(0)
 	combo_counter = 0
-	
-	pass

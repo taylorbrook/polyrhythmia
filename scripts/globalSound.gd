@@ -11,3 +11,9 @@ func transition_start():
 	var tween = create_tween()
 	tween.tween_property($menuMusic,"volume_db", -80,2)
 	$menuMusic.stop()
+	
+func ui_hover():
+	$ui_hover.play()
+
+func ui_select():
+	$ui_select.play()

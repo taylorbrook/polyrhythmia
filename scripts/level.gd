@@ -9,8 +9,8 @@ var score
 var scoreFeedback = " "
 var combo_counter
 
-#func _process(delta):
 #	#for testing score system
+#func _process(delta):
 #	if Input.is_key_pressed(KEY_A):
 #		_perfect()
 #	if Input.is_key_pressed(KEY_S):

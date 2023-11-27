@@ -9,18 +9,8 @@ var score
 var scoreFeedback = " "
 var combo_counter
 
-#	#for testing score system
-#func _process(delta):
-#	if Input.is_key_pressed(KEY_A):
-#		_perfect()
-#	if Input.is_key_pressed(KEY_S):
-#		_good()
-#	if Input.is_key_pressed(KEY_D):
-#		_miss()
-
 func _ready():
 	_reset_score()
-	_update_score(0)
 	$BigWheels/MainCam/Camera3D/AnimationPlayer.play("entry")
 	await get_tree().create_timer(4.0).timeout
 	$SongPlayer.play(SongName, 0, bpm_multiplier)
@@ -39,6 +29,7 @@ func _on_song_player_animation_finished(anim_name):
 #score system - takes value and scales with bpm mulitplier and combo counter
 func _reset_score():
 	score = 0
+	$ui/score.text = str(score)
 	combo_counter = 0
 	scoreFeedback = " "
 	
@@ -52,7 +43,7 @@ func _update_score(val):
 func _perfect():
 	scoreFeedback = "perfect!"
 	_update_score(10)
-	combo_counter += 1
+	combo_counter += 2
 	
 func _good():
 	scoreFeedback = "good!"

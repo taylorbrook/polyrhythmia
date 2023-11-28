@@ -6,7 +6,6 @@ and polymeter and presenting player with a playable visualization of the music
 using Euclidean rhythms. <br>
 
 Lead Programmer: https://smokin-joe.itch.io/ <br>
-Game design by Taylor Brook <br>
-Music and technical audio by Taylor Brook <br>
+Game design, music, and programming by Taylor Brook <br>
 
 developed in Godot 4.1

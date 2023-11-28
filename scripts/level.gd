@@ -37,7 +37,7 @@ func _update_score(val):
 	var tween = create_tween().set_loops()
 	tween.tween_property($ui/score, "scale", Vector2(1.1,1.1), bpm_multiplier).from_current().set_ease(Tween.EASE_OUT)
 	score += val*bpm_multiplier*(combo_counter*.5)
-	$ui/score.text = str(score)
+	$ui/score.text = str(int(score))
 	$ui/scoreFeedback.text = scoreFeedback + "combo x" + str(combo_counter)
 
 func _perfect():

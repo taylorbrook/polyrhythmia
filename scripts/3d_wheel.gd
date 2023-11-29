@@ -84,7 +84,6 @@ func _process(delta):
 			if beat == 0:
 				measure+=1
 			last_beat=beat
-	#brandi.sins@bakerk12.org
 		#look in the future 1.5 seconds and activate upcoming beats.
 		if tracking:
 			var cpos = song_player.current_animation_position+0.75

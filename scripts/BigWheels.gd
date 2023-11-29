@@ -48,7 +48,6 @@ func _ready():
 		new_wheel.beats=beats
 		new_wheel.bpm=Globals.bpm
 		new_wheel.track=d.track
-		#new_wheel.position.z+=0.2
 		var new_pivot = Node3D.new()
 		if side:
 			new_wheel.direction = new_wheel.directions.CounterClockwise
@@ -57,11 +56,9 @@ func _ready():
 		if side:
 			new_wheel.direction = new_wheel.directions.CounterClockwise
 			new_wheel.position=Vector3(-4.0,0.0,0.0)
-			#side=false
 			new_pivot.rotation_degrees = Vector3(0.0,0.0,-on_rot_r)
 			on_rot_r+=spoke_step
 		else:
-			#side=true
 			new_wheel.position=Vector3(4.0,0.0,0.0)
 			new_pivot.rotation_degrees = Vector3(0.0,0.0,on_rot_l)
 			on_rot_l+=spoke_step

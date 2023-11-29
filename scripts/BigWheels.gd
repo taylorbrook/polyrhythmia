@@ -16,7 +16,7 @@ func _process(delta):
 		time_gap = abs(song_player.current_animation_position - wheel_sets.front().time)
 	if time_gap <= 5.0 and !wheel_sets.front().node.tracking:
 		wheel_sets.front().node.tracking=true
-	if wheel_sets.size() > 0 and time_gap <= wheel_sets.front().node.beat_length/2.0 and wheel_sets.front().node.beat == 0:
+	if wheel_sets.size() > 0 and time_gap <= wheel_sets.front().node.beat_length/2.0 and wheel_sets.front().node.beat >= 0:
 		var current_wheel = wheel_sets.pop_front()
 		var small_wheel = current_wheel.node
 		rcount+=1

@@ -227,8 +227,8 @@ func raycast_from_mouse(m_pos, collision_mask):
 
 	#tempo select wheel
 	if result.collider == %TempoTrigger1:
-		$"../TempoWheel/difficultylevel".text = "beginner"
-		Globals.bpm = 25
+		$"../TempoWheel/difficultylevel".text = "easy"
+		Globals.bpm = 30
 		$"../TempoWheel/tempoDisplay".text = str(Globals.bpm * 2)
 		Sound.ui_select()
 

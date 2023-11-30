@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://1il1symgxhtg"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_hm1dg"]
-[ext_resource type="Material" path="res://assets/textures/3d_wheel_texture.tres" id="2_bo4w5"]
+[ext_resource type="Material" uid="uid://bxky85qc7dvj2" path="res://assets/textures/3d_wheel_texture.tres" id="2_bo4w5"]
 [ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D.gd" id="3_chvx7"]
 [ext_resource type="FontFile" uid="uid://cwgup3btg70pd" path="res://assets/fonts/GreatVibes-Regular.otf" id="3_llyuo"]
 [ext_resource type="Script" path="res://scripts/AudioReactiveLabel.gd" id="4_i4ng6"]
@@ -510,5 +510,13 @@ offset_bottom = 138.0
 rotation = 0.00631309
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="GUI"]
+offset_left = 17.0
+offset_top = 602.0
+offset_right = 447.0
+offset_bottom = 641.0
+theme_override_colors/font_color = Color(0.823529, 0.823529, 0.823529, 1)
+text = "BPM settings other than 60 are currently experimental*"
 
 [connection signal="pressed" from="GUI/Button" to="." method="_on_button_pressed"]

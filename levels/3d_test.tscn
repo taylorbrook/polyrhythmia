@@ -223,6 +223,7 @@ _data = {
 
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
+Fog = 0.85
 
 [node name="BigWheels" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.493, 0)
@@ -235,7 +236,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.07)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
 current = true
@@ -263,7 +264,7 @@ mesh = SubResource("TextMesh_c5u4q")
 skeleton = NodePath("../../Right")
 
 [node name="Left" type="MeshInstance3D" parent="BigWheels/ReactionNotes"]
-transform = Transform3D(0.925085, -0.0401331, 0.25339, 0, 0.948181, 0.150177, -0.256549, -0.144715, 0.913696, -0.865, -0.645, 2.01)
+transform = Transform3D(0.925085, -0.0401331, 0.25339, 0, 0.948181, 0.150177, -0.256549, -0.144715, 0.913696, -0.865, -1.615, 2.01)
 visible = false
 mesh = SubResource("TextMesh_0bo5k")
 skeleton = NodePath("../../Right")
@@ -477,7 +478,6 @@ offset_bottom = 148.0
 theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
 theme_override_fonts/font = ExtResource("20_65ke1")
 theme_override_font_sizes/font_size = 24
-text = "combo!"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ui/scoreFeedback"]
 libraries = {

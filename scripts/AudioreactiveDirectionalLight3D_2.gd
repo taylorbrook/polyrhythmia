@@ -1,7 +1,7 @@
 extends DirectionalLight3D
 
 
-func _process(delta):
+func _process(_delta):
 	var spectrum1 = abs(Globals.lerped_spectrum[3])
 	var spectrum2 = abs(Globals.lerped_spectrum[4])
 	var spectrum3 = abs(Globals.lerped_spectrum[5])

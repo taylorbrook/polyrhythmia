@@ -20,11 +20,11 @@ func _ready():
 	tween.tween_property($BigWheels/OmniLight3D, "light_energy", 1.3, bpm_multiplier).from_current().set_ease(Tween.EASE_OUT)
 
 func fog_setter(val):
-	if is_instance_valid($Backdrop/WorldEnvironment):
+	if is_instance_valid(find_child("Backdrop/WorldEnvironment")):
 		var env:Environment = $Backdrop/WorldEnvironment.environment
 		env.volumetric_fog_density=val
 
-func _on_song_player_animation_finished(anim_name):
+func _on_song_player_animation_finished(_anim_name):
 	get_tree().change_scene_to_file("res://levels/menu.tscn")
 	Sound.transition_start()
 
@@ -41,7 +41,9 @@ func _update_score(val):
 	tween.play()
 	score += val*bpm_multiplier*(combo_counter*.5)
 	$ui/score.text = str(int(score))
-	$ui/scoreFeedback.text = scoreFeedback + "combo x" + str(combo_counter)
+	$ui/scoreFeedback.text = scoreFeedback
+	if combo_counter > 0:
+		$ui/scoreFeedback.text += "combo x" + str(combo_counter)
 
 func _perfect(lr):
 	scoreFeedback = "perfect!"

@@ -1,6 +1,6 @@
 extends Node
 
-var levelName: String = "beginner_prelude"
+var levelName: String = "tutorial_onewheel"
 
 var bpm = 30.0
 

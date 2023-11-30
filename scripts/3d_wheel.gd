@@ -38,7 +38,6 @@ func _ready():
 	while nbeats < beats:
 		var new_mark = $Wheel/Polymark0.duplicate()
 		new_mark.name="Polymark"+str(nbeats)
-		var nmesh = new_mark.get_node("MeshInstance3D")
 		#nmesh.set_surface_override_material(0,nmesh.get_surface_override_material(0).duplicate())
 		wheel.add_child(new_mark)
 		#change the direction depending on which way this wheel spins

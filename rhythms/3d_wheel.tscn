@@ -9,6 +9,7 @@ height = 0.105
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3boh"]
 resource_local_to_scene = true
+disable_ambient_light = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ga1uh"]
 resource_local_to_scene = true

@@ -5,6 +5,7 @@ var spoke_step = 0.0
 @onready var song_player:AnimationPlayer = get_tree().current_scene.get_node("SongPlayer")
 
 var rcount = 0
+
 func _process(delta):
 	if !song_player.is_playing():
 		return
@@ -21,6 +22,7 @@ func _process(delta):
 		var small_wheel = current_wheel.node
 		rcount+=1
 		if rcount > 2:
+			small_wheel.is_front=true
 			small_wheel.get_parent().get_parent().get_child(0).queue_free()
 			var stepper = spoke_step
 			if small_wheel.direction == small_wheel.directions.CounterClockwise:
@@ -67,6 +69,8 @@ func _ready():
 		new_wheel.spinning=true
 		wheel_sets[wi].node=new_wheel
 		wheel_sets[wi].beats=beats
+		if wi < 2:
+			new_wheel.is_front=true
 		wi+=1
 
 func read_animation(anim:Animation):

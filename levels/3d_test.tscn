@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://bwrbp5hm8j3ht"]
+[gd_scene load_steps=36 format=3 uid="uid://bwrbp5hm8j3ht"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
+[ext_resource type="FontFile" uid="uid://cwgup3btg70pd" path="res://assets/fonts/GreatVibes-Regular.otf" id="3_de3vj"]
 [ext_resource type="Script" path="res://scripts/BigWheels.gd" id="3_o0j0e"]
 [ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D.gd" id="3_odxpi"]
 [ext_resource type="Animation" uid="uid://bawd5t1e1pn3" path="res://animations/tutorial_onewheel.res" id="4_haxis"]
@@ -56,43 +57,107 @@ _data = {
 "running": SubResource("Animation_fsypk")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86f8w"]
-albedo_color = Color(0.239216, 0.619608, 0.309804, 1)
-roughness = 0.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77rop"]
+albedo_color = Color(0.874036, 0.878938, 0.510976, 1)
 emission = Color(0.239216, 0.619608, 0.309804, 1)
 emission_energy_multiplier = 0.79
 
 [sub_resource type="TextMesh" id="TextMesh_c5u4q"]
-material = SubResource("StandardMaterial3D_86f8w")
+material = SubResource("StandardMaterial3D_77rop")
 text = "Almost!"
+font = ExtResource("3_de3vj")
 font_size = 27
 pixel_size = 0.013
-depth = 0.26
 
-[sub_resource type="Gradient" id="Gradient_0x4q1"]
-offsets = PackedFloat32Array(0.503937, 0.629921)
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_sxq6u"]
-gradient = SubResource("Gradient_0x4q1")
-width = 512
-height = 512
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_roy2t"]
-transparency = 1
-albedo_texture = SubResource("GradientTexture2D_sxq6u")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_xjg5b"]
-material = SubResource("StandardMaterial3D_roy2t")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2sybf"]
+albedo_color = Color(0.184314, 0.560784, 0.262745, 1)
+emission = Color(0.239216, 0.619608, 0.309804, 1)
+emission_energy_multiplier = 0.79
 
 [sub_resource type="TextMesh" id="TextMesh_0bo5k"]
-material = SubResource("StandardMaterial3D_86f8w")
+material = SubResource("StandardMaterial3D_2sybf")
 text = "Nice!"
+font = ExtResource("3_de3vj")
 font_size = 27
 pixel_size = 0.013
-depth = 0.26
+
+[sub_resource type="Animation" id="Animation_3vw6k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.865, -0.62, 2.01)]
+}
+
+[sub_resource type="Animation" id="Animation_sapaj"]
+resource_name = "show_right"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-1.615, -0.675, -0.675, -1.615]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7g07j"]
+resource_name = "show_left"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Left:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-1.615, -0.675, -0.675, -1.615]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Left:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_88owl"]
+_data = {
+"RESET": SubResource("Animation_3vw6k"),
+"show_left": SubResource("Animation_7g07j"),
+"show_right": SubResource("Animation_sapaj")
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
@@ -136,9 +201,28 @@ radius = 17.995
 height = 8.535
 is_hemisphere = true
 
+[sub_resource type="Animation" id="Animation_3ornh"]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_51fyo"]
+_data = {
+"hide": SubResource("Animation_3ornh")
+}
+
 [node name="3dTest" type="Node3D"]
 script = ExtResource("1_u404x")
-Fog = 0.85
 
 [node name="BigWheels" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.493, 0)
@@ -151,7 +235,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
 [node name="MainCam" type="Node3D" parent="BigWheels"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.07)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.4)
 
 [node name="Camera3D" type="Camera3D" parent="BigWheels/MainCam"]
 current = true
@@ -162,35 +246,39 @@ libraries = {
 "": SubResource("AnimationLibrary_c2brf")
 }
 
-[node name="ReactionNoteRight" type="MeshInstance3D" parent="BigWheels"]
-transform = Transform3D(0.925085, 0.0423427, -0.25303, 0, 0.946834, 0.158446, 0.256549, -0.152683, 0.912398, 0.865, -0.49, 3.345)
-visible = false
-mesh = SubResource("TextMesh_c5u4q")
-skeleton = NodePath("../Right")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BigWheels/ReactionNoteRight"]
-transform = Transform3D(1.13, 0, 0, 0, -4.37114e-08, -0.445, 0, 1, -1.94516e-08, 0, -0.04, 0)
-mesh = SubResource("PlaneMesh_xjg5b")
-
-[node name="ReactionNoteLeft" type="MeshInstance3D" parent="BigWheels"]
-transform = Transform3D(0.925085, -0.0423427, 0.25303, 0, 0.946834, 0.158446, -0.256549, -0.152683, 0.912398, -0.865, -0.49, 3.345)
-visible = false
-mesh = SubResource("TextMesh_0bo5k")
-skeleton = NodePath("../Right")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BigWheels/ReactionNoteLeft"]
-transform = Transform3D(1.13, 0, 0, 0, -4.37114e-08, -0.445, 0, 1, -1.94516e-08, 0, -0.04, 0)
-mesh = SubResource("PlaneMesh_xjg5b")
-
 [node name="OmniLight3D" type="OmniLight3D" parent="BigWheels"]
-transform = Transform3D(0.963631, 0, -0.267238, 0, 1, 0, 0.267238, 0, 0.96363, -0.252, -0.535, 4.08)
-light_color = Color(0.694118, 0.854902, 0.847059, 1)
+transform = Transform3D(0.963631, 0, -0.267238, 0, 1, 0, 0.267238, 0, 0.963631, 0.12, -0.54, 2.152)
 light_energy = 0.9
 light_specular = 1.335
 shadow_enabled = true
-shadow_bias = 0.125
-shadow_normal_bias = 9.586
-shadow_blur = 4.737
+shadow_opacity = 0.16
+shadow_blur = 0.0
+
+[node name="ReactionNotes" type="Node3D" parent="BigWheels"]
+
+[node name="Right" type="MeshInstance3D" parent="BigWheels/ReactionNotes"]
+transform = Transform3D(0.925085, 0.0401331, -0.25339, 0, 0.948181, 0.150177, 0.256549, -0.144715, 0.913696, 0.865, -0.62, 2.01)
+visible = false
+mesh = SubResource("TextMesh_c5u4q")
+skeleton = NodePath("../../Right")
+
+[node name="Left" type="MeshInstance3D" parent="BigWheels/ReactionNotes"]
+transform = Transform3D(0.925085, -0.0401331, 0.25339, 0, 0.948181, 0.150177, -0.256549, -0.144715, 0.913696, -0.865, -0.645, 2.01)
+visible = false
+mesh = SubResource("TextMesh_0bo5k")
+skeleton = NodePath("../../Right")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BigWheels/ReactionNotes"]
+root_node = NodePath("../Right")
+libraries = {
+"": SubResource("AnimationLibrary_88owl")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="BigWheels/ReactionNotes"]
+root_node = NodePath("../Right")
+libraries = {
+"": SubResource("AnimationLibrary_88owl")
+}
 
 [node name="SongPlayer" type="AnimationPlayer" parent="."]
 audio_max_polyphony = 64
@@ -390,5 +478,31 @@ theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
 theme_override_fonts/font = ExtResource("20_65ke1")
 theme_override_font_sizes/font_size = 24
 text = "combo!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ui/scoreFeedback"]
+libraries = {
+"": SubResource("AnimationLibrary_51fyo")
+}
+
+[node name="Control" type="Control" parent="ui"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="debug" type="Label" parent="ui/Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+horizontal_alignment = 1
 
 [connection signal="animation_finished" from="SongPlayer" to="." method="_on_song_player_animation_finished"]

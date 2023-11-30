@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://1il1symgxhtg"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_hm1dg"]
-[ext_resource type="Material" uid="uid://bxky85qc7dvj2" path="res://assets/textures/3d_wheel_texture.tres" id="2_bo4w5"]
+[ext_resource type="Material" path="res://assets/textures/3d_wheel_texture.tres" id="2_bo4w5"]
 [ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D.gd" id="3_chvx7"]
 [ext_resource type="FontFile" uid="uid://cwgup3btg70pd" path="res://assets/fonts/GreatVibes-Regular.otf" id="3_llyuo"]
 [ext_resource type="Script" path="res://scripts/AudioReactiveLabel.gd" id="4_i4ng6"]
@@ -11,7 +11,7 @@
 [ext_resource type="Environment" uid="uid://daq2qgxejb7j3" path="res://assets/environments/Sunset.tres" id="7_aq5qb"]
 [ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="8_h2jbp"]
 [ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="9_eq2w6"]
-[ext_resource type="PackedScene" uid="uid://4t5xj5wxscyk" path="res://levels/settings.tscn" id="12_86kph"]
+[ext_resource type="PackedScene" path="res://levels/settings.tscn" id="12_86kph"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_l0opf"]
 height = 0.105

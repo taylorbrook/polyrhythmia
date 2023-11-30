@@ -85,8 +85,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ga1uh")
 transform = Transform3D(-4.37114e-08, -1, 4.37115e-08, 1, -4.37114e-08, 1.31134e-07, -1.31134e-07, 4.37114e-08, 1, -6.10586e-09, 0, 0.139686)
 visible = false
 billboard = 2
+no_depth_test = true
 text = "1"
 font_size = 222
+outline_size = 77
 
 [node name="MarkerShape" type="Area3D" parent="Wheel/Polymark0/MeshInstance3D"]
 

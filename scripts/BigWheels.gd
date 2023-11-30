@@ -5,13 +5,11 @@ var spoke_step = 0.0
 @onready var song_player:AnimationPlayer = get_tree().current_scene.get_node("SongPlayer")
 
 var rcount = 0
-func _process(delta):
+var is_onewheel=false
+func _process(_delta):
 	if !song_player.is_playing():
 		return
 	var time_gap = 10.0
-	var next_marker = null
-	if wheel_sets.size() > 1:
-		next_marker=wheel_sets[1]
 	if wheel_sets.size() > 0:
 		time_gap = abs(song_player.current_animation_position - wheel_sets.front().time)
 	if time_gap <= 5.0 and !wheel_sets.front().node.tracking:
@@ -20,7 +18,8 @@ func _process(delta):
 		var current_wheel = wheel_sets.pop_front()
 		var small_wheel = current_wheel.node
 		rcount+=1
-		if rcount > 2:
+		if (!is_onewheel and rcount > 2) or (is_onewheel and rcount>1):
+			small_wheel.is_front=true
 			small_wheel.get_parent().get_parent().get_child(0).queue_free()
 			var stepper = spoke_step
 			if small_wheel.direction == small_wheel.directions.CounterClockwise:
@@ -44,7 +43,7 @@ func _ready():
 			side=true
 		else:
 			side=false
-		var new_wheel = load("res://rhythms/3d_wheel.tscn").instantiate()
+		var new_wheel = load("res://scenes/3d_wheel.tscn").instantiate()
 		new_wheel.beats=beats
 		new_wheel.bpm=Globals.bpm
 		new_wheel.track=d.track
@@ -67,7 +66,10 @@ func _ready():
 		new_wheel.spinning=true
 		wheel_sets[wi].node=new_wheel
 		wheel_sets[wi].beats=beats
+		if wi < 2:
+			new_wheel.is_front=true
 		wi+=1
+	is_onewheel = $Right.get_child_count() == 0
 
 func read_animation(anim:Animation):
 	var track_count = anim.get_track_count()
@@ -86,7 +88,6 @@ func read_animation(anim:Animation):
 			if key > -1:
 				if tpath.split("_")[1] == "R":
 					side=true
-				var asize = wheel_sets.size()
 				if (side and cright != tpath) or (!side and cleft != tpath):
 					wheel_sets.append({time=anim.track_get_key_time(x,key),track=x,path=tpath,node=null,beats=0})
 					if side:

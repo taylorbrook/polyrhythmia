@@ -13,6 +13,8 @@ enum directions {Clockwise,CounterClockwise}
 @onready var song_player:AnimationPlayer = get_tree().current_scene.get_node("SongPlayer")
 @onready var animation:Animation
 
+var hit = false
+var is_front = false
 var last_played_degrees = 0  # variable to keep track of the last played beat
 var beat = 0
 var ready_notes = []
@@ -20,7 +22,8 @@ var ready_color = Color(0.169, 0.388, 0.314)
 #@onready var audio_streams = $samples.get_children()  # Array containing all AudioStreamPlayer nodes
 @onready var tlabel = find_child("Label3D")
 @onready var wheel = $Wheel
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	var nbeats = 1
 	#var mat:StandardMaterial3D = $Wheel/Polymark0/MeshInstance3D.get_surface_override_material(0)
@@ -35,7 +38,6 @@ func _ready():
 	while nbeats < beats:
 		var new_mark = $Wheel/Polymark0.duplicate()
 		new_mark.name="Polymark"+str(nbeats)
-		var nmesh = new_mark.get_node("MeshInstance3D")
 		#nmesh.set_surface_override_material(0,nmesh.get_surface_override_material(0).duplicate())
 		wheel.add_child(new_mark)
 		#change the direction depending on which way this wheel spins
@@ -71,10 +73,6 @@ func _process(delta):
 			wheel.rotation_degrees.x+=beat_steps * delta
 		#beat = int((song_player.current_animation_position/60.0)/bpm) % beats
 		beat = int(snapped(song_player.current_animation_position,beat_length)) % beats
-		if Input.is_action_just_pressed("button1") and tracking and $"../..".name=="Left":
-			print("LEFT: "+str(wheel.rotation_degrees.x))
-		if Input.is_action_just_pressed("button2") and tracking and $"../..".name=="Right":
-			print("RIGHT: "+str(wheel.rotation_degrees.x))
 		if last_beat!=beat:
 			#flash the marker when an active polymarker goes by.
 #			var current_marker = wheel.get_child(beat).get_node("MeshInstance3D")
@@ -86,19 +84,41 @@ func _process(delta):
 			last_beat=beat
 		#look in the future 1.5 seconds and activate upcoming beats.
 		if tracking:
-			var cpos = song_player.current_animation_position+0.75
+			var cpos = song_player.current_animation_position+1.5
 			if cpos > song_player.current_animation_length:
 				cpos = abs(cpos - song_player.current_animation_length)
 			var fkey = animation.track_find_key(track,cpos,Animation.FIND_MODE_NEAREST)
 			if fkey > -1:
 				var atime = animation.track_get_key_time(track,fkey)
 				var gtime = abs(atime-cpos)
-				if gtime <= ((bpm/60.0)/beats):
+				if gtime <= beat_length:
 					var fbeat = int(snapped(cpos,(bpm/60.0)/beats)*bps) % beats
 					#var fbeat = int((song_player.current_animation_position/60.0)/bpm) % beats
 					var marker = wheel.get_node("Polymark"+str(fbeat)+"/MeshInstance3D")
 					if !marker.visible:
 						marker.show()
+	var gap = abs(song_player.current_animation_position-snapped(song_player.current_animation_position,beat_length))
+	if Input.is_action_just_pressed("button1") and is_front and $"../..".name=="Left":
+		if !hit and gap <= beat_length and get_node("Wheel/Polymark"+str(beat)+"/MeshInstance3D").visible:
+			register_score(gap,false)
+			hit=true
+		else:
+			miss(false)
+	if Input.is_action_just_pressed("button2") and is_front and $"../..".name=="Right":
+		if !hit and gap <= beat_length and get_node("Wheel/Polymark"+str(beat)+"/MeshInstance3D").visible:
+			register_score(gap,true)
+			hit=true
+		else:
+			miss(true)
+
+func register_score(gap,lr):
+	if gap >= 0.1:
+		get_tree().current_scene._good(lr)
+	elif gap < 0.1:
+		get_tree().current_scene._perfect(lr)
+
+func miss(lr):
+	get_tree().current_scene._miss(lr)
 
 func _bpm_setter(val):
 	bpm=val
@@ -107,6 +127,9 @@ func _bpm_setter(val):
 
 func _on_trigger_shape_area_exited(area):
 	if area.get_node("..").visible:
+		if !hit:
+			miss($"../..".name=="Right")
+		hit=false
 		$AnimationPlayer.play("flash_trigger",0.0)
 		var current_marker = area.get_parent()
 		if current_marker.visible:

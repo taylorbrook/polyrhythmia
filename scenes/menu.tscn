@@ -512,11 +512,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="GUI"]
-offset_left = 17.0
-offset_top = 602.0
-offset_right = 447.0
-offset_bottom = 641.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_right = 439.0
+grow_vertical = 0
 theme_override_colors/font_color = Color(0.823529, 0.823529, 0.823529, 1)
-text = "BPM settings other than 60 are currently experimental*"
+text = "  BPM settings other than 60 are currently experimental*"
 
 [connection signal="pressed" from="GUI/Button" to="." method="_on_button_pressed"]

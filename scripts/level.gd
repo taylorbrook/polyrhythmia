@@ -25,7 +25,7 @@ func fog_setter(val):
 		env.volumetric_fog_density=val
 
 func _on_song_player_animation_finished(_anim_name):
-	get_tree().change_scene_to_file("res://levels/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 	Sound.transition_start()
 
 #score system - takes value and scales with bpm mulitplier and combo counter

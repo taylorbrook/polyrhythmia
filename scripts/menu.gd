@@ -9,4 +9,4 @@ func _ready():
 
 
 func _on_button_pressed():
-	$GUI/settings.visible = false	
+	$GUI/settings.visible = false

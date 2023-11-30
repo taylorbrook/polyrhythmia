@@ -99,13 +99,13 @@ func _process(delta):
 						marker.show()
 	var gap = abs(song_player.current_animation_position-snapped(song_player.current_animation_position,beat_length))
 	if Input.is_action_just_pressed("button1") and is_front and $"../..".name=="Left":
-		if gap <= beat_length and get_node("Wheel/Polymark"+str(beat)+"/MeshInstance3D").visible:
+		if !hit and gap <= beat_length and get_node("Wheel/Polymark"+str(beat)+"/MeshInstance3D").visible:
 			register_score(gap,false)
 			hit=true
 		else:
 			miss(false)
 	if Input.is_action_just_pressed("button2") and is_front and $"../..".name=="Right":
-		if gap <= beat_length and get_node("Wheel/Polymark"+str(beat)+"/MeshInstance3D").visible:
+		if !hit and gap <= beat_length and get_node("Wheel/Polymark"+str(beat)+"/MeshInstance3D").visible:
 			register_score(gap,true)
 			hit=true
 		else:

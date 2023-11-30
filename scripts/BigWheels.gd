@@ -43,7 +43,7 @@ func _ready():
 			side=true
 		else:
 			side=false
-		var new_wheel = load("res://rhythms/3d_wheel.tscn").instantiate()
+		var new_wheel = load("res://scenes/3d_wheel.tscn").instantiate()
 		new_wheel.beats=beats
 		new_wheel.bpm=Globals.bpm
 		new_wheel.track=d.track

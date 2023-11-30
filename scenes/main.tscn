@@ -1,20 +1,20 @@
 [gd_scene load_steps=36 format=3 uid="uid://bwrbp5hm8j3ht"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_u404x"]
-[ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="2_80fs5"]
-[ext_resource type="FontFile" uid="uid://cwgup3btg70pd" path="res://assets/fonts/GreatVibes-Regular.otf" id="3_de3vj"]
-[ext_resource type="Script" path="res://scripts/BigWheels.gd" id="3_o0j0e"]
-[ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D.gd" id="3_odxpi"]
-[ext_resource type="Animation" uid="uid://bawd5t1e1pn3" path="res://animations/tutorial_onewheel.res" id="4_haxis"]
-[ext_resource type="Animation" uid="uid://bn3dvg6vmyvaq" path="res://animations/beginner_prelude.res" id="8_6ka7k"]
-[ext_resource type="Animation" uid="uid://csu2yusiebsq8" path="res://animations/advanced_whirl.res" id="8_rphrv"]
-[ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="10_e6p8a"]
-[ext_resource type="Animation" uid="uid://wxey7xwd1f1r" path="res://animations/intermediate_hocket_canon.res" id="11_h17fc"]
-[ext_resource type="Animation" uid="uid://bgs8tlhpwys71" path="res://animations/intermediate_vines.res" id="11_hchbm"]
-[ext_resource type="Animation" uid="uid://dkwcfm8sp1sjm" path="res://animations/intermediate_spinning.res" id="13_6ys6u"]
-[ext_resource type="Environment" uid="uid://daq2qgxejb7j3" path="res://assets/environments/Sunset.tres" id="13_kavhm"]
-[ext_resource type="FontFile" uid="uid://nbjcntuombpn" path="res://assets/fonts/Pacifico.ttf" id="20_65ke1"]
-[ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D_2.gd" id="29_8bmsu"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_0036a"]
+[ext_resource type="Script" path="res://scripts/BigWheels.gd" id="2_lp6qe"]
+[ext_resource type="FontFile" uid="uid://cwgup3btg70pd" path="res://assets/fonts/GreatVibes-Regular.otf" id="3_gyr7l"]
+[ext_resource type="Animation" uid="uid://csu2yusiebsq8" path="res://animations/advanced_whirl.res" id="4_uj21c"]
+[ext_resource type="Animation" uid="uid://bn3dvg6vmyvaq" path="res://animations/beginner_prelude.res" id="5_iefvy"]
+[ext_resource type="Animation" uid="uid://wxey7xwd1f1r" path="res://animations/intermediate_hocket_canon.res" id="6_qffmp"]
+[ext_resource type="Animation" uid="uid://dkwcfm8sp1sjm" path="res://animations/intermediate_spinning.res" id="7_b4mwu"]
+[ext_resource type="Animation" uid="uid://bgs8tlhpwys71" path="res://animations/intermediate_vines.res" id="8_s5ktr"]
+[ext_resource type="Animation" uid="uid://bawd5t1e1pn3" path="res://animations/tutorial_onewheel.res" id="9_qv4oj"]
+[ext_resource type="Environment" uid="uid://daq2qgxejb7j3" path="res://assets/environments/Sunset.tres" id="10_qme16"]
+[ext_resource type="Shader" uid="uid://b0il2ry0653b0" path="res://mesh/3d_test.tres" id="11_0esu8"]
+[ext_resource type="Shader" uid="uid://bns4uwtyb40yw" path="res://mesh/clouds.res" id="12_8l0hf"]
+[ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D.gd" id="13_ieon2"]
+[ext_resource type="Script" path="res://scripts/AudioreactiveDirectionalLight3D_2.gd" id="14_u8ibe"]
+[ext_resource type="FontFile" uid="uid://nbjcntuombpn" path="res://assets/fonts/Pacifico.ttf" id="15_oai36"]
 
 [sub_resource type="Animation" id="Animation_lswjq"]
 resource_name = "entry"
@@ -65,7 +65,7 @@ emission_energy_multiplier = 0.79
 [sub_resource type="TextMesh" id="TextMesh_c5u4q"]
 material = SubResource("StandardMaterial3D_77rop")
 text = "Almost!"
-font = ExtResource("3_de3vj")
+font = ExtResource("3_gyr7l")
 font_size = 27
 pixel_size = 0.013
 
@@ -77,7 +77,7 @@ emission_energy_multiplier = 0.79
 [sub_resource type="TextMesh" id="TextMesh_0bo5k"]
 material = SubResource("StandardMaterial3D_2sybf")
 text = "Nice!"
-font = ExtResource("3_de3vj")
+font = ExtResource("3_gyr7l")
 font_size = 27
 pixel_size = 0.013
 
@@ -161,12 +161,12 @@ _data = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mug7h"]
 _data = {
-"advanced_whirl": ExtResource("8_rphrv"),
-"beginner_prelude": ExtResource("8_6ka7k"),
-"intermediate_hocket_canon": ExtResource("11_h17fc"),
-"intermediate_spinning": ExtResource("13_6ys6u"),
-"intermediate_vines": ExtResource("11_hchbm"),
-"tutorial_onewheel": ExtResource("4_haxis")
+"advanced_whirl": ExtResource("4_uj21c"),
+"beginner_prelude": ExtResource("5_iefvy"),
+"intermediate_hocket_canon": ExtResource("6_qffmp"),
+"intermediate_spinning": ExtResource("7_b4mwu"),
+"intermediate_vines": ExtResource("8_s5ktr"),
+"tutorial_onewheel": ExtResource("9_qv4oj")
 }
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_0l7p0"]
@@ -180,7 +180,7 @@ noise = SubResource("FastNoiseLite_0l7p0")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dxe38"]
 render_priority = 0
-shader = ExtResource("2_80fs5")
+shader = ExtResource("11_0esu8")
 shader_parameter/Texture2DParameter = SubResource("NoiseTexture2D_7d8me")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c12ko"]
@@ -192,7 +192,7 @@ subdivide_depth = 50
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hclrk"]
 render_priority = 0
-shader = ExtResource("10_e6p8a")
+shader = ExtResource("12_8l0hf")
 
 [sub_resource type="SphereMesh" id="SphereMesh_hljms"]
 material = SubResource("ShaderMaterial_hclrk")
@@ -221,13 +221,13 @@ _data = {
 "hide": SubResource("Animation_3ornh")
 }
 
-[node name="3dTest" type="Node3D"]
-script = ExtResource("1_u404x")
+[node name="Main" type="Node3D"]
+script = ExtResource("1_0036a")
 Fog = 0.85
 
 [node name="BigWheels" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.493, 0)
-script = ExtResource("3_o0j0e")
+script = ExtResource("2_lp6qe")
 
 [node name="Right" type="Node3D" parent="BigWheels"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
@@ -417,7 +417,7 @@ bus = &"backing track"
 [node name="Backdrop" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Backdrop"]
-environment = ExtResource("13_kavhm")
+environment = ExtResource("10_qme16")
 
 [node name="Sunset" type="Node3D" parent="Backdrop"]
 
@@ -441,12 +441,12 @@ skeleton = NodePath("../../..")
 [node name="audioReactiveLight1" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.980126, 0.102734, -0.169702, -0.16698, 0.889103, -0.426162, 0.107101, 0.446029, 0.888587, -17.4125, 3.03929, 5.76672)
 light_energy = 2.007
-script = ExtResource("3_odxpi")
+script = ExtResource("13_ieon2")
 
 [node name="audioReactiveLight2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.997894, -0.0335913, 0.0554876, 0.0183505, -0.674302, -0.738228, 0.0622134, 0.737692, -0.672265, 9.1461, 3.03929, 5.10481)
 light_energy = 2.007
-script = ExtResource("29_8bmsu")
+script = ExtResource("14_u8ibe")
 
 [node name="ui" type="CanvasLayer" parent="."]
 
@@ -456,7 +456,7 @@ offset_top = 10.0
 offset_right = 228.0
 offset_bottom = 58.0
 theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
-theme_override_fonts/font = ExtResource("20_65ke1")
+theme_override_fonts/font = ExtResource("15_oai36")
 theme_override_font_sizes/font_size = 24
 text = "score:"
 
@@ -466,7 +466,7 @@ offset_top = 20.0
 offset_right = 205.0
 offset_bottom = 113.0
 theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
-theme_override_fonts/font = ExtResource("20_65ke1")
+theme_override_fonts/font = ExtResource("15_oai36")
 theme_override_font_sizes/font_size = 48
 text = "0"
 
@@ -476,7 +476,7 @@ offset_top = 100.0
 offset_right = 228.0
 offset_bottom = 148.0
 theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
-theme_override_fonts/font = ExtResource("20_65ke1")
+theme_override_fonts/font = ExtResource("15_oai36")
 theme_override_font_sizes/font_size = 24
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ui/scoreFeedback"]

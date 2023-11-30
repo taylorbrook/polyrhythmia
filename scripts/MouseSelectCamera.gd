@@ -170,7 +170,7 @@ func raycast_from_mouse(m_pos, collision_mask):
 
 	#start game button
 	if result.collider == %startGame:
-		get_tree().change_scene_to_file("res://levels/3d_test.tscn")
+		get_tree().change_scene_to_file("res://scenes/main.tscn")
 		Sound.transition_start()
 		
 	#settings

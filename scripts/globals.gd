@@ -24,7 +24,8 @@ func _ready():
 	for i in VU_COUNT:
 		image.set_pixel(i,0, Color.BLACK)
 	image_texture = ImageTexture.create_from_image(image)
-	RenderingServer.global_shader_parameter_set("spectrum_texture", image_texture)
+	#RenderingServer.global_shader_parameter_set("spectrum_texture", image_texture)
+	#The above line throws an error.
 	spectrum = AudioServer.get_bus_effect_instance(0,1)
 
 func _process(delta: float) -> void:

@@ -71,9 +71,12 @@ func _good(lr):
 
 func _miss(lr):
 	scoreFeedback = "miss!"
+	var col=Color(0.785, 0.12, 0.067)
 	if lr:
+		$BigWheels/ReactionNotes/Right.mesh.material.albedo_color=col
 		feedback_right(scoreFeedback)
 	else:
+		$BigWheels/ReactionNotes/Left.mesh.material.albedo_color=col
 		feedback_left(scoreFeedback)
 	_update_score(0)
 	combo_counter = 0

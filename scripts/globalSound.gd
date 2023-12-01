@@ -17,3 +17,10 @@ func ui_hover():
 
 func ui_select():
 	$ui_select.play()
+	
+func missed_left_sfx():
+	
+	$missed_left_note.play()
+	
+func missed_right_sfx():
+	$missed_right_note.play()

@@ -11,6 +11,7 @@ var combo_counter
 
 func _ready():
 	_reset_score()
+	$gameOverScreen.visible = false
 	$BigWheels/MainCam/Camera3D/AnimationPlayer.play("entry")
 	await get_tree().create_timer(4.0).timeout
 	$SongPlayer.play(SongName, 0, bpm_multiplier)
@@ -25,8 +26,9 @@ func fog_setter(val):
 		env.volumetric_fog_density=val
 
 func _on_song_player_animation_finished(_anim_name):
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
-	Sound.transition_start()
+	$gameOverScreen.visible = true
+	#get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	#Sound.transition_start()
 
 #score system - takes value and scales with bpm mulitplier and combo counter
 func _reset_score():
@@ -41,6 +43,7 @@ func _update_score(val):
 	tween.play()
 	score += val*bpm_multiplier*(combo_counter*.5)
 	$ui/score.text = str(int(score))
+	$gameOverScreen/finalScore.text = str(int(score))
 	$ui/scoreFeedback.text = scoreFeedback
 	if combo_counter > 0:
 		$ui/scoreFeedback.text += "combo x" + str(combo_counter)
@@ -73,9 +76,11 @@ func _miss(lr):
 	scoreFeedback = "miss!"
 	var col=Color(0.785, 0.12, 0.067)
 	if lr:
+		Sound.missed_right_sfx()
 		$BigWheels/ReactionNotes/Right.mesh.material.albedo_color=col
 		feedback_right(scoreFeedback)
 	else:
+		Sound.missed_left_sfx()
 		$BigWheels/ReactionNotes/Left.mesh.material.albedo_color=col
 		feedback_left(scoreFeedback)
 	_update_score(0)

@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://k4uqm2lhm6k2"]
+
+[ext_resource type="FontFile" uid="uid://cwgup3btg70pd" path="res://assets/fonts/GreatVibes-Regular.otf" id="1_adoi4"]
+[ext_resource type="Script" path="res://scripts/gameOverScreen.gd" id="1_wqqic"]
+
+[node name="gameOverScreen" type="CanvasLayer"]
+script = ExtResource("1_wqqic")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="levelOverLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_adoi4")
+theme_override_font_sizes/font_size = 96
+text = "Level Over"
+horizontal_alignment = 1
+
+[node name="finalScoreLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_adoi4")
+theme_override_font_sizes/font_size = 64
+text = "Final Score"
+horizontal_alignment = 1
+
+[node name="finalScore" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_adoi4")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="tryAgainButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.164706, 0.392157, 0.509804, 1)
+theme_override_fonts/font = ExtResource("1_adoi4")
+theme_override_font_sizes/font_size = 64
+text = "try again!"
+
+[node name="mainMenuButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.164706, 0.392157, 0.509804, 1)
+theme_override_fonts/font = ExtResource("1_adoi4")
+theme_override_font_sizes/font_size = 64
+text = "main menu"
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/tryAgainButton" to="." method="_on_try_again_button_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/tryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/mainMenuButton" to="." method="_on_main_menu_button_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/mainMenuButton" to="." method="_on_main_menu_button_pressed"]

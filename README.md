@@ -8,6 +8,8 @@ A rhythm game in Godot exploring polyrhythms being developed for Github Gamejam 
 and polymeter and presenting player with a playable visualization of the music
 using Euclidean rhythms. <br>
 
+soundtrack at https://taylorbrook.bandcamp.com/
+
 ### credits
 - Lead Programmer: https://smokin-joe.itch.io/ <br>
 - Game design, music, and programming by Taylor Brook <br>
@@ -42,3 +44,5 @@ The windows and mac executables may require permission to run as they are coming
 **MAC**, after attempting to open go to Apple menu  > System Settings, click Privacy & Security  in the sidebar, then go to Security on the right. (You may need to scroll down.) <br>
 
 **WINDOWS**, click on "run anyway" when Windows defender pops up. If there is no "run anyway" option, open Windows Defender and go to App & Browser Control. Under ‘Check apps and files’, select the ‘Warn’ option instead of the ‘Block’ option. <br>
+
+Polyrhythmis runs best at a 44.1 sample rate

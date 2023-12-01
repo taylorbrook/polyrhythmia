@@ -45,4 +45,4 @@ The windows and mac executables may require permission to run as they are coming
 
 **WINDOWS**, click on "run anyway" when Windows defender pops up. If there is no "run anyway" option, open Windows Defender and go to App & Browser Control. Under ‘Check apps and files’, select the ‘Warn’ option instead of the ‘Block’ option. <br>
 
-Polyrhythmis runs best at a 44.1 sample rate
+Polyrhythmia runs best at a 44.1 sample rate

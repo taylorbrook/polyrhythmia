@@ -1,4 +1,7 @@
 # polyrhythmia <br>
+
+### https://justaguyjustaguy.itch.io/polyrhythmia
+
 A rhythm game in Godot exploring polyrhythms being developed for Github Gamejam 2023 <br>
 
 https://justaguyjustaguy.itch.io/polyrhythmia
@@ -12,16 +15,16 @@ Game design, music, and programming by Taylor Brook <br>
 
 developed in Godot 4.1 <br>
 
-### https://justaguyjustaguy.itch.io/polyrhythmia
+## about Polyrhythmia
 
 Polyrhythmia is a challenging 2-button rhythm game that explores polyrhythms, concentrating on cross-rhythms in particular. These polyrhythms are represented as Euclidean Rhythms in game, presented visiually as nodes rotating around a circular path. <br>
 
 Polyrhythmia was created for the Github Gamejam 2022, this game explores the theme of "scale" <br>
 
-the tempo scales the speed of the levels and therefor the difficulty of the game <br>
-the music is all for a harp sampler instrument tuned to a particular just-intonation scale in the key of G <br>
-The long beats are scaled into subdivisions <br>
-the levels are scaled-up into a massive wheel-of-wheels that represent the greater subdivision of the music into beats and measures, presenting the music on a larger scale <br>
+- the tempo scales the speed of the levels and therefor the difficulty of the game <br>
+- the music is all for a harp sampler instrument tuned to a particular just-intonation scale in the key of G <br>
+- the long beats are scaled into subdivisions <br>
+- the levels are scaled-up into a massive wheel-of-wheels that represent the greater subdivision of the music into beats and measures, presenting the music on a larger scale <br>
 
 ## Gameplay <br>
 Match your button presses with the markers rotating around the wheels when they meet in the center. <br>

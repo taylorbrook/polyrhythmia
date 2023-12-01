@@ -462,12 +462,12 @@ text = "score:"
 
 [node name="score" type="Label" parent="ui"]
 offset_left = 30.0
-offset_top = 20.0
+offset_top = 6.0
 offset_right = 205.0
-offset_bottom = 113.0
+offset_bottom = 144.0
 theme_override_colors/font_color = Color(0.784314, 0.392157, 0.588235, 0.588235)
 theme_override_fonts/font = ExtResource("15_oai36")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 64
 text = "0"
 
 [node name="scoreFeedback" type="Label" parent="ui"]
